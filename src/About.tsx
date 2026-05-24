@@ -12,8 +12,8 @@ export default function About() {
   return (
     <div className="min-h-screen bg-transparent text-white font-sans w-full selection:bg-indigo-500/30 pb-24 relative">
       <Helmet>
-        <title>About | Vishwa Anandh — AI UI/UX & Product Designer</title>
-        <meta name="description" content="Learn more about Vishwa Anandh, a passionate UI/UX Designer who thrives on creating intuitive, AI-driven digital experiences." />
+        <title>About | Vishwa Anandh | AI UI/UX & Product Designer</title>
+        <meta name="description" content="Learn more about Vishwa Anandh, a passionate UI/UX Designer who thrives on creating intuitive, AI driven digital experiences." />
         <meta name="keywords" content="About, UI/UX, Product Designer, Experience, Background, Vishwa Anandh" />
       </Helmet>
       <div className="fixed inset-0 z-[-2] bg-black"></div>
@@ -41,10 +41,10 @@ export default function About() {
             Hello! I'm Vishwa Anandh, a passionate UI/UX Designer who thrives on smoothing out complex user interfaces, translating intricate ideas into intuitive UI designs, and creating delightful user interactions. 
           </p>
           <p>
-            With over 4 years of experience shaping digital products, I specialize in human-centered design deeply integrated with artificial intelligence. From developing comprehensive school management suites to enterprise social intranets, I've had the privilege of consistently shipping AI-driven experiences that put the user first.
+            With over 4 years of experience shaping digital products, I specialize in human centered design deeply integrated with artificial intelligence. From developing comprehensive school management suites to enterprise social intranets, I've had the privilege of consistently shipping AI driven experiences that put the user first.
           </p>
           <p>
-            My core philosophy revolves around "Architectural Honesty" and distinctive, polished visual language. Good design comes from intentional pairings—not defaults. By focusing on purposeful animations, intentional variation, and establishing a clear mood, I aim to craft interfaces that are both beautiful and highly foundational.
+            My core philosophy revolves around "Architectural Honesty" and distinctive, polished visual language. Good design comes from intentional pairings, not defaults. By focusing on purposeful animations, intentional variation, and establishing a clear mood, I aim to craft interfaces that are both beautiful and highly foundational.
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export default function About() {
                   <p className="text-indigo-400 font-mono text-sm uppercase tracking-wider font-semibold">Maitsys</p>
                 </div>
                 <span className="text-white/40 font-mono text-sm tracking-wider uppercase bg-white/5 px-4 py-2 rounded-full">
-                  July 2024 — Present
+                  July 2024 to Present
                 </span>
               </div>
               <p className="text-white/70 leading-relaxed text-base md:text-lg">
@@ -78,20 +78,20 @@ export default function About() {
               <div className="flex flex-col sm:flex-row justify-between items-start mb-6 gap-4">
                 <div>
                   <h3 className="text-2xl font-medium text-white mb-2">Freelance Brand & Digital Designer</h3>
-                  <p className="text-indigo-400 font-mono text-sm uppercase tracking-wider font-semibold">Self-Employed</p>
+                  <p className="text-indigo-400 font-mono text-sm uppercase tracking-wider font-semibold">Self Employed</p>
                 </div>
                 <span className="text-white/40 font-mono text-sm tracking-wider uppercase bg-white/5 px-4 py-2 rounded-full">
-                  2019 — Present
+                  2019 to Present
                 </span>
               </div>
               <p className="text-white/70 leading-relaxed text-base md:text-lg mb-6">
-                I have been freelancing since 2019, working with startups and established businesses across industries such as granite manufacturing, food outlets, IT startups, and e-commerce brands. My focus has been on creating strong branding assets and digital design solutions that help businesses build a professional and impactful market presence.
+                I have been freelancing since 2019, working with startups and established businesses across industries such as granite manufacturing, food outlets, IT startups, and e commerce brands. My focus has been on creating strong branding assets and digital design solutions that help businesses build a professional and impactful market presence.
               </p>
               <p className="text-white/70 leading-relaxed text-base md:text-lg mb-6">
                 I collaborated closely with business owners, founders, and marketing teams to understand brand goals and transform ideas into effective visual experiences that improve customer engagement, brand visibility, and business growth.
               </p>
               <p className="text-white/70 leading-relaxed text-base md:text-lg mb-6">
-                My freelance experience spans industries including manufacturing, hospitality, food & beverage, technology, and online retail, allowing me to deliver versatile and business-focused design solutions.
+                My freelance experience spans industries including manufacturing, hospitality, food & beverage, technology, and online retail, allowing me to deliver versatile and business focused design solutions.
               </p>
               <div>
                 <h4 className="text-white/90 font-medium mb-3">Key Deliverables:</h4>
@@ -103,7 +103,7 @@ export default function About() {
                   <li className="flex items-start"><span className="text-indigo-400 mr-2">•</span> Product Presentation Decks</li>
                   <li className="flex items-start"><span className="text-indigo-400 mr-2">•</span> Investor Pitch Decks</li>
                   <li className="flex items-start"><span className="text-indigo-400 mr-2">•</span> Mobile App UI Design</li>
-                  <li className="flex items-start"><span className="text-indigo-400 mr-2">•</span> E-commerce Product Branding</li>
+                  <li className="flex items-start"><span className="text-indigo-400 mr-2">•</span> E commerce Product Branding</li>
                   <li className="flex items-start"><span className="text-indigo-400 mr-2">•</span> Brochures, Banners & Flyers</li>
                 </ul>
               </div>

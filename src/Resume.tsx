@@ -215,7 +215,7 @@ export default function Resume() {
                       </p>
                     </div>
                     <span className="inline-block px-3 py-1 rounded-full border border-white/20 text-white/60 font-mono text-sm self-start sm:self-auto">
-                      July 2024 - Present
+                      July 2024 to Present
                     </span>
                   </div>
                 </div>
@@ -251,7 +251,7 @@ export default function Resume() {
                       </p>
                     </div>
                     <span className="inline-block px-3 py-1 rounded-full border border-white/20 text-white/60 font-mono text-sm self-start sm:self-auto">
-                      2019 - Present
+                      2019 to Present
                     </span>
                   </div>
                 </div>
@@ -297,7 +297,7 @@ export default function Resume() {
                 <div className="relative group">
                   <div className="absolute w-3 h-3 bg-pink-500 rounded-full -left-[38px] md:-left-[54px] top-1.5 ring-4 ring-black shadow-[0_0_10px_rgba(236,72,153,0.5)]"></div>
                   <span className="text-pink-400 font-mono text-xs tracking-wider mb-2 block">
-                    2021 - 2023
+                    2021 to 2023
                   </span>
                   <h4 className="text-xl font-medium text-white mb-1">
                     MASTER OF COMPUTER APPLICATIONS
@@ -310,7 +310,7 @@ export default function Resume() {
                 <div className="relative group">
                   <div className="absolute w-3 h-3 bg-pink-500 rounded-full -left-[38px] md:-left-[54px] top-1.5 ring-4 ring-black shadow-[0_0_10px_rgba(236,72,153,0.5)]"></div>
                   <span className="text-pink-400 font-mono text-xs tracking-wider mb-2 block">
-                    2018 - 2021
+                    2018 to 2021
                   </span>
                   <h4 className="text-xl font-medium text-white mb-1">
                     BACHELOR OF COMPUTER APPLICATIONS
@@ -323,7 +323,7 @@ export default function Resume() {
                 <div className="relative group">
                   <div className="absolute w-3 h-3 bg-neutral-600 rounded-full -left-[38px] md:-left-[54px] top-1.5 ring-4 ring-black"></div>
                   <span className="text-neutral-400 font-mono text-xs tracking-wider mb-2 block">
-                    2017 - 2018
+                    2017 to 2018
                   </span>
                   <h4 className="text-xl font-medium text-neutral-300 mb-1">
                     HSC

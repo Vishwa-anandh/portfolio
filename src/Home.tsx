@@ -483,7 +483,7 @@ export default function Home() {
                 >
                   <div className="absolute w-4 h-4 bg-indigo-500 rounded-full -left-[8px] lg:-left-[60px] top-1.5 ring-4 ring-black shadow-[0_0_20px_rgba(99,102,241,0.8)] z-10 hidden lg:block"></div>
                   <div className="w-32 lg:w-40 shrink-0 text-white/40 font-mono pt-1 text-sm tracking-wider uppercase">
-                    July 2024 — Present
+                    July 2024 to Present
                   </div>
                   <div className="bg-neutral-900/30 border border-white/5 p-6 md:p-8 rounded-[2rem] w-full transition-colors hover:bg-neutral-900/50 hover:border-indigo-500/20">
                     <h4 className="text-3xl font-medium text-white mb-2">
