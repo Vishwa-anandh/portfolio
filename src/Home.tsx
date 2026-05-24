@@ -250,24 +250,24 @@ export default function Home() {
           {/* Floating pill-shaped navbar with liquid glass UI */}
           <header className="absolute top-4 md:top-6 left-0 right-0 z-50 px-2 md:px-4 max-w-[100vw] mx-auto w-full pointer-events-auto">
             <nav className="flex items-center justify-between gap-4">
-              {/* Center pill (hidden on mobile) */}
-              <div className="hidden md:flex items-center gap-1 liquid-glass rounded-full px-3 py-2">
+              {/* Navigation pill (visible on both mobile and desktop) */}
+              <div className="flex items-center gap-0.5 md:gap-1 liquid-glass rounded-full p-1 md:px-3 md:py-2">
                 <Link
                   to="/projects"
-                  className="text-white/80 hover:text-white transition-colors text-sm px-5 py-2 rounded-full hover:bg-white/10"
+                  className="text-white/80 hover:text-white transition-colors text-xs md:text-sm px-3 md:px-5 py-1.5 md:py-2 rounded-full hover:bg-white/10"
                 >
                   projects
                 </Link>
                 <Link
                   to="/about"
-                  className="text-white/80 hover:text-white transition-colors text-sm px-5 py-2 rounded-full hover:bg-white/10"
+                  className="text-white/80 hover:text-white transition-colors text-xs md:text-sm px-3 md:px-5 py-1.5 md:py-2 rounded-full hover:bg-white/10"
                 >
                   about
                 </Link>
                 <a
                   href="#contact"
                   onClick={(e) => handleScrollTo(e, 'contact')}
-                  className="text-white/80 hover:text-white transition-colors text-sm px-5 py-2 rounded-full hover:bg-white/10"
+                  className="text-white/80 hover:text-white transition-colors text-xs md:text-sm px-3 md:px-5 py-1.5 md:py-2 rounded-full hover:bg-white/10"
                 >
                   contact
                 </a>
@@ -276,7 +276,7 @@ export default function Home() {
               {/* Right button */}
               <button 
                 onClick={(e) => handleScrollTo(e, 'contact')}
-                className="liquid-glass text-white text-sm font-normal rounded-full px-6 py-3 hover:bg-white/20 transition-all hover:scale-105"
+                className="liquid-glass text-white text-xs md:text-sm font-normal rounded-full px-4 md:px-6 py-2.5 md:py-3 hover:bg-white/20 transition-all hover:scale-105"
               >
                 let's talk
               </button>
