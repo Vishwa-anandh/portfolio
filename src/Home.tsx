@@ -17,21 +17,18 @@ export default function Home() {
   const imagesRef = useRef<HTMLImageElement[]>([]);
   
   useEffect(() => {
-    const loadedImages: HTMLImageElement[] = [];
-    let loadedCount = 0;
+    const loadedImages: HTMLImageElement[] = new Array(frameCount);
     
-    // Draw the first frame specifically once it loads to guarantee sizing
-    const firstImg = new Image();
+    // Create image objects without setting src to defer network load
+    for (let i = 0; i < frameCount; i++) {
+      loadedImages[i] = new Image();
+    }
+    imagesRef.current = loadedImages;
+
+    // Load and draw the critical first frame immediately
+    const firstImg = loadedImages[0];
     const frameNumber = '000';
     firstImg.src = `/sequence/frame_${frameNumber}_delay-0.067s.webp`;
-    
-    const checkComplete = () => {
-      loadedCount++;
-      // If by some chance this is the last loaded
-      if (loadedCount === frameCount) {
-         imagesRef.current = [...loadedImages];
-      }
-    };
     
     firstImg.onload = () => {
       if (canvasRef.current) {
@@ -46,21 +43,95 @@ export default function Home() {
           }
         }
       }
-      checkComplete();
+      // Start downloading the remaining frames in a staged background queue
+      startStagedLoading();
     };
-    firstImg.onerror = checkComplete;
-    loadedImages.push(firstImg);
-
-    for (let i = 1; i < frameCount; i++) {
-      const img = new Image();
-      const fn = i.toString().padStart(3, '0');
-      img.src = `/sequence/frame_${fn}_delay-0.067s.webp`;
-      img.onload = checkComplete;
-      img.onerror = checkComplete;
-      loadedImages.push(img);
-    }
     
-    imagesRef.current = loadedImages;
+    firstImg.onerror = () => {
+      startStagedLoading();
+    };
+
+    const startStagedLoading = () => {
+      const groups: number[][] = [];
+      
+      // Stage 1: Critical early frames (1 to 40) for immediate scrolling response
+      const stage1: number[] = [];
+      for (let i = 1; i <= 40; i++) {
+        stage1.push(i);
+      }
+      groups.push(stage1);
+      
+      // Stage 2: Coarse interlaced timeline (every 4th frame) to cover full scroll range quickly
+      const stage2: number[] = [];
+      for (let i = 44; i < frameCount; i += 4) {
+        stage2.push(i);
+      }
+      groups.push(stage2);
+      
+      // Stage 3: Medium interlaced timeline (every 2nd frame)
+      const stage3: number[] = [];
+      for (let i = 42; i < frameCount; i += 4) {
+        stage3.push(i);
+      }
+      groups.push(stage3);
+      
+      // Stage 4: Fine details (all remaining odd frames)
+      const stage4: number[] = [];
+      for (let i = 41; i < frameCount; i += 2) {
+        stage4.push(i);
+      }
+      groups.push(stage4);
+
+      const loadQueue = groups.flat();
+      
+      // Batch download with max concurrency of 6 to avoid network/thread congestion
+      const maxConcurrency = 6;
+      let queueIndex = 0;
+      
+      const loadNext = () => {
+        if (queueIndex >= loadQueue.length) return;
+        
+        const frameIndex = loadQueue[queueIndex++];
+        const img = loadedImages[frameIndex];
+        
+        const handleImageLoad = () => {
+          // Immediately schedule next request
+          loadNext();
+          
+          // Redraw current frame immediately if the user is currently viewing it
+          if (canvasRef.current && containerRef.current) {
+            const rect = containerRef.current.getBoundingClientRect();
+            const maxScroll = rect.height - window.innerHeight;
+            if (maxScroll > 0) {
+              let progress = -rect.top / maxScroll;
+              progress = Math.min(Math.max(progress, 0), 1);
+              let frameProgress = progress / 0.85;
+              frameProgress = Math.min(Math.max(frameProgress, 0), 1);
+              const currentIndex = Math.min(Math.max(Math.floor(frameProgress * (frameCount - 1)), 0), frameCount - 1);
+              
+              if (currentIndex === frameIndex) {
+                const ctx = canvasRef.current.getContext('2d');
+                if (ctx && img.complete && img.naturalWidth > 0) {
+                  ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+                  ctx.drawImage(img, 0, 0, canvasRef.current.width, canvasRef.current.height);
+                }
+              }
+            }
+          }
+        };
+        
+        img.onload = handleImageLoad;
+        img.onerror = handleImageLoad;
+        
+        // Start network request
+        const fn = frameIndex.toString().padStart(3, '0');
+        img.src = `/sequence/frame_${fn}_delay-0.067s.webp`;
+      };
+      
+      for (let i = 0; i < Math.min(maxConcurrency, loadQueue.length); i++) {
+        loadNext();
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -77,7 +148,6 @@ export default function Home() {
       const rect = containerRef.current.getBoundingClientRect();
       const maxScroll = rect.height - window.innerHeight;
       
-      // Calculate progress of container avoiding division by zero
       if (maxScroll <= 0) return;
       
       let progress = -rect.top / maxScroll;
@@ -85,14 +155,32 @@ export default function Home() {
       
       scrollProg.set(progress);
 
-      // map [0, 0.85] -> [0, 1]
       let frameProgress = progress / 0.85;
       frameProgress = Math.min(Math.max(frameProgress, 0), 1);
 
       const index = Math.min(Math.max(Math.floor(frameProgress * (frameCount - 1)), 0), frameCount - 1);
       
-      const img = imagesRef.current[index];
+      let img = imagesRef.current[index];
       const ctx = canvasRef.current.getContext('2d');
+      
+      // Nearest loaded frame fallback to prevent blank frames or freezes during scrolling
+      if (img && (!img.complete || img.naturalWidth === 0)) {
+        let nearestImg = null;
+        let minDiff = Infinity;
+        for (let i = 0; i < imagesRef.current.length; i++) {
+          const tempImg = imagesRef.current[i];
+          if (tempImg && tempImg.complete && tempImg.naturalWidth > 0) {
+            const diff = Math.abs(i - index);
+            if (diff < minDiff) {
+              minDiff = diff;
+              nearestImg = tempImg;
+            }
+          }
+        }
+        if (nearestImg) {
+          img = nearestImg;
+        }
+      }
       
       if (ctx && img && img.complete && img.naturalWidth > 0) {
         ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
