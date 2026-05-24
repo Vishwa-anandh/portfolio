@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Background3D } from "./components/Background3D";
 
 export default function About() {
@@ -10,6 +11,11 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-transparent text-white font-sans w-full selection:bg-indigo-500/30 pb-24 relative">
+      <Helmet>
+        <title>About | Vishwa Anandh — AI UI/UX & Product Designer</title>
+        <meta name="description" content="Learn more about Vishwa Anandh, a passionate UI/UX Designer who thrives on creating intuitive, AI-driven digital experiences." />
+        <meta name="keywords" content="About, UI/UX, Product Designer, Experience, Background, Vishwa Anandh" />
+      </Helmet>
       <div className="fixed inset-0 z-[-2] bg-black"></div>
       <Background3D />
       <div className="relative z-10 block">
@@ -35,7 +41,7 @@ export default function About() {
             Hello! I'm Vishwa Anandh, a passionate UI/UX Designer who thrives on smoothing out complex user interfaces, translating intricate ideas into intuitive UI designs, and creating delightful user interactions. 
           </p>
           <p>
-            With over 10 years of experience shaping digital products, I specialize in human-centered design deeply integrated with artificial intelligence. From developing comprehensive school management suites to enterprise social intranets, I've had the privilege of consistently shipping AI-driven experiences that put the user first.
+            With over 4 years of experience shaping digital products, I specialize in human-centered design deeply integrated with artificial intelligence. From developing comprehensive school management suites to enterprise social intranets, I've had the privilege of consistently shipping AI-driven experiences that put the user first.
           </p>
           <p>
             My core philosophy revolves around "Architectural Honesty" and distinctive, polished visual language. Good design comes from intentional pairings—not defaults. By focusing on purposeful animations, intentional variation, and establishing a clear mood, I aim to craft interfaces that are both beautiful and highly foundational.

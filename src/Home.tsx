@@ -2,6 +2,7 @@ import { useEffect, useRef, MouseEvent } from "react";
 import { motion, useMotionValue, useTransform } from "motion/react";
 import Lenis from "lenis";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { projects } from "./data/projects";
 import { Background3D } from "./components/Background3D";
 
@@ -138,6 +139,11 @@ export default function Home() {
 
   return (
     <div className="w-full bg-transparent font-sans min-h-screen relative z-0">
+      <Helmet>
+        <title>Vishwa Anandh — AI UI/UX & Product Designer</title>
+        <meta name="description" content="Portfolio of Vishwa Anandh, a passionate UI/UX Designer crafting human-centered digital products integrated with artificial intelligence." />
+        <meta name="keywords" content="UI/UX, Product Design, Portfolio, AI Integration, Web Design, Figma, Vishwa Anandh" />
+      </Helmet>
       <div className="fixed inset-0 z-[-2] bg-black"></div>
       <div className="fixed inset-0 z-[-1]">
         <Background3D />

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Background3D } from "./components/Background3D";
 
 export default function Resume() {
@@ -40,6 +41,11 @@ export default function Resume() {
 
   return (
     <div className="min-h-screen bg-transparent text-white font-sans selection:bg-indigo-500/30 pb-24 relative">
+      <Helmet>
+        <title>Resume | Vishwa Anandh — AI UI/UX & Product Designer</title>
+        <meta name="description" content="View the professional resume of Vishwa Anandh, detailing UI/UX expertise, key product experiences, and core competencies." />
+        <meta name="keywords" content="Resume, CV, UI/UX Design, Experience, Education, Vishwa Anandh" />
+      </Helmet>
       <div className="fixed inset-0 z-[-2] bg-black"></div>
       <Background3D />
       <div className="relative z-10 block">
