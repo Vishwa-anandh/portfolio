@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { projects } from "./data/projects";
 import { Background3D } from "./components/Background3D";
+import ImpactSection from "./components/ui/impact-section";
+import { ToolsKnown } from './components/ToolsKnown';
+import { LetsTalk } from "./components/LetsTalk";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -26,8 +29,8 @@ export default function Home() {
     imagesRef.current = loadedImages;
 
     // Load and draw the critical first frame immediately
-    const firstImg = loadedImages[0];
-    const frameNumber = '000';
+    const firstImg = loadedImages[100];
+    const frameNumber = '100';
     firstImg.src = `/sequence/frame_${frameNumber}_delay-0.067s.webp`;
     
     firstImg.onload = () => {
@@ -54,30 +57,34 @@ export default function Home() {
     const startStagedLoading = () => {
       const groups: number[][] = [];
       
-      // Stage 1: Critical early frames (1 to 40) for immediate scrolling response
+      // Stage 1: Critical early frames (101 to 140) for immediate scrolling response
       const stage1: number[] = [];
-      for (let i = 1; i <= 40; i++) {
+      for (let i = 101; i <= 140; i++) {
         stage1.push(i);
       }
       groups.push(stage1);
       
       // Stage 2: Coarse interlaced timeline (every 4th frame) to cover full scroll range quickly
       const stage2: number[] = [];
-      for (let i = 44; i < frameCount; i += 4) {
+      for (let i = 144; i < frameCount; i += 4) {
         stage2.push(i);
       }
       groups.push(stage2);
       
       // Stage 3: Medium interlaced timeline (every 2nd frame)
       const stage3: number[] = [];
-      for (let i = 42; i < frameCount; i += 4) {
+      for (let i = 142; i < frameCount; i += 4) {
         stage3.push(i);
       }
       groups.push(stage3);
       
       // Stage 4: Fine details (all remaining odd frames)
       const stage4: number[] = [];
-      for (let i = 41; i < frameCount; i += 2) {
+      for (let i = 141; i < frameCount; i += 2) {
+        stage4.push(i);
+      }
+      // Fill in previous frames just in case
+      for (let i = 0; i < 100; i++) {
         stage4.push(i);
       }
       groups.push(stage4);
@@ -107,7 +114,8 @@ export default function Home() {
               progress = Math.min(Math.max(progress, 0), 1);
               let frameProgress = progress / 0.85;
               frameProgress = Math.min(Math.max(frameProgress, 0), 1);
-              const currentIndex = Math.min(Math.max(Math.floor(frameProgress * (frameCount - 1)), 0), frameCount - 1);
+              const startIndex = 100;
+              const currentIndex = Math.min(Math.max(Math.floor(startIndex + frameProgress * (frameCount - 1 - startIndex)), 0), frameCount - 1);
               
               if (currentIndex === frameIndex) {
                 const ctx = canvasRef.current.getContext('2d');
@@ -158,7 +166,8 @@ export default function Home() {
       let frameProgress = progress / 0.85;
       frameProgress = Math.min(Math.max(frameProgress, 0), 1);
 
-      const index = Math.min(Math.max(Math.floor(frameProgress * (frameCount - 1)), 0), frameCount - 1);
+      const startIndex = 100;
+      const index = Math.min(Math.max(Math.floor(startIndex + frameProgress * (frameCount - 1 - startIndex)), 0), frameCount - 1);
       
       let img = imagesRef.current[index];
       const ctx = canvasRef.current.getContext('2d');
@@ -264,13 +273,7 @@ export default function Home() {
                 >
                   about
                 </Link>
-                <a
-                  href="#contact"
-                  onClick={(e) => handleScrollTo(e, 'contact')}
-                  className="text-white/80 hover:text-white transition-colors text-xs md:text-sm px-3 md:px-5 py-1.5 md:py-2 rounded-full hover:bg-white/10"
-                >
-                  contact
-                </a>
+
               </div>
 
               {/* Right button */}
@@ -350,87 +353,17 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Bottom gradient overlay */}
-          <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black to-transparent z-20" />
+          {/* Bottom gradient overlay removed */}
         </section>
       </div>
 
       {/* Scrollable Content Below Hero */}
       <div className="relative z-30 bg-transparent w-full pb-16 md:pb-32" id="work">
         <div className="max-w-7xl mx-auto px-2 md:px-4 xl:px-0 py-16 md:py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-10%" }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
-          >
-            <div className="flex items-center justify-between mb-8 md:mb-12">
-            <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-white mix-blend-plus-lighter">
-              Selected Work
-            </h2>
-            <Link
-              to="/projects"
-              className="hidden md:flex items-center gap-2 text-white/50 hover:text-white transition-colors font-mono uppercase tracking-wider text-sm under"
-            >
-              View All <span aria-hidden="true">&rarr;</span>
-            </Link>
-          </div>
-          </motion.div>
 
-          {/* Case Studies Carousel */}
-          <div className="relative group/carousel -mx-4 md:-mx-8 xl:-mx-0 px-4 md:px-8 xl:px-0 mb-16 md:mb-24">
-            <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pt-6 pb-12" style={{ scrollBehavior: 'smooth' }}>
-              {projects.map((project, index) => {
-                const cardHoverStyles = [
-                  "hover:shadow-[0_30px_80px_rgba(34,197,94,0.15)] hover:border-green-500/40",
-                  "hover:shadow-[0_30px_80px_rgba(255,255,255,0.1)] hover:border-white/40",
-                  "hover:shadow-[0_30px_80px_rgba(79,70,229,0.25)] hover:border-indigo-500/40",
-                  "hover:shadow-[0_30px_80px_rgba(59,130,246,0.2)] hover:border-blue-500/40"
-                ];
-                const hoverStyle = cardHoverStyles[index % cardHoverStyles.length];
-
-                return (
-                  <motion.div
-                    key={project.id}
-                    className="shrink-0 w-[85vw] md:w-[65vw] lg:w-[55vw] snap-center first:ml-0 md:first:ml-0 lg:first:ml-0 last:mr-4"
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-10%" }}
-                    transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
-                  >
-                    <Link
-                      to={`/projects/${project.id}`}
-                      className={`group relative block w-full aspect-[4/3] md:aspect-[16/9] bg-neutral-900/40 rounded-[2.5rem] overflow-hidden cursor-pointer transition-all duration-700 hover:-translate-y-3 hover:scale-[1.02] border border-white/5 ${hoverStyle}`}
-                    >
-                      <img
-                        src={project.img}
-                        alt={`${project.name} thumbnail`}
-                        className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-75 group-hover:scale-110 transition-all duration-700 ease-out grayscale group-hover:grayscale-0"
-                      />
-                      <div className="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-black via-black/60 to-transparent flex flex-col justify-end p-8 md:p-12 transition-opacity duration-500"></div>
-                      <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 z-10 pointer-events-none">
-                        <div className="transform transition-all duration-500 ease-out translate-y-4 group-hover:-translate-y-2 group-hover:translate-y-0">
-                          <span className="inline-block px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white font-mono text-[10px] md:text-xs mb-3 tracking-wide backdrop-blur-md uppercase">
-                            {project.type}
-                          </span>
-                          <h3 className="text-2xl md:text-4xl text-white font-medium mb-2 tracking-tight">
-                            {project.name}
-                          </h3>
-                          <p className="text-white/60 max-w-xl line-clamp-2 text-xs md:text-sm opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                            {project.description}
-                          </p>
-                        </div>
-                      </div>
-                    </Link>
-                  </motion.div>
-                );
-              })}
-            </div>
-            
-            <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 pointer-events-none hidden md:flex justify-between px-2 xl:-mx-8">
-              <div className="w-16 h-full bg-gradient-to-r from-[#f7f8fc] dark:from-neutral-950 to-transparent absolute left-0 top-0"></div>
-              <div className="w-16 h-full bg-gradient-to-l from-[#f7f8fc] dark:from-neutral-950 to-transparent absolute right-0 top-0"></div>
-            </div>
+          {/* Case Studies Accordion (Impact Section) */}
+          <div className="relative mb-16 md:mb-24 w-full">
+            <ImpactSection projects={projects} />
           </div>
 
           {/* Resume / Experience Section */}
@@ -501,102 +434,26 @@ export default function Home() {
             </div>
           </motion.div>
 
+          {/* Tools Known Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-10%" }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
+            className="pt-16 md:pt-32 border-t border-white/10 mt-16 md:mt-32"
+          >
+            <ToolsKnown />
+          </motion.div>
+
           {/* Contact Section */}
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20%" }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
-            id="contact"
             className="pt-16 md:pt-32 pb-24 border-t border-white/10 mt-16 md:mt-32"
           >
-            <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
-              <div className="w-full lg:w-1/3 sticky top-32">
-                <h2 className="text-5xl lg:text-6xl font-medium tracking-tight text-white mb-6 mix-blend-plus-lighter">
-                  Let's Talk
-                </h2>
-                <p className="text-white/60 leading-relaxed text-lg mb-8">
-                  Interested in working together or have a question? Send me a
-                  message.
-                </p>
-                <div className="flex flex-col gap-4 text-white/50 font-mono text-sm">
-                  <p className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-neutral-400 animate-pulse"></span>
-                    Available for work
-                  </p>
-                  <p className="hover:text-white transition-colors cursor-pointer w-max">
-                    Anandhvishwa12@gmail.com
-                  </p>
-                </div>
-              </div>
-
-              <div className="w-full lg:w-2/3 bg-neutral-900/20 border border-white/5 p-8 md:p-12 rounded-[2.5rem]">
-                <form
-                  action="mailto:Anandhvishwa12@gmail.com"
-                  method="POST"
-                  encType="text/plain"
-                  className="flex flex-col gap-10"
-                >
-                  <div className="flex flex-col gap-4">
-                    <label
-                      htmlFor="name"
-                      className="text-sm font-mono text-white/40 uppercase tracking-widest pl-2"
-                    >
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white text-xl focus:outline-none focus:border-indigo-500 focus:bg-white/10 transition-all placeholder:text-white/20"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-4">
-                    <label
-                      htmlFor="email"
-                      className="text-sm font-mono text-white/40 uppercase tracking-widest pl-2"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white text-xl focus:outline-none focus:border-indigo-500 focus:bg-white/10 transition-all placeholder:text-white/20"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-4">
-                    <label
-                      htmlFor="message"
-                      className="text-sm font-mono text-white/40 uppercase tracking-widest pl-2"
-                    >
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      rows={5}
-                      className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white text-xl focus:outline-none focus:border-indigo-500 focus:bg-white/10 transition-all resize-none placeholder:text-white/20"
-                      placeholder="Tell me about your project..."
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="mt-4 px-10 py-5 rounded-full bg-white text-black hover:bg-neutral-200 hover:scale-105 transition-all font-medium self-start text-lg shadow-[0_0_20px_rgba(255,255,255,0.1)] flex items-center gap-3"
-                  >
-                    <span>Send Message</span>
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </button>
-                </form>
-              </div>
-            </div>
+            <LetsTalk />
           </motion.div>
         </div>
       </div>

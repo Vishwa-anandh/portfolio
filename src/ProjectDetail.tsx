@@ -41,7 +41,7 @@ export default function ProjectDetail() {
 
   if (project.id === 0) {
     return (
-      <div className="min-h-screen bg-neutral-950 font-sans w-full selection:bg-blue-500/30 pb-24 text-neutral-300">
+      <div className="min-h-screen bg-neutral-950 font-sans w-full selection:bg-blue-500/100/30 pb-24 text-neutral-300">
         <Helmet>
           <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
           <meta name="description" content={project.detailedDescription || project.description} />
@@ -78,7 +78,7 @@ export default function ProjectDetail() {
 
   if (project.id === 1) {
     return (
-      <div className="min-h-screen bg-neutral-950 font-sans w-full selection:bg-neutral-500/30 pb-24 text-neutral-300">
+      <div className="min-h-screen bg-neutral-950 font-sans w-full selection:bg-neutral-800/500/30 pb-24 text-neutral-300">
         <Helmet>
           <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
           <meta name="description" content={project.detailedDescription || project.description} />
@@ -115,7 +115,7 @@ export default function ProjectDetail() {
 
   if (project.id === 2) {
     return (
-      <div className="min-h-screen bg-neutral-950 font-sans w-full selection:bg-emerald-500/30 pb-24 text-neutral-300">
+      <div className="min-h-screen bg-neutral-950 font-sans w-full selection:bg-emerald-500/100/30 pb-24 text-neutral-300">
         <Helmet>
           <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
           <meta name="description" content={project.detailedDescription || project.description} />
@@ -152,7 +152,7 @@ export default function ProjectDetail() {
 
   if (project.id === 3) {
     return (
-      <div className="min-h-screen bg-neutral-950 font-sans w-full selection:bg-purple-500/30 pb-24 text-neutral-300">
+      <div className="min-h-screen bg-neutral-950 font-sans w-full selection:bg-purple-500/100/30 pb-24 text-neutral-300">
         <Helmet>
           <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
           <meta name="description" content={project.detailedDescription || project.description} />
@@ -189,7 +189,7 @@ export default function ProjectDetail() {
 
   if (project.id === 4) {
     return (
-      <div className="min-h-screen bg-white dark:bg-neutral-950 font-sans w-full selection:bg-indigo-500/30 pb-24 text-neutral-800 dark:text-neutral-300">
+      <div className="min-h-screen bg-neutral-900 dark:bg-neutral-950 font-sans w-full selection:bg-indigo-500/100/30 pb-24 text-neutral-800 dark:text-neutral-300">
         <Helmet>
           <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
           <meta name="description" content={project.detailedDescription || project.description} />
@@ -206,7 +206,7 @@ export default function ProjectDetail() {
           <EducourseCaseStudy project={project} />
           
           {/* Next Project / Footer Nav */}
-          <div className="mt-32 pt-16 border-t border-black/5 dark:border-white/10 text-center pb-12">
+          <div className="mt-32 pt-16 border-t border-white/5 dark:border-white/10 text-center pb-12">
             <h3 className="text-neutral-500 text-sm font-mono uppercase tracking-widest mb-6">
               Next Project
             </h3>
@@ -226,7 +226,7 @@ export default function ProjectDetail() {
 
   if (project.id === 5) {
     return (
-      <div className="min-h-screen bg-white dark:bg-neutral-950 font-sans w-full selection:bg-teal-500/30 pb-24 text-neutral-800 dark:text-neutral-300">
+      <div className="min-h-screen bg-neutral-900 dark:bg-neutral-950 font-sans w-full selection:bg-teal-500/30 pb-24 text-neutral-800 dark:text-neutral-300">
         <Helmet>
           <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
           <meta name="description" content={project.detailedDescription || project.description} />
@@ -243,7 +243,7 @@ export default function ProjectDetail() {
           <LoopHRCaseStudy project={project} />
           
           {/* Next Project / Footer Nav */}
-          <div className="mt-32 pt-16 border-t border-black/5 dark:border-white/10 text-center pb-12">
+          <div className="mt-32 pt-16 border-t border-white/5 dark:border-white/10 text-center pb-12">
             <h3 className="text-neutral-500 text-sm font-mono uppercase tracking-widest mb-6">
               Next Project
             </h3>
@@ -300,7 +300,7 @@ export default function ProjectDetail() {
 
   if (project.id === 7) {
     return (
-      <div className="min-h-screen bg-[#f7f8fc] dark:bg-neutral-950 font-sans w-full selection:bg-indigo-500/30 pb-24 text-neutral-800 dark:text-neutral-300">
+      <div className="min-h-screen bg-[#f7f8fc] dark:bg-neutral-950 font-sans w-full selection:bg-indigo-500/100/30 pb-24 text-neutral-800 dark:text-neutral-300">
         <Helmet>
           <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
           <meta name="description" content={project.detailedDescription || project.description} />
@@ -317,7 +317,7 @@ export default function ProjectDetail() {
           <P14CaseStudy project={project} />
           
           {/* Next Project / Footer Nav */}
-          <div className="mt-32 pt-16 border-t border-black/5 dark:border-white/10 text-center pb-12">
+          <div className="mt-32 pt-16 border-t border-white/5 dark:border-white/10 text-center pb-12">
             <h3 className="text-neutral-500 text-sm font-mono uppercase tracking-widest mb-6">
               Next Project
             </h3>
@@ -346,7 +346,7 @@ export default function ProjectDetail() {
         <div className="w-full relative z-50">
           <Link
             to="/projects"
-            className="fixed top-8 left-8 z-50 inline-flex items-center gap-2 px-4 py-2 bg-black/60 backdrop-blur-md text-white/90 hover:bg-black/80 hover:text-white rounded-full transition-colors font-mono text-sm border border-white/10 shadow-2xl underline-offset-4"
+            className="fixed top-8 left-8 z-50 inline-flex items-center gap-2 px-4 py-2 bg-black/60 backdrop-blur-md text-white/90 hover:bg-black/80 hover:text-white rounded-full transition-colors font-mono text-sm border border-white/10 shadow-2xl shadow-black/50 underline-offset-4"
           >
             <span>← Back to Projects</span>
           </Link>
@@ -372,7 +372,7 @@ export default function ProjectDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans w-full selection:bg-indigo-500/30">
+    <div className="min-h-screen bg-black text-white font-sans w-full selection:bg-indigo-500/100/30">
       <Helmet>
         <title>{`${project.name} - ${project.type} | Vishwa Anandh`}</title>
         <meta name="description" content={project.detailedDescription || project.description} />
@@ -405,7 +405,7 @@ export default function ProjectDetail() {
             </div>
 
             {/* Meta Info Sidebar */}
-            <div className="w-full lg:w-1/3 flex flex-col gap-8 bg-white/5 border border-white/10 rounded-3xl p-8">
+            <div className="w-full lg:w-1/3 flex flex-col gap-8 bg-neutral-900/5 border border-white/10 rounded-3xl p-8">
               {project.role && (
                 <div>
                   <h3 className="text-xs uppercase tracking-widest text-white/40 mb-2 font-mono">
@@ -431,7 +431,7 @@ export default function ProjectDetail() {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-white/10 rounded-full text-sm text-white/80"
+                        className="px-3 py-1 bg-neutral-900/10 rounded-full text-sm text-white/80"
                       >
                         {tech}
                       </span>
@@ -444,7 +444,7 @@ export default function ProjectDetail() {
         </header>
 
         {/* Main Image */}
-        <div className="w-full aspect-video md:aspect-[21/9] rounded-[2rem] overflow-hidden mb-16 border border-white/5 shadow-2xl">
+        <div className="w-full aspect-video md:aspect-[21/9] rounded-[2rem] overflow-hidden mb-16 border border-white/5 shadow-2xl shadow-black/50">
           <img
             src={project.img}
             alt={project.name}
@@ -469,7 +469,7 @@ export default function ProjectDetail() {
                   {section.images.map((imgUrl, i) => (
                     <div
                       key={i}
-                      className={`w-full rounded-2xl md:rounded-[2rem] overflow-hidden border border-white/10 bg-neutral-900 shadow-2xl ${
+                      className={`w-full rounded-2xl md:rounded-[2rem] overflow-hidden border border-white/10 bg-neutral-900 shadow-2xl shadow-black/50 ${
                         section.images.length === 3 && i === 2 ? 'md:col-span-2' : ''
                       }`}
                     >

@@ -13,8 +13,8 @@ function ZoomableImage({ src, alt, onClick }: { src: string, alt: string, onClic
          alt={alt} 
          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
        />
-       <div className="absolute inset-0 bg-indigo-500/0 group-hover:bg-indigo-500/10 transition-colors duration-300 flex items-center justify-center">
-         <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-black/50 backdrop-blur-md text-white text-sm px-4 py-2 rounded-full border border-white/10">
+       <div className="absolute inset-0 bg-indigo-500/100/0 group-hover:bg-indigo-500/100/10 transition-colors duration-300 flex items-center justify-center">
+         <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-neutral-900/50 backdrop-blur-md text-white text-sm px-4 py-2 rounded-full border border-white/5">
            View Fullscreen
          </div>
        </div>
@@ -24,7 +24,7 @@ function ZoomableImage({ src, alt, onClick }: { src: string, alt: string, onClic
 
 function PhoneMockup({ src, alt }: { src: string, alt: string }) {
   return (
-    <div className="relative w-full max-w-[320px] mx-auto overflow-hidden rounded-[2.5rem] md:rounded-[3rem] border-[6px] md:border-[8px] border-neutral-900 bg-neutral-950 shadow-2xl">
+    <div className="relative w-full max-w-[320px] mx-auto overflow-hidden rounded-[2.5rem] md:rounded-[3rem] border-[6px] md:border-[8px] border-neutral-900 bg-neutral-950 shadow-2xl shadow-black/50">
        <div className="absolute top-0 inset-x-0 h-6 bg-neutral-900 z-20 flex justify-center rounded-b-xl max-w-[150px] mx-auto blur-[1px]"></div>
        <img src={src} alt={alt} className="w-full h-auto relative z-10" />
     </div>
@@ -63,18 +63,18 @@ function HeroDashboardMockup({ children, className = "" }: { children: React.Rea
           style={{ transform: "translateZ(-150px)" }}
         />
         <div 
-          className="relative rounded-2xl md:rounded-[1.5rem] overflow-hidden bg-neutral-950 border border-white/10 flex flex-col z-10"
+          className="relative rounded-2xl md:rounded-[1.5rem] overflow-hidden bg-neutral-950 border border-white/5 flex flex-col z-10"
           style={{ boxShadow: '0 40px 80px -20px rgba(0,0,0,1), 0 0 0 1px rgba(255,255,255,0.05) inset' }}
         >
-          <div className="h-9 md:h-12 border-b border-white/10 bg-[#0e0e0e] flex items-center px-3 md:px-5 gap-4">
+          <div className="h-9 md:h-12 border-b border-white/5 bg-[#0e0e0e] flex items-center px-3 md:px-5 gap-4">
             <div className="flex gap-1.5 md:gap-2">
               <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-rose-500/80"></div>
               <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-amber-500/80"></div>
-              <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-indigo-500/80"></div>
+              <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-indigo-500/100/80"></div>
             </div>
             
             <div className="flex-grow flex justify-center">
-               <div className="w-full max-w-sm h-6 md:h-7 bg-white/5 border border-white/5 rounded-md flex items-center justify-center gap-2 px-3 shadow-inner">
+               <div className="w-full max-w-sm h-6 md:h-7 bg-neutral-900/5 border border-white/5 rounded-md flex items-center justify-center gap-2 px-3 shadow-inner">
                  <svg className="w-3 h-3 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                  <span className="text-[10px] md:text-xs text-white/40 font-mono tracking-wide">payroll.dashboard.app</span>
                </div>
@@ -144,11 +144,11 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
                transition={{ type: "spring", stiffness: 300, damping: 30 }}
                src={fullscreenImage.src} 
                alt={fullscreenImage.alt}
-               className="max-w-full max-h-full object-contain rounded-lg rounded-xl shadow-2xl"
+               className="max-w-full max-h-full object-contain rounded-lg rounded-xl shadow-2xl shadow-black/50"
                onClick={(e) => e.stopPropagation()} // Prevent clicking image from closing if we wanted, but zoom out on image click is nice
             />
             <button 
-              className="absolute top-6 right-6 md:top-8 md:right-8 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors backdrop-blur-md border border-white/10"
+              className="absolute top-6 right-6 md:top-8 md:right-8 w-12 h-12 bg-neutral-900/10 hover:bg-neutral-900/20 rounded-full flex items-center justify-center text-white transition-colors backdrop-blur-md border border-white/5"
               onClick={() => setFullscreenImage(null)}
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -170,16 +170,16 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
                 A unified shift tracking and automated payroll platform designed to manage workforces effortlessly. Bridging the gap between staff mobile presence and enterprise administrative overview.
               </p>
               
-              <div className="flex flex-wrap gap-8 md:gap-16 pt-8 border-t border-white/10">
+              <div className="flex flex-wrap gap-8 md:gap-16 pt-8 border-t border-white/5">
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-neutral-500 mb-2 font-mono">Platform</p>
+                  <p className="text-xs uppercase tracking-widest text-white/50 mb-2 font-mono">Platform</p>
                   <p className="text-lg text-white font-medium flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
                     Web Dashboard
                   </p>
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-neutral-500 mb-2 font-mono">Timeline</p>
+                  <p className="text-xs uppercase tracking-widest text-white/50 mb-2 font-mono">Timeline</p>
                   <p className="text-lg text-white font-medium flex items-center gap-2">
                     Dec 2024
                   </p>
@@ -215,7 +215,7 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
               <motion.div variants={itemVariants} className="space-y-8">
                 <h4 className="text-3xl md:text-4xl text-white font-medium">Navigating shift chaos.</h4>
-                <div className="space-y-6 text-neutral-400 text-lg font-light leading-relaxed">
+                <div className="space-y-6 text-white/60 text-lg font-light leading-relaxed">
                   <p>
                     Shift-based businesses struggle with tracking staff attendance, managing branch rosters, and correctly processing end-of-month payouts. Traditional solutions are paper-based or rely on cumbersome spreadsheets, leading to lost hours and payroll disputes.
                   </p>
@@ -224,28 +224,28 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
                   </p>
                 </div>
               </motion.div>
-              <motion.div variants={itemVariants} className="bg-white/5 rounded-3xl p-8 md:p-12 border border-white/10 flex flex-col justify-center">
+              <motion.div variants={itemVariants} className="bg-neutral-900/5 rounded-3xl p-8 md:p-12 border border-white/5 flex flex-col justify-center">
                  <h5 className="text-xl font-medium text-white mb-6">Core Demands</h5>
                  <ul className="space-y-6">
                    <li className="flex gap-4">
                      <span className="text-indigo-400 text-xl">01</span>
                      <div>
                        <strong className="text-white block mb-1">Dual-Sided UX</strong>
-                       <span className="text-neutral-500 text-sm">Consumer-grade mobile interface for staff alongside an enterprise-dense admin dashboard.</span>
+                       <span className="text-white/50 text-sm">Consumer-grade mobile interface for staff alongside an enterprise-dense admin dashboard.</span>
                      </div>
                    </li>
                    <li className="flex gap-4">
                      <span className="text-indigo-400 text-xl">02</span>
                      <div>
                        <strong className="text-white block mb-1">Frictionless Check-Ins</strong>
-                       <span className="text-neutral-500 text-sm">QR Code and fast workflow actions for starting and ending shifts seamlessly.</span>
+                       <span className="text-white/50 text-sm">QR Code and fast workflow actions for starting and ending shifts seamlessly.</span>
                      </div>
                    </li>
                    <li className="flex gap-4">
                      <span className="text-indigo-400 text-xl">03</span>
                      <div>
                        <strong className="text-white block mb-1">Data Consolidation</strong>
-                       <span className="text-neutral-500 text-sm">Aggregating multiple branches, admins, and staffs into a clear financial reporting view.</span>
+                       <span className="text-white/50 text-sm">Aggregating multiple branches, admins, and staffs into a clear financial reporting view.</span>
                      </div>
                    </li>
                  </ul>
@@ -260,10 +260,10 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16">
               <motion.div variants={itemVariants} className="lg:col-span-5 flex flex-col justify-center">
                  <h4 className="text-3xl font-medium tracking-tight mb-6 text-white">Empowering the Frontline</h4>
-                 <p className="text-neutral-400 font-light leading-relaxed mb-8">
+                 <p className="text-white/60 font-light leading-relaxed mb-8">
                    For staff members, the mobile app acts as their primary interface to the company. The design eliminates unnecessary clutter, focusing on the immediate daily actions: scanning into a shift, checking today's roster, and reviewing personal earnings history. 
                  </p>
-                 <p className="text-neutral-400 font-light leading-relaxed">
+                 <p className="text-white/60 font-light leading-relaxed">
                    Using clear typographic hierarchy and bold call-to-action buttons, the mobile experience is designed for high-contrast usability, whether indoors or outdoors.
                  </p>
               </motion.div>
@@ -281,27 +281,27 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
             <motion.h3 variants={itemVariants} className="text-sm font-mono text-indigo-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-indigo-600/30">03 // The Admin Dashboard</motion.h3>
             
-            <motion.div variants={itemVariants} className="space-y-8 bg-neutral-900/30 p-8 md:p-12 lg:p-16 rounded-[3rem] border border-white/5 relative overflow-hidden mb-16">
-              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
+            <motion.div variants={itemVariants} className="space-y-8 bg-neutral-900 shadow-xl shadow-black/50 p-8 md:p-12 lg:p-16 rounded-[3rem] border border-white/5 relative overflow-hidden mb-16">
+              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-500/100/10 rounded-full blur-[100px] pointer-events-none" />
               
               <div className="max-w-3xl relative z-10">
                 <h4 className="text-3xl font-medium text-white mb-6">Centralized Operations</h4>
-                <p className="text-neutral-400 leading-relaxed font-light text-xl mb-12">
+                <p className="text-white/60 leading-relaxed font-light text-xl mb-12">
                   The desktop dashboard empowers administrators and branch managers to oversee operations at bird's eye view, quickly drilling down into specific staff profiles and earning reports. Complex financial and time-tracking data is visualized in easily digestible formats.
                 </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
-                <div className="p-8 rounded-3xl bg-black/40 border border-white/5">
+                <div className="p-8 rounded-3xl bg-neutral-800/50 border border-white/5">
                   <h5 className="text-xl font-medium text-white mb-3">Shift Approvals</h5>
-                  <p className="text-neutral-400 font-light text-sm leading-relaxed mb-6">Review, approve, or reject shift requests natively with complete transparency on shift overlaps.</p>
+                  <p className="text-white/60 font-light text-sm leading-relaxed mb-6">Review, approve, or reject shift requests natively with complete transparency on shift overlaps.</p>
                   <img src="/Payroll Management System/Dashboard - Approve Staff.png" className="rounded-xl w-full border border-white/5 shadow-md" alt="Flow" />
                 </div>
 
-                <div className="p-8 rounded-3xl bg-black/40 border border-white/5">
+                <div className="p-8 rounded-3xl bg-neutral-800/50 border border-white/5">
                   <div className="mb-4">
                     <h5 className="text-xl font-medium text-white mb-3">Branch & Staff Management</h5>
-                    <p className="text-neutral-400 font-light text-sm leading-relaxed mb-6">Quickly add admins, onboard new staff members, and assign them to various physical branches.</p>
+                    <p className="text-white/60 font-light text-sm leading-relaxed mb-6">Quickly add admins, onboard new staff members, and assign them to various physical branches.</p>
                   </div>
                   <div className="flex gap-4">
                      <img src="/Payroll Management System/Branches.png" className="rounded-xl w-1/2 object-cover object-left-top h-32 border border-white/5 shadow-md" alt="Branches" />
@@ -316,19 +316,19 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
             <motion.h3 variants={itemVariants} className="text-sm font-mono text-indigo-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-indigo-600/30">04 // Competitor Analysis</motion.h3>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-               <motion.div variants={itemVariants} className="bg-neutral-900/50 p-8 rounded-3xl border border-white/5">
+               <motion.div variants={itemVariants} className="bg-neutral-900 shadow-lg shadow-black/50 p-8 rounded-3xl border border-white/5">
                  <h4 className="text-xl font-medium text-white mb-4">Legacy Systems</h4>
-                 <p className="text-neutral-400 font-light text-sm leading-relaxed mb-6">Traditional tools like ADP or paper ledgers heavily focus on HR compliance but lack modern, consumer-grade interfaces for ground-level staff.</p>
+                 <p className="text-white/60 font-light text-sm leading-relaxed mb-6">Traditional tools like ADP or paper ledgers heavily focus on HR compliance but lack modern, consumer-grade interfaces for ground-level staff.</p>
                  <div className="text-rose-400 text-sm font-mono">Cons: High friction, low mobile adoption.</div>
                </motion.div>
-               <motion.div variants={itemVariants} className="bg-neutral-900/50 p-8 rounded-3xl border border-white/5">
+               <motion.div variants={itemVariants} className="bg-neutral-900 shadow-lg shadow-black/50 p-8 rounded-3xl border border-white/5">
                  <h4 className="text-xl font-medium text-white mb-4">Clock-in Only Apps</h4>
-                 <p className="text-neutral-400 font-light text-sm leading-relaxed mb-6">Tools like TSheets excel at time tracking but lack seamless financial integration directly into admin shift approval workflows and multi-branch rollups.</p>
+                 <p className="text-white/60 font-light text-sm leading-relaxed mb-6">Tools like TSheets excel at time tracking but lack seamless financial integration directly into admin shift approval workflows and multi-branch rollups.</p>
                  <div className="text-orange-400 text-sm font-mono">Cons: Fragmented data, complex integrations.</div>
                </motion.div>
                <motion.div variants={itemVariants} className="bg-indigo-900/20 p-8 rounded-3xl border border-indigo-500/20">
                  <h4 className="text-xl font-medium text-white mb-4">Our Methodology</h4>
-                 <p className="text-neutral-400 font-light text-sm leading-relaxed mb-6">Combining the ease of consumer mobile applications with the density of enterprise dashboards. Staff use QR scans, while admins review financial rollups in real-time.</p>
+                 <p className="text-white/60 font-light text-sm leading-relaxed mb-6">Combining the ease of consumer mobile applications with the density of enterprise dashboards. Staff use QR scans, while admins review financial rollups in real-time.</p>
                  <div className="text-emerald-400 text-sm font-mono">Pros: Unified data, zero training.</div>
                </motion.div>
             </div>
@@ -337,31 +337,31 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
           {/* User Flow */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
             <motion.h3 variants={itemVariants} className="text-sm font-mono text-indigo-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-indigo-600/30">05 // User Flow</motion.h3>
-            <div className="bg-black/30 rounded-[3rem] p-8 md:p-16 border border-white/5 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+            <div className="bg-neutral-900 shadow-md rounded-[3rem] p-8 md:p-16 border border-white/5 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent hidden md:block"></div>
                
-               <motion.div variants={itemVariants} className="bg-neutral-900 border border-white/10 rounded-2xl p-6 w-full md:w-1/3 relative z-10 text-center">
-                  <div className="w-12 h-12 rounded-full bg-indigo-500/20 text-indigo-400 mx-auto flex items-center justify-center mb-4">
+               <motion.div variants={itemVariants} className="bg-neutral-900 border border-white/5 rounded-2xl p-6 w-full md:w-1/3 relative z-10 text-center">
+                  <div className="w-12 h-12 rounded-full bg-indigo-500/100/20 text-indigo-400 mx-auto flex items-center justify-center mb-4">
                      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" /></svg>
                   </div>
                   <h5 className="text-white font-medium mb-2">Staff Request Shift</h5>
-                  <p className="text-neutral-500 text-sm font-light">Staff members apply for upcoming shifts via the mobile application calendar.</p>
+                  <p className="text-white/50 text-sm font-light">Staff members apply for upcoming shifts via the mobile application calendar.</p>
                </motion.div>
                
-               <motion.div variants={itemVariants} className="bg-neutral-900 border border-white/10 rounded-2xl p-6 w-full md:w-1/3 relative z-10 text-center shadow-[0_0_30px_rgba(79,70,229,0.15)]">
+               <motion.div variants={itemVariants} className="bg-neutral-900 border border-white/5 rounded-2xl p-6 w-full md:w-1/3 relative z-10 text-center shadow-[0_0_30px_rgba(79,70,229,0.15)]">
                   <div className="w-12 h-12 rounded-full bg-violet-500/20 text-violet-400 mx-auto flex items-center justify-center mb-4">
                      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" /></svg>
                   </div>
                   <h5 className="text-white font-medium mb-2">Admin Approval</h5>
-                  <p className="text-neutral-500 text-sm font-light">Managers review shift schedules and approve or modify requests directly from the dashboard.</p>
+                  <p className="text-white/50 text-sm font-light">Managers review shift schedules and approve or modify requests directly from the dashboard.</p>
                </motion.div>
                
-               <motion.div variants={itemVariants} className="bg-neutral-900 border border-white/10 rounded-2xl p-6 w-full md:w-1/3 relative z-10 text-center">
-                  <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center mb-4">
+               <motion.div variants={itemVariants} className="bg-neutral-900 border border-white/5 rounded-2xl p-6 w-full md:w-1/3 relative z-10 text-center">
+                  <div className="w-12 h-12 rounded-full bg-emerald-500/100/20 text-emerald-400 mx-auto flex items-center justify-center mb-4">
                      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
                   <h5 className="text-white font-medium mb-2">QR Scan & Earning</h5>
-                  <p className="text-neutral-500 text-sm font-light">Staff generate unique QR codes to start the shift; earnings calculate automatically.</p>
+                  <p className="text-white/50 text-sm font-light">Staff generate unique QR codes to start the shift; earnings calculate automatically.</p>
                </motion.div>
             </div>
           </motion.div>
@@ -373,7 +373,7 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
                 <motion.h3 variants={itemVariants} className="text-sm font-mono text-indigo-400 uppercase tracking-widest inline-block pb-2 border-b border-indigo-600/30">06 // Complete Interface Ecosystem</motion.h3>
                 <motion.h2 variants={itemVariants} className="text-4xl text-white font-light mt-8">Extensive Surface Area</motion.h2>
               </div>
-              <motion.p variants={itemVariants} className="text-neutral-500 font-mono text-sm max-w-sm text-right">Explore the various modules of the system grouped by functionality.</motion.p>
+              <motion.p variants={itemVariants} className="text-white/50 font-mono text-sm max-w-sm text-right">Explore the various modules of the system grouped by functionality.</motion.p>
             </motion.div>
 
             <div className="space-y-24">
@@ -382,7 +382,7 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="space-y-8">
                 <div className="border-l-2 border-indigo-500 pl-4 py-1">
                   <h4 className="text-2xl font-medium text-white mb-2">Staff Mobile Application</h4>
-                  <p className="text-neutral-500 text-sm">Consumer-grade screens for employees on the ground.</p>
+                  <p className="text-white/50 text-sm">Consumer-grade screens for employees on the ground.</p>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <ZoomableImage src="/Payroll Management System/Landing - Menu.png" alt="Menu" onClick={openImage} />
@@ -406,7 +406,7 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="space-y-8">
                 <div className="border-l-2 border-violet-500 pl-4 py-1">
                   <h4 className="text-2xl font-medium text-white mb-2">Admin Dashboard</h4>
-                  <p className="text-neutral-500 text-sm">Centralized overview of pending requests, branches, and financials.</p>
+                  <p className="text-white/50 text-sm">Centralized overview of pending requests, branches, and financials.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="md:col-span-2">
@@ -423,7 +423,7 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="space-y-8">
                 <div className="border-l-2 border-emerald-500 pl-4 py-1">
                   <h4 className="text-2xl font-medium text-white mb-2">Entity Management & Reports</h4>
-                  <p className="text-neutral-500 text-sm">Dense data tables for staffs, branches, and monthly earning reports.</p>
+                  <p className="text-white/50 text-sm">Dense data tables for staffs, branches, and monthly earning reports.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="md:col-span-2">
@@ -444,7 +444,7 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
           {/* Outro */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="max-w-3xl mx-auto text-center mt-32 mb-16">
               <motion.h4 variants={itemVariants} className="text-3xl font-medium text-white mb-6">Conclusion</motion.h4>
-              <motion.p variants={itemVariants} className="text-neutral-400 font-light text-lg">Thank you for exploring the Payroll Management System case study.</motion.p>
+              <motion.p variants={itemVariants} className="text-white/60 font-light text-lg">Thank you for exploring the Payroll Management System case study.</motion.p>
           </motion.div>
 
       </div>
