@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     id: 1,
     name: "SEO PRO",
-    type: "AI-Powered SEO & Traffic Analytics Suite (Web & Mobile)",
+    type: "SEO & Traffic Analytics Suite (Web & Mobile)",
     description: "Designed a comprehensive AI-powered SEO analytics dashboard with domain overview, keyword research, site audits, and competitor analysis tools.",
     img: "/SEO PRO/SEO Dashboard - Desktop 1441.png",
     detailedDescription: "SEO PRO is an AI-powered all-in-one SEO platform tailored for marketing agencies and growth teams. The platform centralizes Traffic Analytics, Desktop & Mobile Domain Overviews, Keyword Exploration, and Site Auditing into a cohesive, data-dense interface. Emphasis was placed on creating legible data visualizations, responsive multi-device layouts (optimized extensively for iPad and iPhone), and actionable competitive insights.",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
   {
     id: 0,
     name: "Workflow AI",
-    type: "AI-Powered Visual Canvas & Workspace (Web)",
+    type: "Generative Canvas & Workspace (Web)",
     description: "Designed a comprehensive canvas-based workspace with AI generation capabilities, real-time collaboration tools, and extensive project management workflows.",
     img: "/v14 coer .png",
     detailedDescription: "Workflow AI represents a new generation of visual workspace. Combining endless canvas interaction with native AI tools, it allows users to 'Generate' workflows on the fly. The design scales from simple onboarding directly into an advanced spatial editor featuring templates, smart object modeling (notes, shapes, texts, sections), deep collaboration (comments sidebar, member invites, real-time presence), and a modular settings architecture. Both a sleek Dark Theme and a clean Light Theme were developed to support various user preferences and lighting contexts.",
@@ -113,7 +113,7 @@ export const projects: Project[] = [
   {
     id: 2,
     name: "Agentic14",
-    type: "AI Agent Orchestration Dashboard",
+    type: "Multi-Agent Orchestration Engine",
     description: "Designed a comprehensive orchestration dashboard for managing, deploying, and tracking autonomous AI agents.",
     img: "/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Orchestrate AI Agents At Scale.png",
     detailedDescription: "Agentic14 is an orchestration platform designed to help teams orchestrate AI agents at scale. The platform allows users to deploy agents, track real-time logs, monitor token usages and model performance, and seamlessly integrate API providers. Built with a futuristic dark mode identity, Agentic14 provides a unified environment to scale your artificial workforce.",
@@ -128,6 +128,7 @@ export const projects: Project[] = [
     role: "Lead Product Designer",
     timeline: "Apr 2025"
   },
+  /* 
   {
     id: 3,
     name: "Payroll Management System",
@@ -238,11 +239,12 @@ export const projects: Project[] = [
       "/loop - Your AI-Powered HR System/71. Expense - Overview.png",
       "/loop - Your AI-Powered HR System/81. Profile – Default.png"
     ]
-  },
+  }
+  */
   {
     id: 6,
     name: "SmartyAir",
-    type: "AI-Powered Industrial Monitoring Dashboard",
+    type: "Predictive Industrial Monitoring",
     description: "An advanced industrial IoT dashboard focusing on real-time machine monitoring, AI-driven performance recommendations, and predictive maintenance schedules.",
     img: "/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Dashboard - Performance.png",
     detailedDescription: "SmartyAir is a robust industrial monitoring panel designed to oversee factories and heavy machinery operations. Through real-time data streams and connected sensors, plant managers can monitor compressor statuses, analyze cycle counts, and review machine runtime hours. Built with dark-mode optimized components to reduce glare in industrial environments, it features deeper analytical views, AI performance recommendations (chat-room style diagnostics), and comprehensive historical data comparisons to prevent breakdowns before they happen.",
@@ -260,6 +262,7 @@ export const projects: Project[] = [
       "/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Historical Data.png"
     ]
   },
+  /* 
   {
     id: 7,
     name: "P14 Dashboard",
@@ -280,11 +283,12 @@ export const projects: Project[] = [
       "/P14 - AI Project Management Dashboard/Settings - General.png",
       "/P14 - AI Project Management Dashboard/Log In.png"
     ]
-  },
+  }
+  */
   {
     id: 8,
     name: "Click Cart",
-    type: "E-Commerce Experience",
+    type: "UX Research & Methodology",
     description: "An end-to-end e-commerce platform focusing on intuitive product discovery and seamless checkout workflows.",
     img: "/clickkart.png",
     detailedDescription: "Click Cart is a concept e-commerce application exploring seamless product discovery, intuitive sorting mechanisms, and frictionless checkout experiences.",

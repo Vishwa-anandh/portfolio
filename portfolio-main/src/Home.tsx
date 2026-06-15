@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet-async";
 import { projects } from "./data/projects";
 import { Background3D } from "./components/Background3D";
 import { LandingAccordionItem } from "./components/ui/interactive-image-accordion";
+import { DomainExpertise } from './components/DomainExpertise';
 import { ToolsKnown } from './components/ToolsKnown';
 import { LetsTalk } from "./components/LetsTalk";
 
@@ -237,9 +238,9 @@ export default function Home() {
   return (
     <div className="w-full bg-transparent font-sans min-h-screen relative z-0">
       <Helmet>
-        <title>Vishwa Anandh — AI UI/UX & Product Designer</title>
-        <meta name="description" content="Portfolio of Vishwa Anandh, a passionate UI/UX Designer crafting human-centered digital products integrated with artificial intelligence." />
-        <meta name="keywords" content="UI/UX, Product Design, Portfolio, AI Integration, Web Design, Figma, Vishwa Anandh" />
+        <title>Vishwa Anandh — Senior Product Designer</title>
+        <meta name="description" content="Portfolio of Vishwa Anandh, a Senior Product Designer specializing in complex enterprise workflows and AI-native systems." />
+        <meta name="keywords" content="Senior Product Designer, UI/UX, Enterprise Workflows, AI Integration, Vishwa Anandh" />
       </Helmet>
       <div className="fixed inset-0 z-[-2] bg-black"></div>
       <div className="fixed inset-0 z-[-1]">
@@ -291,9 +292,9 @@ export default function Home() {
             {/* Giant staggered headline words */}
             <motion.h1
               style={{ opacity: restOpacity, y: restY, filter: restBlur, x: restXRight }}
-              className="hero-title absolute text-white font-medium text-[9vw] md:text-[7vw] left-4 md:left-12 xl:left-16 top-[15%] md:top-[12%] mix-blend-plus-lighter leading-[1.05] tracking-tight z-10 drop-shadow-2xl"
+              className="hero-title absolute text-white font-medium text-[8vw] md:text-[6vw] left-4 md:left-12 xl:left-16 top-[15%] md:top-[12%] mix-blend-plus-lighter leading-[1.05] tracking-tight z-10 drop-shadow-2xl"
             >
-              Product <br />
+              Senior Product <br />
               Designer
             </motion.h1>
 
@@ -309,30 +310,22 @@ export default function Home() {
               Anandh
             </motion.h1>
 
-            {/* Description paragraph */}
-            <motion.p 
-              style={{ opacity: restOpacity, y: restY, filter: restBlur }}
-              className="absolute left-6 md:left-16 top-[40%] md:top-[42%] max-w-[260px] text-[15px] md:text-[16px] leading-snug text-white/95 font-sans pointer-events-auto mix-blend-plus-lighter drop-shadow-sm border-none bg-transparent shadow-none backdrop-blur-none p-0 rounded-none"
-            >
-              crafting exceptional digital experiences at the intersection of
-              human-centered design and artificial intelligence.
-            </motion.p>
-
-            {/* Stat block — top-right */}
+            {/* Description paragraph and CTA */}
             <motion.div 
-              style={{ opacity: restOpacity, x: restXLeft }}
-              className="absolute right-6 md:right-20 top-[25%] md:top-[20%] flex flex-col items-end pointer-events-auto mix-blend-plus-lighter drop-shadow-sm"
+              style={{ opacity: restOpacity, y: restY, filter: restBlur }}
+              className="absolute left-6 md:left-16 top-[40%] md:top-[42%] max-w-[320px] pointer-events-auto mix-blend-plus-lighter drop-shadow-sm flex flex-col items-start gap-6"
             >
-              <div className="flex items-center gap-3 justify-end">
-                <div className="hidden md:block h-px w-24 bg-white/40 rotate-[20deg]" />
-                <span className="text-4xl md:text-5xl font-medium tracking-tight font-mono text-white">
-                  2+
-                </span>
-              </div>
-              <span className="text-xs md:text-sm text-white/80 mt-1 text-right font-sans lowercase">
-                years experience
-              </span>
+              <p className="text-lg md:text-xl font-medium leading-snug text-white font-sans">
+                specializing in complex enterprise workflows and AI-native systems.
+              </p>
+              <button 
+                onClick={(e) => handleScrollTo(e, 'work')}
+                className="px-6 py-2.5 rounded-full bg-white text-black font-medium text-sm hover:bg-neutral-200 transition-colors shadow-lg"
+              >
+                Explore Case Studies ↓
+              </button>
             </motion.div>
+
 
 
 
@@ -342,13 +335,13 @@ export default function Home() {
               className="absolute left-6 md:left-20 top-[60%] md:top-[65%] flex flex-col items-start pointer-events-auto mix-blend-plus-lighter drop-shadow-sm z-20"
             >
               <div className="flex items-center gap-3 justify-start">
-                <span className="text-4xl md:text-5xl font-medium tracking-tight font-mono text-white">
-                  100%
+                <span className="text-3xl md:text-4xl font-medium tracking-tight font-mono text-white">
+                  3+
                 </span>
-                <div className="hidden md:block h-px w-24 bg-white/40 rotate-[20deg]" />
+                <div className="hidden md:block h-px w-16 bg-white/40 rotate-[20deg]" />
               </div>
-              <span className="text-xs md:text-sm text-white/80 mt-1 text-left font-sans lowercase">
-                ai driven
+              <span className="text-xs md:text-sm text-white/80 mt-1 text-left font-sans uppercase tracking-widest max-w-[120px]">
+                Enterprise AI Systems Shipped
               </span>
             </motion.div>
           </div>
@@ -361,77 +354,37 @@ export default function Home() {
       <div className="relative z-30 bg-transparent w-full pb-16 md:pb-32" id="work">
         <div className="max-w-7xl mx-auto px-2 md:px-4 xl:px-0 py-16 md:py-24">
 
-          {/* Selected Work Accordion */}
-          <div className="relative mb-16 md:mb-24 w-full">
-            <LandingAccordionItem />
-          </div>
-
-          {/* Resume / Experience Section */}
+          {/* The Manifesto Section */}
           <motion.div
-            id="experience"
+            id="manifesto"
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10%" }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
-            className="pt-16 md:pt-28 border-t border-white/10 md:mt-16"
+            className="mb-24 md:mb-32 text-center max-w-4xl mx-auto px-4"
           >
-            <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
-              <div className="w-full lg:w-1/3">
-                <h2 className="text-5xl lg:text-6xl font-medium tracking-tight text-white mb-6 mix-blend-plus-lighter">
-                  Experience
-                </h2>
-                <p className="text-white/60 leading-relaxed text-lg mb-10">
-                  Bridging the gap between beautiful aesthetics and highly
-                  technical AI implementations.
-                </p>
-                <Link
-                  to="/resume"
-                  className="px-8 py-4 rounded-full bg-white text-black hover:bg-neutral-200 hover:scale-105 transition-all font-medium flex items-center justify-center gap-3 group w-max shadow-lg"
-                >
-                  <span>View Resume</span>
-                  <svg
-                    className="w-4 h-4 transition-transform group-hover:translate-x-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </Link>
-              </div>
+            <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-white mb-8 mix-blend-plus-lighter leading-[1.2]">
+              Bridging the gap between beautiful aesthetics and highly technical AI implementations.
+            </h2>
+            <p className="text-white/60 leading-relaxed text-lg md:text-xl font-light">
+              I align engineering constraints with user needs to build systems that feel effortless—even when powering autonomous agents and dense industrial telemetry.
+            </p>
+          </motion.div>
 
-              <div className="w-full lg:w-2/3 relative flex flex-col gap-12 lg:gap-16 pt-2 lg:pt-0">
-                <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-indigo-500/50 via-pink-500/50 to-transparent hidden lg:block" />
-                <motion.div 
-                  initial={{ opacity: 0, x: 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-10%" }}
-                  transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] as const }}
-                  className="group relative flex flex-col sm:flex-row gap-6 sm:gap-12 hover:translate-x-3 transition-transform duration-500 lg:pl-12"
-                >
-                  <div className="absolute w-4 h-4 bg-indigo-500 rounded-full -left-[8px] lg:-left-[60px] top-1.5 ring-4 ring-black shadow-[0_0_20px_rgba(99,102,241,0.8)] z-10 hidden lg:block"></div>
-                  <div className="w-32 lg:w-40 shrink-0 text-white/40 font-mono pt-1 text-sm tracking-wider uppercase">
-                    July 2024 to Present
-                  </div>
-                  <div className="bg-neutral-900/30 border border-white/5 p-6 md:p-8 rounded-[2rem] w-full transition-colors hover:bg-neutral-900/50 hover:border-indigo-500/20">
-                    <h4 className="text-3xl font-medium text-white mb-2">
-                      UI/UX Designer
-                    </h4>
-                    <p className="text-indigo-400 mb-6 font-mono text-sm uppercase tracking-wider font-semibold">
-                      Maitsys
-                    </p>
-                    <p className="text-white/70 leading-relaxed text-base md:text-lg">
-                      Spearheading UI/UX design. Designed seamless experiences for Workflow AI covering web and workspace canvases. Created complex spatial layouts and dashboards for diverse AI-powered workflows.
-                    </p>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
+          {/* Selected Work Accordion */}
+          <div className="relative mb-16 md:mb-32 w-full">
+            <LandingAccordionItem />
+          </div>
+
+          {/* Domain Expertise Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-10%" }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
+            className="pt-16 md:pt-32 border-t border-white/10 mt-16 md:mt-32"
+          >
+            <DomainExpertise />
           </motion.div>
 
           {/* Tools Known Section */}

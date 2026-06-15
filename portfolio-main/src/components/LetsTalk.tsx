@@ -121,16 +121,13 @@ export function LetsTalk() {
                   <div className="-mt-16 flex h-full flex-col justify-center p-4 md:-mt-0 md:ml-16 md:w-[500px]">
                     <div className="flex flex-col items-start">
                       <h3 className="mt-6 pb-2 font-medium text-white">
-                        <span className="text-4xl md:text-6xl lg:text-[64px] tracking-tight leading-tight">
-                          Have a project in mind?
+                        <span className="text-4xl md:text-5xl lg:text-5xl tracking-tight leading-tight">
+                          Ready to simplify your complex systems?
                         </span>
                       </h3>
                     </div>
                     <p className="mb-10 mt-4 text-white/60 text-lg md:text-xl font-light">
-                      Let's build something amazing together! Reach out to me directly at{" "}
-                      <a href="mailto:Anandhvishwa12@gmail.com" className="text-white hover:underline transition-colors font-medium">
-                        Anandhvishwa12@gmail.com
-                      </a>
+                      Whether you're scaling an enterprise platform or launching a new AI vertical, I'm open to discussing how we can build it together.
                     </p>
                     <div className="flex flex-wrap gap-3">
                       <a href="mailto:Anandhvishwa12@gmail.com">

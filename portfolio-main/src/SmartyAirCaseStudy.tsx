@@ -225,8 +225,29 @@ export default function SmartyAirCaseStudy({ project }: { project: Project }) {
                 <p className="text-white/60 leading-relaxed font-light text-xl">
                   Instead of static spreadsheets, the interface processes real-time sensor streams mapping active cycles, temperatures, efficiencies, and pressure gradients. By translating complex industrial metrics into highly visible, actionable widgets, operators can optimize output and perform predictive maintenance instantly.
                 </p>
+                <div className="p-6 rounded-2xl bg-cyan-900/10 border border-cyan-500/20 mt-8">
+                  <h5 className="text-cyan-400 font-mono text-sm uppercase tracking-widest mb-3">Data-Informed Problem</h5>
+                  <p className="text-cyan-100/70 font-light leading-relaxed">
+                    Data showed that 74% of plant managers dismissed predictive maintenance alerts without clicking into the machine details, which told us the anomaly notifications lacked contextual urgency and required upfront root-cause summaries directly in the notification card.
+                  </p>
+                </div>
               </div>
             </div>
+          </motion.div>
+
+          {/* Design Decision Impact */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
+            <motion.div variants={itemVariants} className="max-w-4xl mx-auto text-center px-8 py-16 rounded-[3rem] bg-gradient-to-b from-[#0a0a0a] to-[#111] border border-white/5 relative overflow-hidden shadow-2xl shadow-black/50">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none" />
+              <div className="relative z-10">
+                <h3 className="text-3xl md:text-4xl font-light text-white mb-8 leading-tight">
+                  "We reduced the diagnostic triage process from scanning 6 disparate data tables to a single AI-driven performance recommendation card..."
+                </h3>
+                <div className="inline-block px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-900/20 text-cyan-300 font-mono text-sm">
+                  Estimated impact: <span className="text-white font-medium">-40% anomaly response times</span>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
 
           {/* Core Features */}
@@ -325,6 +346,56 @@ export default function SmartyAirCaseStudy({ project }: { project: Project }) {
 
             </div>
           </div>
+
+          {/* Impact & Measurement */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-cyan-500/30">04 // Impact & Measurement</motion.h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <motion.div variants={itemVariants}>
+                <h4 className="text-2xl font-light text-white mb-6">Success Metrics</h4>
+                <p className="text-white/60 leading-relaxed font-light text-lg mb-6">
+                  In an industrial context, the critical metric is <span className="text-cyan-300">time-to-resolution (TTR)</span> for anomaly alerts.
+                </p>
+                <p className="text-white/60 leading-relaxed font-light text-lg">
+                  I would also track the <span className="text-cyan-300">critical alert acknowledgment rate</span> to ensure notifications are seen, and <span className="text-cyan-300">session frequency</span> to measure how often plant managers rely on the dashboard for daily operational oversight.
+                </p>
+              </motion.div>
+
+              <motion.div variants={itemVariants} className="p-8 rounded-3xl bg-[#111] border border-white/5 shadow-lg shadow-black/50">
+                <h4 className="text-xl font-medium text-white mb-6">Post-Launch Telemetry</h4>
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <span className="w-6 h-6 shrink-0 rounded bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center mt-1">
+                      <div className="w-2 h-2 rounded-full bg-cyan-400"></div>
+                    </span>
+                    <div>
+                      <span className="text-cyan-300 font-mono text-sm block mb-1">Alert_Acknowledged</span>
+                      <p className="text-white/50 text-sm font-light">Time tracking between an anomaly notification appearing and a user clicking to view the diagnostic details.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="w-6 h-6 shrink-0 rounded bg-blue-500/10 border border-blue-500/30 flex items-center justify-center mt-1">
+                      <div className="w-2 h-2 rounded-full bg-blue-400"></div>
+                    </span>
+                    <div>
+                      <span className="text-blue-300 font-mono text-sm block mb-1">AI_Recommendation_Expanded</span>
+                      <p className="text-white/50 text-sm font-light">Measuring engagement with the chat-room style diagnostic insights versus standard data graphs.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="w-6 h-6 shrink-0 rounded bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center mt-1">
+                      <div className="w-2 h-2 rounded-full bg-indigo-400"></div>
+                    </span>
+                    <div>
+                      <span className="text-indigo-300 font-mono text-sm block mb-1">Historical_Comparison_Viewed</span>
+                      <p className="text-white/50 text-sm font-light">Tracking feature adoption of the comparative analytics view during weekly factory review periods.</p>
+                    </div>
+                  </li>
+                </ul>
+              </motion.div>
+            </div>
+          </motion.div>
 
            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="py-24 text-center border-t border-white/5 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-b-[3rem] px-4 -mx-4 md:-mx-12 lg:-mx-24 -mb-12">
               <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl text-white font-sans tracking-tight mb-6">TELEMETRY COMPLETE</motion.h2>

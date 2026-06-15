@@ -63,11 +63,11 @@ export default function ProjectDetail() {
               Next Project
             </h3>
             <Link
-              to={`/projects/1`}
+              to={`/projects/2`}
               className="group inline-block"
             >
               <h2 className="text-4xl md:text-6xl font-medium text-neutral-100 group-hover:text-blue-500 transition-colors">
-                SEO PRO
+                Agentic14
               </h2>
             </Link>
           </div>
@@ -100,11 +100,11 @@ export default function ProjectDetail() {
               Next Project
             </h3>
             <Link
-              to={`/projects/2`}
+              to={`/projects/0`}
               className="group inline-block"
             >
               <h2 className="text-4xl md:text-6xl font-medium text-neutral-100 group-hover:text-neutral-400 transition-colors">
-                Agentic14
+                Workflow AI
               </h2>
             </Link>
           </div>
@@ -137,11 +137,11 @@ export default function ProjectDetail() {
               Next Project
             </h3>
             <Link
-              to={`/projects/3`}
+              to={`/projects/6`}
               className="group inline-block"
             >
               <h2 className="text-4xl md:text-6xl font-medium text-neutral-100 group-hover:text-emerald-500 transition-colors">
-                Payroll System
+                SmartyAir
               </h2>
             </Link>
           </div>
@@ -285,11 +285,11 @@ export default function ProjectDetail() {
               Next Project
             </h3>
             <Link
-              to={`/projects/7`}
+              to={`/projects/8`}
               className="group inline-block"
             >
               <h2 className="text-4xl md:text-6xl font-medium text-white group-hover:text-cyan-400 transition-colors">
-                P14 Dashboard
+                Click Cart
               </h2>
             </Link>
           </div>
@@ -358,11 +358,11 @@ export default function ProjectDetail() {
               Next Project
             </h3>
             <Link
-              to={`/projects/0`}
+              to={`/projects/1`}
               className="group inline-block"
             >
               <h2 className="text-4xl md:text-6xl font-medium text-white group-hover:text-indigo-500 transition-colors">
-                Workflow AI
+                SEO PRO
               </h2>
             </Link>
           </div>

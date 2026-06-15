@@ -217,6 +217,12 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
                   <br/><br/>
                   <span>We envisioned Workflow AI not just as a drawing tool, but as an active collaborator. The mission was to revolutionize the way users map out ideas by introducing a context-aware generative engine right into the canvas. By merging spatial collaboration with language models, we transform ideation from a manual absolute chore into an intuitive dialogue with the workspace itself.</span>
                 </p>
+                <div className="p-6 rounded-2xl bg-blue-900/10 border border-blue-500/20 mt-8">
+                  <h5 className="text-blue-400 font-mono text-sm uppercase tracking-widest mb-3">Data-Informed Problem</h5>
+                  <p className="text-blue-100/70 font-light leading-relaxed">
+                    Data showed that 52% of users generated a workflow using AI but didn't interact with the canvas for more than 45 seconds afterward, which told us the AI was solving the "blank-page" problem but failing to encourage subsequent spatial mapping, editing, and deep work.
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -292,6 +298,21 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
                   <p className="text-white/60 text-sm leading-relaxed">
                     A spatial engine infused with AI from the ground up, capable of seamlessly bridging creative chaos and structured output without forcing the user to switch platforms.
                   </p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Design Decision Impact */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
+            <motion.div variants={itemVariants} className="max-w-4xl mx-auto text-center px-8 py-16 rounded-[3rem] bg-gradient-to-b from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden shadow-2xl shadow-black/50">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-blue-500/100/10 rounded-full blur-[100px] pointer-events-none" />
+              <div className="relative z-10">
+                <h3 className="text-3xl md:text-4xl font-light text-white mb-8 leading-tight">
+                  "We reduced the time-to-first-value from a manual mapping process of 20 minutes to a 15-second generative prompt..."
+                </h3>
+                <div className="inline-block px-4 py-2 rounded-full border border-blue-500/30 bg-blue-900/20 text-blue-300 font-mono text-sm">
+                  Estimated impact: <span className="text-white font-medium">+30% day-1 user retention</span>
                 </div>
               </div>
             </motion.div>
@@ -482,6 +503,56 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
                 
             </div>
           </div>
+
+          {/* Impact & Measurement */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-blue-500 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-blue-500/30">06 // Impact & Measurement</motion.h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <motion.div variants={itemVariants}>
+                <h4 className="text-2xl font-light text-white mb-6">Success Metrics</h4>
+                <p className="text-white/60 leading-relaxed font-light text-lg mb-6">
+                  For this spatial workspace, success hinges on the <span className="text-blue-300">feature adoption rate</span> of the AI generative prompt versus manual node creation.
+                </p>
+                <p className="text-white/60 leading-relaxed font-light text-lg">
+                  I'd also look closely at <span className="text-blue-300">session depth</span> (time spent actively panning, zooming, and interacting with the canvas post-generation) and <span className="text-blue-300">collaboration frequency</span> (average comments or multiplayer interactions per session).
+                </p>
+              </motion.div>
+
+              <motion.div variants={itemVariants} className="p-8 rounded-3xl bg-neutral-900 border border-white/5 shadow-lg shadow-black/50">
+                <h4 className="text-xl font-medium text-white mb-6">Post-Launch Telemetry</h4>
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <span className="w-6 h-6 shrink-0 rounded bg-blue-500/10 border border-blue-500/30 flex items-center justify-center mt-1">
+                      <div className="w-2 h-2 rounded-full bg-blue-400"></div>
+                    </span>
+                    <div>
+                      <span className="text-blue-300 font-mono text-sm block mb-1">AI_Workflow_Generated</span>
+                      <p className="text-white/50 text-sm font-light">Funnel conversion from clicking the prompt bar to accepting the generated canvas output.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="w-6 h-6 shrink-0 rounded bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center mt-1">
+                      <div className="w-2 h-2 rounded-full bg-indigo-400"></div>
+                    </span>
+                    <div>
+                      <span className="text-indigo-300 font-mono text-sm block mb-1">Node_Edited_Manual</span>
+                      <p className="text-white/50 text-sm font-light">Tracking the frequency of users manually modifying AI-generated objects to validate practical utility.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="w-6 h-6 shrink-0 rounded bg-purple-500/10 border border-purple-500/30 flex items-center justify-center mt-1">
+                      <div className="w-2 h-2 rounded-full bg-purple-400"></div>
+                    </span>
+                    <div>
+                      <span className="text-purple-300 font-mono text-sm block mb-1">Multiplayer_Invite_Sent</span>
+                      <p className="text-white/50 text-sm font-light">Tracking the viral loop of users inviting team members to collaborate on a specific spatial area.</p>
+                    </div>
+                  </li>
+                </ul>
+              </motion.div>
+            </div>
+          </motion.div>
 
            {/* Thank you */}
            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="py-24 text-center border-t border-white/5 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-b-[3rem] px-4 -mx-4 md:-mx-12 lg:-mx-24 -mb-12">

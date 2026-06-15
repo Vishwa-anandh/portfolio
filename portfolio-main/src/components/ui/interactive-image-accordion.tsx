@@ -71,8 +71,8 @@ export function LandingAccordionItem() {
     setActiveIndex(index);
   };
 
-  // Show all projects
-  const displayedProjects = projects;
+  // Show core case study projects
+  const displayedProjects = projects.filter(p => p.id !== 8);
 
   return (
     <div className="bg-transparent font-sans">
@@ -85,16 +85,8 @@ export function LandingAccordionItem() {
               Selected Work
             </h2>
             <p className="mt-6 text-base md:text-lg text-white/60 leading-relaxed text-center">
-              From intelligent web apps to industrial dashboards, explore the impact of thoughtful, AI-driven product design.
+              Translating complex technical architectures into intuitive, scalable interfaces that drive user adoption and operational efficiency.
             </p>
-            <div className="mt-8">
-              <Link
-                to="/projects"
-                className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors font-mono uppercase tracking-wider text-sm underline-offset-4 hover:underline"
-              >
-                View All Projects <ArrowRight size={16} />
-              </Link>
-            </div>
           </div>
 
           {/* Bottom Side: Image Accordion */}

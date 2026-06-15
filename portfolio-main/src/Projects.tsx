@@ -121,9 +121,26 @@ export default function Projects() {
           </div>
         </header>
 
-        {/* Projects Grid */}
+        {/* Case Studies Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 pb-16">
+          {projects.filter(p => p.id !== 8).map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+
+        {/* Methodology Section */}
+        <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12 pb-8 border-b border-white/10 mt-16">
+          <div>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-2 mix-blend-plus-lighter">
+              UX Research & Methodology
+            </h2>
+            <h3 className="text-lg md:text-xl text-white/60 font-medium tracking-tight">
+              Process & Insights
+            </h3>
+          </div>
+        </header>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 pb-32">
-          {projects.map((project) => (
+          {projects.filter(p => p.id === 8).map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>

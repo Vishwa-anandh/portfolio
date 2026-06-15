@@ -42,9 +42,9 @@ export default function Resume() {
   return (
     <div className="min-h-screen bg-transparent text-white font-sans selection:bg-indigo-500/30 pb-24 relative">
       <Helmet>
-        <title>Resume | Vishwa Anandh — AI UI/UX & Product Designer</title>
-        <meta name="description" content="View the professional resume of Vishwa Anandh, detailing UI/UX expertise, key product experiences, and core competencies." />
-        <meta name="keywords" content="Resume, CV, UI/UX Design, Experience, Education, Vishwa Anandh" />
+        <title>Resume | Vishwa Anandh — Senior Product Designer</title>
+        <meta name="description" content="View the professional resume of Vishwa Anandh, detailing enterprise workflow expertise, key product experiences, and core competencies." />
+        <meta name="keywords" content="Resume, CV, Senior Product Designer, Enterprise, AI Integration, Vishwa Anandh" />
       </Helmet>
       <div className="fixed inset-0 z-[-2] bg-black"></div>
       <Background3D />
@@ -89,11 +89,10 @@ export default function Resume() {
               VISHWA ANANDH
             </h1>
             <h2 className="text-2xl md:text-3xl text-indigo-400 font-medium tracking-tight">
-              UI & UX DESIGNER
+              SENIOR PRODUCT DESIGNER
             </h2>
             <p className="max-w-xl text-lg text-white/70 mt-6 leading-relaxed">
-              Passionate in smoothing out complex user interface, translating
-              ideas into UI design, and creating delightful interactions.
+              Passionate about smoothing out complex enterprise workflows, translating intricate systems into intuitive UI designs, and creating robust, AI-native user experiences.
             </p>
           </div>
 
@@ -208,7 +207,7 @@ export default function Resume() {
                   <div className="flex flex-col sm:flex-row justify-between sm:items-end gap-2">
                     <div>
                       <h4 className="text-2xl font-semibold text-white">
-                        UI/UX Designer
+                        Senior Product Designer
                       </h4>
                       <p className="text-indigo-400 font-mono mt-1 text-lg">
                         Maitsys
