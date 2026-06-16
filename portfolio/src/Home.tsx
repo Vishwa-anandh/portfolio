@@ -379,7 +379,7 @@ export default function Home() {
             className="pt-12 md:pt-16 border-t border-white/10 md:mt-8"
           >
             <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
-              <div className="w-full lg:w-1/3">
+              <div className="w-full lg:w-1/3 lg:sticky lg:top-32 self-start">
                 <h2 className="text-5xl lg:text-6xl font-medium tracking-tight text-white mb-6 mix-blend-plus-lighter">
                   Experience
                 </h2>
@@ -412,6 +412,7 @@ export default function Home() {
 
               <div className="w-full lg:w-2/3 relative flex flex-col gap-12 lg:gap-16 pt-2 lg:pt-0">
                 <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-indigo-500/50 via-pink-500/50 to-transparent hidden lg:block" />
+                
                 <motion.div 
                   initial={{ opacity: 0, x: 40 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -421,20 +422,69 @@ export default function Home() {
                 >
                   <div className="absolute w-4 h-4 bg-indigo-500 rounded-full -left-[8px] lg:-left-[60px] top-1.5 ring-4 ring-black shadow-[0_0_20px_rgba(99,102,241,0.8)] z-10 hidden lg:block"></div>
                   <div className="w-32 lg:w-40 shrink-0 text-white/40 font-mono pt-1 text-sm tracking-wider uppercase">
-                    July 2024 to Present
+                    Deployed
                   </div>
                   <div className="bg-neutral-900/30 border border-white/5 p-6 md:p-8 rounded-[2rem] w-full transition-colors hover:bg-neutral-900/50 hover:border-indigo-500/20">
                     <h4 className="text-3xl font-medium text-white mb-2">
-                      UI/UX Designer
+                      Product Designer & Developer
                     </h4>
                     <p className="text-indigo-400 mb-6 font-mono text-sm uppercase tracking-wider font-semibold">
-                      Maitsys
+                      PulseCX (Independent Project)
                     </p>
                     <p className="text-white/70 leading-relaxed text-base md:text-lg">
-                      Spearheading UI/UX design. Designed seamless experiences for Workflow AI covering web and workspace canvases. Created complex spatial layouts and dashboards for diverse AI-powered workflows.
+                      Architected and designed the end-to-end UX for an <strong className="text-indigo-300 font-medium">AI-native enterprise monitoring</strong> and incident response platform. Beyond designing the complex product architecture, I independently <strong className="text-indigo-300 font-medium">built and deployed</strong> the fully functional web application using AI-assisted development as a non-developer. The live platform features an LLM chatbot that I <strong className="text-indigo-300 font-medium">personally trained</strong>, bridging the gap between deep system infrastructure and actionable visual interfaces.
                     </p>
                   </div>
                 </motion.div>
+
+                <motion.div 
+                  initial={{ opacity: 0, x: 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-10%" }}
+                  transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] as const }}
+                  className="group relative flex flex-col sm:flex-row gap-6 sm:gap-12 hover:translate-x-3 transition-transform duration-500 lg:pl-12"
+                >
+                  <div className="absolute w-4 h-4 bg-white/20 rounded-full -left-[8px] lg:-left-[60px] top-1.5 ring-4 ring-black group-hover:bg-pink-500 group-hover:shadow-[0_0_20px_rgba(236,72,153,0.8)] transition-all duration-500 z-10 hidden lg:block"></div>
+                  <div className="w-32 lg:w-40 shrink-0 text-white/40 font-mono pt-1 text-sm tracking-wider uppercase">
+                    July 2024 to Present
+                  </div>
+                  <div className="bg-neutral-900/30 border border-white/5 p-6 md:p-8 rounded-[2rem] w-full transition-colors hover:bg-neutral-900/50 hover:border-pink-500/20">
+                    <h4 className="text-3xl font-medium text-white mb-2">
+                      UI/UX Designer
+                    </h4>
+                    <p className="text-pink-400 mb-6 font-mono text-sm uppercase tracking-wider font-semibold">
+                      Maitsys
+                    </p>
+                    <p className="text-white/70 leading-relaxed text-base md:text-lg">
+                      Driving the <strong className="text-white font-medium">UX architecture</strong> and product design across multiple core enterprise applications. <strong className="text-white font-medium">Streamlined multi-role workflows</strong> and reduced administrative overhead for <strong className="text-white font-medium">Pappa.ai</strong> and <strong className="text-white font-medium">NC STEM Academy</strong> through AI-driven platforms. <strong className="text-white font-medium">Replaced manual tracking</strong> with robust digital ecosystems in <strong className="text-white font-medium">Project.AI</strong>, and overhauled <strong className="text-white font-medium">Getherly</strong> to deliver stricter privacy controls and safer communication. Across all projects, I focus on translating complex data into actionable, accessible dashboards.
+                    </p>
+                  </div>
+                </motion.div>
+
+                <motion.div 
+                  initial={{ opacity: 0, x: 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-10%" }}
+                  transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] as const }}
+                  className="group relative flex flex-col sm:flex-row gap-6 sm:gap-12 hover:translate-x-3 transition-transform duration-500 lg:pl-12"
+                >
+                  <div className="absolute w-4 h-4 bg-white/20 rounded-full -left-[8px] lg:-left-[60px] top-1.5 ring-4 ring-black group-hover:bg-purple-500 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.8)] transition-all duration-500 z-10 hidden lg:block"></div>
+                  <div className="w-32 lg:w-40 shrink-0 text-white/40 font-mono pt-1 text-sm tracking-wider uppercase">
+                    2019 to Present
+                  </div>
+                  <div className="bg-neutral-900/30 border border-white/5 p-6 md:p-8 rounded-[2rem] w-full transition-colors hover:bg-neutral-900/50 hover:border-purple-500/20">
+                    <h4 className="text-3xl font-medium text-white mb-2">
+                      Freelance Brand & Digital Designer
+                    </h4>
+                    <p className="text-purple-400 mb-6 font-mono text-sm uppercase tracking-wider font-semibold">
+                      Self Employed
+                    </p>
+                    <p className="text-white/70 leading-relaxed text-base md:text-lg">
+                      Since 2019, I have partnered directly with founders and marketing teams across various industries, from manufacturing to e-commerce, to build their digital presence from the ground up. By delivering <strong className="text-white font-medium">comprehensive brand identities</strong>, <strong className="text-white font-medium">UI/UX designs</strong>, and <strong className="text-white font-medium">scalable design systems</strong>, I help businesses transform abstract goals into cohesive, professional market experiences.
+                    </p>
+                  </div>
+                </motion.div>
+
               </div>
             </div>
           </motion.div>
