@@ -1,0 +1,1610 @@
+{
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/scratch/convert_theme.py": {
+    "mtime": 1780756801000,
+    "hash": "930b1c578694fe1e5b8033abae4afd84"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/About.tsx": {
+    "mtime": 1780756801000,
+    "hash": "5271310aafeb6a88ef59047063793a6b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/Agentic14CaseStudy.tsx": {
+    "mtime": 1780756801000,
+    "hash": "5eee6e60194f99b6bdf074300b215ead"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/App.tsx": {
+    "mtime": 1780756801000,
+    "hash": "6d067a3976077a40448981a04ca94f1f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/EducourseCaseStudy.tsx": {
+    "mtime": 1780756801000,
+    "hash": "c6d0e208c7eba3bbb0bc8b17e8716b4f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/Home.tsx": {
+    "mtime": 1780756801000,
+    "hash": "64503b11c3534cf8ca2e22d464523204"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/LoopHRCaseStudy.tsx": {
+    "mtime": 1780756801000,
+    "hash": "a8d15900a5709cd5bfe721540595d9e9"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/P14CaseStudy.tsx": {
+    "mtime": 1780756801000,
+    "hash": "5c1323959ecce3e14076c066cd62f7f6"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/PayrollCaseStudy.tsx": {
+    "mtime": 1780756801000,
+    "hash": "68666a8925784ab4eb42634e3c8ebf58"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/ProjectDetail.tsx": {
+    "mtime": 1780756801000,
+    "hash": "d8f217227059644f9c7e86dc033030b7"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/Projects.tsx": {
+    "mtime": 1780756801000,
+    "hash": "4e4b4f64cc305ce6299dea19d458079e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/Resume.tsx": {
+    "mtime": 1780756801000,
+    "hash": "efa5e97448e1e5a90b6c252f1703bb38"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/SeoProCaseStudy.tsx": {
+    "mtime": 1780756801000,
+    "hash": "1948bc3836dcb4ec49a7636a80ddb4eb"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/SmartyAirCaseStudy.tsx": {
+    "mtime": 1780756801000,
+    "hash": "d326742ff66920e7c13a96447bad4639"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/WorkflowAICaseStudy.tsx": {
+    "mtime": 1780756801000,
+    "hash": "283e650de9867ecf8ec411f6234e8032"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/components/Background3D.tsx": {
+    "mtime": 1780756801000,
+    "hash": "d0535b6d9c817e0928feaf50d0bbc3f8"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/components/ImageViewer.tsx": {
+    "mtime": 1780756801000,
+    "hash": "648ee1a0dffe7078dddfaa0c69c9ffbb"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/components/LetsTalk.tsx": {
+    "mtime": 1780756801000,
+    "hash": "3ee02ffc1ede7b325ff887b8ed636ada"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/components/ToolsKnown.tsx": {
+    "mtime": 1780756801000,
+    "hash": "f3980c6f91dd0dbe122cd3550d9ef396"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/components/ui/button.tsx": {
+    "mtime": 1780756801000,
+    "hash": "45cb656341f78b36bbd4fb5a73a76f0d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/components/ui/container-scroll-animation.tsx": {
+    "mtime": 1780756801000,
+    "hash": "5ba29a97f14b458b583bdec8aadb1ac1"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/components/ui/highlighter.tsx": {
+    "mtime": 1780756801000,
+    "hash": "d26eb2831107a5a9e01e03d98ec6417f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/components/ui/impact-section.tsx": {
+    "mtime": 1780756801000,
+    "hash": "27d4ac9ae23f074f72e67c6dd5771633"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/components/ui/interactive-image-accordion.tsx": {
+    "mtime": 1780756801000,
+    "hash": "7ac76d1153ff44e9d38770e527317ca1"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/components/ui/pixel-logo-grid.tsx": {
+    "mtime": 1780756801000,
+    "hash": "fb385a9c8c01a0bc383ee72b2ffd1b5a"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/data/projects.ts": {
+    "mtime": 1780756801000,
+    "hash": "ea456d590519741c4d6408c19f06f6f2"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/lib/utils.ts": {
+    "mtime": 1780756801000,
+    "hash": "ea1c194ee828369e6fcdde84b4d8b8ba"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/src/main.tsx": {
+    "mtime": 1780756801000,
+    "hash": "deed79ca9909acda7df8edc95cc37185"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/vite.config.ts": {
+    "mtime": 1781584605396.3726,
+    "hash": "897a8a68595b0dd145c2f82e7cff0551"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/README.md": {
+    "mtime": 1780756801000,
+    "hash": "7500a9dba1233bdb4995a65bf4663909"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/deleted_assets.txt": {
+    "mtime": 1780756801000,
+    "hash": "42b242bb4dfe37eec4541e2c46092b32"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/index.html": {
+    "mtime": 1780756801000,
+    "hash": "ecded14313d09a47b3b36e3e133ceaf3"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/scratch/generated_logos.txt": {
+    "mtime": 1780756801000,
+    "hash": "c4301b58eeb8e048bcbde7faf1859625"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/scratch/keys.txt": {
+    "mtime": 1780756801000,
+    "hash": "84d8b6c54de79514472dc1e18540e730"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/scratch/keys2.txt": {
+    "mtime": 1780756801000,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/resume.pdf": {
+    "mtime": 1780756801000,
+    "hash": "ac02ea790207ebfe47383c3063011648"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Agent Detail.png": {
+    "mtime": 1780756801000,
+    "hash": "8e6e04c2b757a503356655c40e9d43bd"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Agent Logs.png": {
+    "mtime": 1780756801000,
+    "hash": "f27c8a15cf10169808c3cabc7e88cc56"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - All Agents.png": {
+    "mtime": 1780756801000,
+    "hash": "d596e6a65d350dc753aa7211bce244c3"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Checkout.png": {
+    "mtime": 1780756801000,
+    "hash": "64c695f41f1bab69026917cb41599647"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Cluster Nodes.png": {
+    "mtime": 1780756801000,
+    "hash": "7d6edd0898769dd74aba752cc9242aed"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Delete Agent Modal.png": {
+    "mtime": 1780756801000,
+    "hash": "0876b6eb06197e8b92a50011d5b11f94"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Edit Agent.png": {
+    "mtime": 1780756801000,
+    "hash": "ab69f06a79fe1a97f1c08d7383927dac"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - GPU Cluster Detail.png": {
+    "mtime": 1780756801000,
+    "hash": "3607bf5d3295e0991e857f91e620cd45"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Home Dashboard.png": {
+    "mtime": 1780756801000,
+    "hash": "76b2c782e7475ac89a3d64f573bafad5"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Inference Jobs.png": {
+    "mtime": 1780756801000,
+    "hash": "9cd569e3891efe4624ca72f9270f901c"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - KB Document Preview.png": {
+    "mtime": 1780756801000,
+    "hash": "69b38a20254d0d68729a53dd0ff033f0"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - KB Semantic Search.png": {
+    "mtime": 1780756801000,
+    "hash": "51aeb2cb548c30b0fd572a006cc1946c"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - KB Settings.png": {
+    "mtime": 1780756801000,
+    "hash": "13f1b3aaed4dbe0f7721a913c68bddd7"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - KB Upload Modal.png": {
+    "mtime": 1780756801000,
+    "hash": "575d34e1febfb888953a7eb640a366f1"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Live Log Stream.png": {
+    "mtime": 1780756801000,
+    "hash": "ef33c29818206ca8bdfb60acedc7721c"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Model Performance.png": {
+    "mtime": 1780756801000,
+    "hash": "74cb610de446dc6a9ea55e0c7b5dd2bf"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - No Data.png": {
+    "mtime": 1780756801000,
+    "hash": "86dd4f87f28614a0c08cdcd230966774"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - No Results.png": {
+    "mtime": 1780756801000,
+    "hash": "1a6cc200fe6bccad3afa5764b132047d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Not Found.png": {
+    "mtime": 1780756801000,
+    "hash": "498ecd9008dbe476f3524d84b48a0400"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Notifications.png": {
+    "mtime": 1780756801000,
+    "hash": "ea137c0adae4a5d2368e5142e814c36b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Onboarding Guide.png": {
+    "mtime": 1780756801000,
+    "hash": "ab6a9f4856a5d0efacbd240805bda1a5"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Orchestrate AI Agents At Scale.png": {
+    "mtime": 1780756801000,
+    "hash": "e3da76d64ee873bb1ab4d7c92ee53302"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Payment Success.png": {
+    "mtime": 1780756801000,
+    "hash": "52d2e64f6f5099449180a54f7322887b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Pipeline Runs.png": {
+    "mtime": 1780756801000,
+    "hash": "7a42de431ec9661eec05f5c3a8d73dd4"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Pricing & Upgrade.png": {
+    "mtime": 1780756801000,
+    "hash": "73123aa9c370756fac9e188b79fd8f9b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Server Error.png": {
+    "mtime": 1780756801000,
+    "hash": "a167f079bc479ab07fc20ebb26b2eb77"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Settings_ API Providers.png": {
+    "mtime": 1780756801000,
+    "hash": "fa33ba925fd5f176e211b507e4da6ca3"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Settings_ Billing.png": {
+    "mtime": 1780756801000,
+    "hash": "42acf91dbbd570b834c25df45c5a425b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Settings_ Team Members-1.png": {
+    "mtime": 1780756801000,
+    "hash": "c5e69afe4bb896d2e58d6785b6dd5c3f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Settings_ Team Members.png": {
+    "mtime": 1780756801000,
+    "hash": "c5e69afe4bb896d2e58d6785b6dd5c3f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Settings_ Workspace.png": {
+    "mtime": 1780756801000,
+    "hash": "0035cb4ed9e1eff2fa9756bd13d14cc2"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Sign In.png": {
+    "mtime": 1780756801000,
+    "hash": "32f2484aa934a729d6228351eef86cba"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Sign Up.png": {
+    "mtime": 1780756801000,
+    "hash": "26d11b1d573153cc612fa61e69a3da55"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Swarm Activity.png": {
+    "mtime": 1780756801000,
+    "hash": "a620a8dc8a0408479ea1621dffddf788"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Task Detail.png": {
+    "mtime": 1780756801000,
+    "hash": "38e77370f487553ba5206dc5531a2fed"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Test Agent Modal.png": {
+    "mtime": 1780756801000,
+    "hash": "6522bbf7cfb78fee9a100b0263c74438"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - User Profile.png": {
+    "mtime": 1780756801000,
+    "hash": "f29cea27ac064428d0821ae968662f9d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Workflow List.png": {
+    "mtime": 1780756801000,
+    "hash": "5561c20e885983a442bec7fbf7d1dbf0"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Workflow Run History.png": {
+    "mtime": 1780756801000,
+    "hash": "3f696e4673d43dae1b20a199f4b7db2a"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/Create New Agent.png": {
+    "mtime": 1780756801000,
+    "hash": "fcb58a2c1309350d8c4961d620d82b2f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Agentic14 - AI Agent Orchestration Dashboard/Recent Alerts.png": {
+    "mtime": 1780756801000,
+    "hash": "8ad789f2f7fcd95302e0ad5da6652e8b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Cover.png": {
+    "mtime": 1780756801000,
+    "hash": "20e23d13499308fee02854ec7b70d9f3"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Active Course Certificate - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "e2d8ca38d058127920a6c1a21440d2c3"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Analystics - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "8ccc5047bf195228bf0acaeda7095312"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Analystics - Mobile.png": {
+    "mtime": 1780756801000,
+    "hash": "b8549c106cae91e0a363875c8485f985"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Analystics Courses - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "8f440012cc820f0fc76e5f5c21a6d3a8"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Choose Price Coaching Program - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "bcfae30b2db5dbd3520a88203eadb65b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Coaching Page - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "8bf226fde4ce7d3dad95f0c67118aa37"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Coaching Page - Mobile.png": {
+    "mtime": 1780756801000,
+    "hash": "ba0c21b4525c8f31ef87b3379a8f67ff"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Community Details - Desktop.png": {
+    "mtime": 1780756801000,
+    "hash": "454b9f570ec16ca59b1cc73720edf2c6"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Community Details - Mobile.png": {
+    "mtime": 1780756801000,
+    "hash": "2d85772f0311074c3a9679abefbcf5ea"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Coupon Page - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "0154e29be2680582546ba70cef9db06e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Course Pricing - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "b1fe5a4c334c0033c4cac3e280e66bb7"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Course Setup Guide - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "e6712d9dda4513febeb447c74b90c703"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Create Certificate - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "e3d7120c4a94b0eef19150ebf562c03b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Create Certificate - Mobile.png": {
+    "mtime": 1780756801000,
+    "hash": "70b9e2be86320c37ba0edc06ac5926be"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Create Community - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "5b7054f2f85aaeb98900ad8e39eee28e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Create Courses - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "d61bfa275f42b38bba7056d0fc4c66a3"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Create Courses - Mobile.png": {
+    "mtime": 1780756801000,
+    "hash": "868b650d347f1e49b42a3857d22c370b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Create Lesson - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "325fe9f2b1adb02349f3d139ba60beb3"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Create New Coaching Program - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "85a69cd52f16dc1935a680c777e5d7f4"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Create New Community - Desktop.png": {
+    "mtime": 1780756801000,
+    "hash": "ac44829b219b8a1b5832390df4414fee"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Create New Podcast - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "250442cfb133b56c2fe6f5316c4bcb1e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Create New Podcast - Mobile.png": {
+    "mtime": 1780756801000,
+    "hash": "273e24770f2d3dc33892dc46586b956d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Curriculum Add Course - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "2fde3eac8e4d5137a971e648a75877fa"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Curriculum Page - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "bff10cf55f0312c51f15cf07d719957c"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Curriculum Page - Mobile.png": {
+    "mtime": 1780756801000,
+    "hash": "18e121ca9f7f83ee7caeff0c4bddce8e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Feed Community - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "1d0557bad6e703984bad9be8aa325115"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Filter Analystics Courses - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "272baebd61c56ec32f058d1727554247"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Home Page - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "f25b2d24921f8315b4abb2361af3b091"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Home Page - Mobile.png": {
+    "mtime": 1780756801000,
+    "hash": "6e2cf009134c704fc678d4d0d59a1a2d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Knowlage Check - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "8d7cecb6f7ee9ced6358b58e0cbaf353"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Product Page - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "0c2558df5a24f281caf3054171d5b9d8"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Reorder Courses - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "5b6abdefe8d07ae009f358c68817ee31"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Reorder Curriculum - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "ecb6310873b6a6d6357e85b5b170fbbf"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Sales Page - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "a8f0582f2b57b04b2a2abdf7cdd9ed2d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Selec Your Courses Type - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "272f44a496248fd44a27efdbf81d6d8d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Educourse - AI for Online Course/Testimonial Page - Dekstop.png": {
+    "mtime": 1780756801000,
+    "hash": "70289806df6b25b7e222158915245911"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/AI Assistant.png": {
+    "mtime": 1780756801000,
+    "hash": "9a95f084e388e23cdc58033bd72a6ce2"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/Calendar.png": {
+    "mtime": 1780756801000,
+    "hash": "b033f1012d938e7805cf73e06b10fc4e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/Create New Project.png": {
+    "mtime": 1780756801000,
+    "hash": "0062431e587b6f29b3f39b02db6877cd"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/Create New Schedule.png": {
+    "mtime": 1780756801000,
+    "hash": "a242df59ea5cfef044e9f724860cbba4"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/Create New Task.png": {
+    "mtime": 1780756801000,
+    "hash": "f8a6bfe2a153ac34433bf41b2b8b550f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/Dashboard.png": {
+    "mtime": 1780756801000,
+    "hash": "fa5cc2c08f6c988b26ebeafada3f3ada"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/Export Data.png": {
+    "mtime": 1780756801000,
+    "hash": "82be4190a6595a2767ce7d1f8cf16e82"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/Inbox_ Video Call.png": {
+    "mtime": 1780756801000,
+    "hash": "207c85745ecbea1acea323cc3731cf82"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/Log In.png": {
+    "mtime": 1780756801000,
+    "hash": "6e666596bda60ce21947a1b992ba4cd1"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/My Inbox.png": {
+    "mtime": 1780756801000,
+    "hash": "e0982f23abf3cd72ac7ef24dc44d9384"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/Notifications.png": {
+    "mtime": 1780756801000,
+    "hash": "d336d81b7edf00e69d6f833f36f2fd72"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/Projects.png": {
+    "mtime": 1780756801000,
+    "hash": "9906f5e2b885d7b91341dfbe025c5058"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/Search.png": {
+    "mtime": 1780756801000,
+    "hash": "e44d0b0f7fbe572e4d19dc75bbf8af9b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/Settings - Account.png": {
+    "mtime": 1780756801000,
+    "hash": "67c21e80656ee8f0d96f334d77ca2d72"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/Settings - General.png": {
+    "mtime": 1780756801000,
+    "hash": "68b7cb33313f19d7c2137d2d5ba74380"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/Settings - Plan & Pricing.png": {
+    "mtime": 1780756801000,
+    "hash": "7e5c29d6373a9ec93a7cc9edfecbe90f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/P14 - AI Project Management Dashboard/Settings - Time & Language.png": {
+    "mtime": 1780756801000,
+    "hash": "a422f1db7ff48e73f50269bb10d034b1"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Add New Staff.png": {
+    "mtime": 1780756801000,
+    "hash": "91552862741881fbc0b9804830fe3339"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Admins.png": {
+    "mtime": 1780756801000,
+    "hash": "b497d58703fb2becf593c5d3b58d776d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Apply Shift.png": {
+    "mtime": 1780756801000,
+    "hash": "cb9c846f1d559587505c5da2606d6d62"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Branch details.png": {
+    "mtime": 1780756801000,
+    "hash": "a048195ed12aa68825cb618fe04819b4"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Branches.png": {
+    "mtime": 1780756801000,
+    "hash": "92812b6f525ed742d191c2523a5fb90a"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Cancel Shift.png": {
+    "mtime": 1780756801000,
+    "hash": "783048ab8d8f145f4050b358e03524cd"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Dashboard - Add Shift.png": {
+    "mtime": 1780756801000,
+    "hash": "f6cf5f1adf9a8978c7b05bc4b615940b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Dashboard - Approve Staff.png": {
+    "mtime": 1780756801000,
+    "hash": "c500d9d5a4ed6cea95b69ac3abc04226"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Dashboard - Notifications.png": {
+    "mtime": 1780756801000,
+    "hash": "a670a6898df5327010cf110b9741d0c5"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Dashboard - Shift Rejected.png": {
+    "mtime": 1780756801000,
+    "hash": "a39cd0f15c05ee951b65b4c5da4afb11"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Dashboard.png": {
+    "mtime": 1780756801000,
+    "hash": "bb6d18795142748d7a8482ea71e87f55"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Earning History.png": {
+    "mtime": 1780756801000,
+    "hash": "a0c0e8531b5aa1f65a0e41720e2844ea"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Landing - Menu.png": {
+    "mtime": 1780756801000,
+    "hash": "1188468aee42e6458b4e2bca6b18dac9"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Landing - Today - Calendar.png": {
+    "mtime": 1780756801000,
+    "hash": "966c18f1e08a143aa0483a9725bd6294"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Landing - Today.png": {
+    "mtime": 1780756801000,
+    "hash": "8218084bf8b9e011f1b99ae218bdb4aa"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Login - Show QR.png": {
+    "mtime": 1780756801000,
+    "hash": "4f2a4e480be5f7bedc5ca3c1d7300dd9"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Login.png": {
+    "mtime": 1780756801000,
+    "hash": "76c4581ef9ddd73192ee9a342ae8fb81"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/OTP.png": {
+    "mtime": 1780756801000,
+    "hash": "b86d59121b1262c521edac4b5969c80e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Profile.png": {
+    "mtime": 1780756801000,
+    "hash": "956790155aac9bb6bcf944f98a672d87"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Reports.png": {
+    "mtime": 1780756801000,
+    "hash": "ded35861dcab366e441faad7e08daf3d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Staff Details v1 (Sliding Panel).png": {
+    "mtime": 1780756801000,
+    "hash": "b85569119aa5023a66f162605255b364"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Staffs.png": {
+    "mtime": 1780756801000,
+    "hash": "80c4d17d9e8cac25949258c3ee422633"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/Payroll Management System/Start.png": {
+    "mtime": 1780756801000,
+    "hash": "9ecce2b82b04be65917b196d38291a96"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SEO PRO/Competitive Analysis - Desktop 1445.png": {
+    "mtime": 1780756801000,
+    "hash": "6f8282aaf908305901d8ecde553cf049"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SEO PRO/Domain Overview - Desktop 1440.png": {
+    "mtime": 1780756801000,
+    "hash": "c9cddb1d46c18b5b605c79a45e290962"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SEO PRO/Domain Overview - Desktop 1443.png": {
+    "mtime": 1780756801000,
+    "hash": "a4f3b0274a8b0801749a29c9fa5e79c2"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SEO PRO/Keyword Explorer - Desktop 1444.png": {
+    "mtime": 1780756801000,
+    "hash": "a1d636e7a3e900ebacbd5fecaa358706"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SEO PRO/Link Opportunities - Desktop 1447.png": {
+    "mtime": 1780756801000,
+    "hash": "a81816c9b5160d4909fd902a637d716d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SEO PRO/Organic Research - Desktop 1444.png": {
+    "mtime": 1780756801000,
+    "hash": "1aed2a6adb19263f2830d9c4ef4112c6"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SEO PRO/SEO Dashboard - Desktop 1441.png": {
+    "mtime": 1780756801000,
+    "hash": "cfb6017e6aeb55dccb6caf02304608fc"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SEO PRO/SEO Dashboard - Desktop 1442.png": {
+    "mtime": 1780756801000,
+    "hash": "16e73a5fff0eaf2fb388677a5ebb95ac"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SEO PRO/Site Audit - Desktop 1448.png": {
+    "mtime": 1780756801000,
+    "hash": "11c57e5bacd3136e7792f079d0f202a2"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SEO PRO/Traffic Analytics - Desktop 1443.png": {
+    "mtime": 1780756801000,
+    "hash": "b8d352f62949cebd93681fe270d71f1f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SEO PRO/iPad mini 8.3 - 1.png": {
+    "mtime": 1780756801000,
+    "hash": "bccf6dd258ac929a8c67ebb514606e51"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SEO PRO/iPad mini 8.3 - 2.png": {
+    "mtime": 1780756801000,
+    "hash": "a7691b85ad168b3ea99c527c812a65d2"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SEO PRO/iPhone 16 Pro Max - 1.png": {
+    "mtime": 1780756801000,
+    "hash": "a473ed90d2fb4c5b39a4023ddf2ece6c"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SEO PRO/iPhone 16 Pro Max - 2.png": {
+    "mtime": 1780756801000,
+    "hash": "b55cee28e70b4b779d14909bb0692395"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/AI Recommendation - Chat Room.png": {
+    "mtime": 1780756801000,
+    "hash": "0789043ecf7ceea3e7df5524fce2462a"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/AI Recommendation.png": {
+    "mtime": 1780756801000,
+    "hash": "0b21543ac4a0c6260d88cd0da8af30ef"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Compressor - Add Device Qr Code.png": {
+    "mtime": 1780756801000,
+    "hash": "b45d9de95e2676abc818b0ccf6d841d6"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Compressor - Grid.png": {
+    "mtime": 1780756801000,
+    "hash": "4b436491b560afa846ee9b888a39c238"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Compressor - Machines - Machine Details.png": {
+    "mtime": 1780756801000,
+    "hash": "56509e3b5b56bc64cd7d9df6386d504f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Dashboard - Cycle Count.png": {
+    "mtime": 1780756801000,
+    "hash": "f91369f2c46c6e001333982084725cb5"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Dashboard - Performance.png": {
+    "mtime": 1780756801000,
+    "hash": "7a5d4db21438afab449269f3cc8637b7"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Dashboard - Runtime Hours.png": {
+    "mtime": 1780756801000,
+    "hash": "4b2f615377221162f7446041e96943b0"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Dashboard-9.png": {
+    "mtime": 1780756801000,
+    "hash": "3606343fb537bf9c45edf3bb6f9742ed"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/General Report.png": {
+    "mtime": 1780756801000,
+    "hash": "d2e7751f85de5c2a70e150249d35d986"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Historical Data - Select Device Comparasion.png": {
+    "mtime": 1780756801000,
+    "hash": "491ab1c11f44aeb8e36255ad4bcd4bed"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Historical Data.png": {
+    "mtime": 1780756801000,
+    "hash": "199b287d991517b504e375e8b2ba4cd0"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Maintenance Schedule.png": {
+    "mtime": 1780756801000,
+    "hash": "1460b70f40eb684d51f22d85e387b39b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/On Boarding.png": {
+    "mtime": 1780756801000,
+    "hash": "6b21554b9f53baeb1bee2c7e0379b917"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Real Time Data - Machines - Graphic.png": {
+    "mtime": 1780756801000,
+    "hash": "cbea939332dc5d0b671bc28df484cead"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Real Time Data - Machines- Status.png": {
+    "mtime": 1780756801000,
+    "hash": "33c22dfce23d2c2c05335803736a4244"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Sign In.png": {
+    "mtime": 1780756801000,
+    "hash": "f243226b4884346eb93776c527372396"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/1. Sign In.png": {
+    "mtime": 1780756801000,
+    "hash": "e8af285bd020b8017c525dabfde1c0d8"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/10. Upgrade to PRO.png": {
+    "mtime": 1780756801000,
+    "hash": "9445f5e83241ab0b6c5eb69fffe011f0"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/11. Default.png": {
+    "mtime": 1780756801000,
+    "hash": "a2e3103aeb894c321fcb0dd1189a8fec"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/12. Hand Tool.png": {
+    "mtime": 1780756801000,
+    "hash": "f73cd3fb0cbe392c5230d0be1eba4a82"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/14. Template.png": {
+    "mtime": 1780756801000,
+    "hash": "e5190fbe019fa6ee5a14639fff97ff82"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/15. Template - Open.png": {
+    "mtime": 1780756801000,
+    "hash": "cb3de7aece91b17955b026b33c576d19"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/16. Note.png": {
+    "mtime": 1780756801000,
+    "hash": "e3d16660592fc9cb3d1f4c0ff81068da"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/17. Note - Open.png": {
+    "mtime": 1780756801000,
+    "hash": "6a36e997e4fefec451d53668e140e486"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/18. Note - Selected.png": {
+    "mtime": 1780756801000,
+    "hash": "327c5389e0db210b24bcd5f1ec5e7768"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/19. Text.png": {
+    "mtime": 1780756801000,
+    "hash": "9361f1ea6367e3fe33992e46aca4641b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/2. Sign Up.png": {
+    "mtime": 1780756801000,
+    "hash": "c623e3cc4ce1779fdfa77a09610d940b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/20. Text - Type Something.png": {
+    "mtime": 1780756801000,
+    "hash": "efe2105cdc096db45fe6d0323d31bb7d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/21. Shape.png": {
+    "mtime": 1780756801000,
+    "hash": "3f7422bfcdb0b37ffc38b7640f1d2175"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/22. Shape - Open.png": {
+    "mtime": 1780756801000,
+    "hash": "9a64ab3cce37b060bd1b5140e033a7ea"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/23. Shape - Created Rectangle.png": {
+    "mtime": 1780756801000,
+    "hash": "be629a69550bcf8979649bd0fa758de4"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/24. Marker.png": {
+    "mtime": 1780756801000,
+    "hash": "e1e2f5afe2c967a13ab9fe5fa51c0254"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/26. Section.png": {
+    "mtime": 1780756801000,
+    "hash": "421e93167b31983050b8386c6b633305"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/27. Section - Created.png": {
+    "mtime": 1780756801000,
+    "hash": "48d5dfcb49faf58bd2bc5f0a92f5d35e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/28. Comment.png": {
+    "mtime": 1780756801000,
+    "hash": "be3dc61ad3a4e2ebd9c21e4dd8f1c15a"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/29. Comment Open.png": {
+    "mtime": 1780756801000,
+    "hash": "dcfcac1e6c3d49f834915944e6c7da80"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/3. Sign Up - Success.png": {
+    "mtime": 1780756801000,
+    "hash": "9d4c45293be253498832d2ab5984616b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/30. Comment Sidebar.png": {
+    "mtime": 1780756801000,
+    "hash": "c1fa94dc98c05368daae36a18667de0f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/31. Generating.png": {
+    "mtime": 1780756801000,
+    "hash": "746ebdb881cf7170680ee6344ff309e4"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/32. Generating Result.png": {
+    "mtime": 1780756801000,
+    "hash": "5fa0b1c781394146889557568d17906f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/33. Generating.png": {
+    "mtime": 1780756801000,
+    "hash": "e9c2bb8ce7e47c730a1b8c3a70f69575"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/34. Sticker - Emoji Open.png": {
+    "mtime": 1780756801000,
+    "hash": "cddfdf6c2c9e885cc627d543d2f10a0b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/35. Sticker - Sticker Open.png": {
+    "mtime": 1780756801000,
+    "hash": "93b576d2b03bbd9bbb58b2a967f704d1"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/36. Share.png": {
+    "mtime": 1780756801000,
+    "hash": "853c87936b90978520d641902b9a5dc1"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/37. Preview.png": {
+    "mtime": 1780756801000,
+    "hash": "79468ad6ceae0308a0be1d12a2d8c2ae"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/38. Settings - Profile.png": {
+    "mtime": 1780756801000,
+    "hash": "a8218075a7c6e3f2bff3ae82b51c067c"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/39. Settings - Notifications.png": {
+    "mtime": 1780756801000,
+    "hash": "ed76a997c1c28d312bb285e454d569e4"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/40. Settings - Your Apps.png": {
+    "mtime": 1780756801000,
+    "hash": "9fea25f0802c7f6a6d3707f97119f17c"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/41. Settings - Integrations.png": {
+    "mtime": 1780756801000,
+    "hash": "bc3cd050e1bf94a4654ca8324b527d27"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/42. Settings - Security.png": {
+    "mtime": 1780756801000,
+    "hash": "2346af900e527911e016e441b8a98892"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/43. Settings - Permissions.png": {
+    "mtime": 1780756801000,
+    "hash": "76aa48726ba66056c9a577995b5dd7d9"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/44. Settings - Data Usages.png": {
+    "mtime": 1780756801000,
+    "hash": "5f6170c44e1c2ebd96d45a08c98070e7"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/45. Settings - About.png": {
+    "mtime": 1780756801000,
+    "hash": "a83f43b113bdff32e1a13f84c033891d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/6. Homepage.png": {
+    "mtime": 1780756801000,
+    "hash": "9f71d1d6be0ac730d2bdf1403e17b189"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/7. Create New Project.png": {
+    "mtime": 1780756801000,
+    "hash": "7ddb1e1797c18534a33a9c32532719f5"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/8. Invite Member.png": {
+    "mtime": 1780756801000,
+    "hash": "c6e0dc1d2e059b141e741435003aafa0"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/V14 Workflow AI/9. Notifications.png": {
+    "mtime": 1780756801000,
+    "hash": "02ce2ad9158b58baad4724ac16835641"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/clickkart.png": {
+    "mtime": 1780756801000,
+    "hash": "17635adff4f66c96af698c248ce3f6cb"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/Company=Adobe.png": {
+    "mtime": 1780756801000,
+    "hash": "755913daf466ed2cafa9100f3c57d66a"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/Company=Canva.png": {
+    "mtime": 1780756801000,
+    "hash": "5e62b7b881144a887b4bd5a54bef9d8b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/Company=Docker.png": {
+    "mtime": 1780756801000,
+    "hash": "8cbe8fb3e685bba1b9a6a2873806a382"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/Company=Framer.png": {
+    "mtime": 1780756801000,
+    "hash": "81d8753223a04eb45aba8394253b640f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/Company=GitHub.png": {
+    "mtime": 1780756801000,
+    "hash": "0cccb2691bdf2bc296632f5715305ffd"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/Company=Gitlab.png": {
+    "mtime": 1780756801000,
+    "hash": "029d60108fc49a67df145b791eb44d5f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/Company=Google.png": {
+    "mtime": 1780756801000,
+    "hash": "8f9eaf844c6e5572e92a7c6cd1adaab8"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/Company=Slack.png": {
+    "mtime": 1780756801000,
+    "hash": "c567f81dfaf3faa2886bb6742a90684f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/Company=Webflow.png": {
+    "mtime": 1780756801000,
+    "hash": "f48878c7907b1cbdd70f0a49e60ed031"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/Google AI.png": {
+    "mtime": 1780756801000,
+    "hash": "ceb35186ff1db619c075d059cfc01a07"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/Mid Journey.png": {
+    "mtime": 1780756801000,
+    "hash": "fca367ef2cbf03a354747b22341c9cbc"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/cloudflare-logo-svg-150px.png": {
+    "mtime": 1780756801000,
+    "hash": "cc9c62f7b0e13ade9f532010c702782d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/figma-logo-svg-150px.png": {
+    "mtime": 1780756801000,
+    "hash": "0fdec25cde6b102ee353258b17a3d352"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/google labs.png": {
+    "mtime": 1780756801000,
+    "hash": "717d4d05e91d5f0265eaca9c9736be8a"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/google-analytics-logo-svg-150px.png": {
+    "mtime": 1780756801000,
+    "hash": "2b6f8e0c1972585f2027a84fbc3c350f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/google-search-console-logo-svg-150px.png": {
+    "mtime": 1780756801000,
+    "hash": "ce03617a4c222b7a878bf7ce30b2bfa2"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/jira-software-logo-svg-150px.png": {
+    "mtime": 1780756801000,
+    "hash": "45bcf7508ddbdef2050d8f5f426f7abd"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/logos/monday-logo-svg-150px.png": {
+    "mtime": 1780756801000,
+    "hash": "58fb41168855d0504fa2f71d5d029747"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/1. Splash Screen.png": {
+    "mtime": 1780756801000,
+    "hash": "158e5b5302355173dc6bdb4ba3eaa4b2"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/12. PIN Verification.png": {
+    "mtime": 1780756801000,
+    "hash": "5edab5c01bd082281e2b572d918407da"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/13. Home – Default.png": {
+    "mtime": 1780756801000,
+    "hash": "8f5d23ee5eea7cff247463774f7be320"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/14. Home – Checked In.png": {
+    "mtime": 1780756801000,
+    "hash": "4c145d195a21a0cb9c19de813ff3599e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/17. Home – Shortcut Expanded.png": {
+    "mtime": 1780756801000,
+    "hash": "f7ea63d68a815014eaceaa56b67dcbaa"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/18. Home – Notification Preview.png": {
+    "mtime": 1780756801000,
+    "hash": "c2a3e84ddd9190bcd31daced4a17e8d5"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/19. AI Chat – Home.png": {
+    "mtime": 1780756801000,
+    "hash": "ba0862f33bae3655638ca5d517b39986"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/2. Onboarding - 1.png": {
+    "mtime": 1780756801000,
+    "hash": "6a77f55e78d9222ef4daeb9088383f51"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/20. AI Chat – Home Expanded.png": {
+    "mtime": 1780756801000,
+    "hash": "3a6fb499d1557918af157028e746f46c"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/21. AI Chat – Suggested Prompts.png": {
+    "mtime": 1780756801000,
+    "hash": "4de77b66f9126e0b51fca11358338f38"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/22. AI Chat – Referenced Document View.png": {
+    "mtime": 1780756801000,
+    "hash": "502600b37ecc27736ee5768b18a4f623"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/24. Attendance – Location Validation.png": {
+    "mtime": 1780756801000,
+    "hash": "2fdf17b600eb2abe5dd133a845e2304d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/25. Attendance – Face Validation.png": {
+    "mtime": 1780756801000,
+    "hash": "1366b72d29361ae154981bdc76617a97"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/26. Attendance – QR Validation.png": {
+    "mtime": 1780756801000,
+    "hash": "c216051f2dc4dafd3be6cef190ede1e9"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/30. Attendance History – Monthly Summary.png": {
+    "mtime": 1780756801000,
+    "hash": "563d36b43f5ec371e958a7ad9b7c667a"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/32. Attendance Calendar.png": {
+    "mtime": 1780756801000,
+    "hash": "e96b147015cf9c1423ab1913f1768caa"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/42. Timesheet – Weekly.png": {
+    "mtime": 1780756801000,
+    "hash": "380b24bfa06e6e366c0e3bea309bee7e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/43. Timesheet – Monthly.png": {
+    "mtime": 1780756801000,
+    "hash": "97a336dee8795f30b3a79e8ea897d94d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/45. Timesheet – Submitted Successfully.png": {
+    "mtime": 1780756801000,
+    "hash": "ffb10833c96af8c072927671327b37ab"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/46. Timesheet – Approval Status.png": {
+    "mtime": 1780756801000,
+    "hash": "a42656518a8ad2cbad4ab1cb948d5adc"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/48. Leave - Home.png": {
+    "mtime": 1780756801000,
+    "hash": "de8fcc3767e9e981cba24eea1180d212"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/5. Login - Default.png": {
+    "mtime": 1780756801000,
+    "hash": "e6cc5f1a3b1a042c68d0373104541594"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/50. Leave - Select Type.png": {
+    "mtime": 1780756801000,
+    "hash": "1210779a07c699d56e9ef33b5ae957d6"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/54. Leave - Review Summary.png": {
+    "mtime": 1780756801000,
+    "hash": "047726427ea4ea911f88163cde8fbd34"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/60. Overtime - Home.png": {
+    "mtime": 1780756801000,
+    "hash": "2591e09f47ed32a1f84fa2e1f3b50cf7"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/64. Payslip – Home.png": {
+    "mtime": 1780756801000,
+    "hash": "b387be1e2543c44fb7ba118cd05ae0e4"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/67. Payslip - Basic Salary.png": {
+    "mtime": 1780756801000,
+    "hash": "9f9a384353ef32f43d1e87969e5c2093"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/71. Expense - Overview.png": {
+    "mtime": 1780756801000,
+    "hash": "dfa5f52efd1bfb61906c5aa4c102a35e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/74. Expense – Create Request.png": {
+    "mtime": 1780756801000,
+    "hash": "96c644855b450855a7c0e4ad2b0b0cef"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/79. Expense – Detail.png": {
+    "mtime": 1780756801000,
+    "hash": "2368b825cfd205feea8a6e45b91f0f3a"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/loop - Your AI-Powered HR System/81. Profile – Default.png": {
+    "mtime": 1780756801000,
+    "hash": "4003873a0e4f870673be01dab2ec97cb"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_100_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "b3933536c388597aaa47237912fbab1a"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_101_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "3ccb7d885ac147ec6931c3e8d4c7c272"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_102_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "9501e51cb5a596e34df6e78a24a2f008"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_103_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "dd2813c024b29651d93b83eef46c4be9"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_104_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "99203fc9ad93763813c346c0e1000492"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_105_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "0c0533986c90c71309a7e1840bbf8f2e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_106_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "eadd6055f23d4800d4687444c8723d9f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_107_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "f8f8d291c17e8de4f735719f3a874803"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_108_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "1f9952abce07bc066a1eac56133e5ebe"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_109_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "60212724df03031ad3d62003e4e2cf87"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_110_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "55a3d07cef43c6c42a6470fb90ab6f26"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_111_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "f29f8c6931d316a357f40b4e06bcda73"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_112_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "afb2b4e5485672fef38b6db8417f8dea"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_113_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "aee1a132833cba9be909fd5c18001871"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_114_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "f6bcd8893e0351b3e0160b7dbf747bd6"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_115_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "15454dc3d03db7ea4a6e5a8b68f8810c"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_116_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "b9228ef35209ad03c7094e0db2a55b69"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_117_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "af72dbfa87b2f6e0488057d16456e686"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_118_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "a78c7af5d81f998d7061c44627ea5abd"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_119_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "0c11e20a1e7d34e843a5e7d79f17bdc0"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_120_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "cccc8ea3d61bfd4bb36dc9eddda5595d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_121_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "dc0afa32fd29a62a739b374f915f483b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_122_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "0b1d9e8d288ac1e740419f11b5f02453"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_123_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "046c84533e38692f10efb3ddd722693e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_124_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "eee986fa3910979d1e872d766206fd90"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_125_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "1a9076bfd8cf25473e831d91e8573099"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_126_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "60fa6db1dc15d1abe77a132096882ecc"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_127_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "ead65083814ec96206b1411f92bfb724"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_128_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "19eb3813256a9e70378508ed8d06ff44"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_129_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "9364216828c88433c5cbc34df81782c9"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_130_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "34630d1b01c45c55ed4f1bcaa734bfe8"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_131_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "1b30ef37cded546933881b5ac0b16eef"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_132_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "2f86e20043a28f4212c658c767b90078"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_133_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "453e548bc2727807815ef764d2822641"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_134_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "13cf868995ef76645b2f0a8a57963fa1"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_135_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "86756f67f82c3f9b8ee05e55ab6e9c17"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_136_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "57f2c4a84885fb73c16a7a928c746c4d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_137_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "cd3c640aecb890330fa7266ab2cdcd1a"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_138_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "b39a5db0857c89e971c8c2098c106362"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_139_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "40b0c7ce3cc5f4a5ddf66f00a05de351"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_140_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "3ed060fcd996de60e66742cdff837442"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_141_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "d1366ac0c9a065f8ff0fb907840f9655"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_142_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "a2dd0b88760ac5363d630ffe772fab23"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_143_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "9d707182e77e476dccc9fc4ecb61eab2"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_144_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "fcd039e340e05997e4a0752fec429277"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_145_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "12d72efc10c0848c6793656924882133"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_146_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "c1ded6cac872f73ebc18a2abbdad2d8d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_147_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "d1828cab452537c132c9efdf773fb6ce"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_148_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "a91bd523a736fb9acc2522bcf070c7e8"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_149_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "0a0d225b603ca88846b3f01a29cbee3d"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_150_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "797b3811ed99cf6a3a41dc212de51167"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_151_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "ff05004be8fdb088a23de98985fe10b0"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_152_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "68420cd3a814ab96be70c686a8616c56"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_153_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "dd12fe211358a2529615a32c02fab56c"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_154_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "85c32cb50af35a6e98730f0a12174a02"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_155_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "59567df146174a34957e67bf6a82c25b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_156_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "1b14f3dc4d383bc19bcafe9c1e060a94"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_157_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "03e3b2c81f582b60ca925aa258715e5c"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_158_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "99eedfd109421ad51780c034e0ac598e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_159_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "e5f1dbb067d5873bb80563e386d28dbf"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_160_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "c4bd065aac2896f3ed2b91b337171d1b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_161_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "83d724b7a6cd622cffbb3d3c04aef116"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_162_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "783c8e888ddc0b8da222034b4b3d6cda"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_163_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "6eb47350aeff4096da4d69fb187d1e88"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_164_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "37812c7e9ec2f53ef2e1b394cec8862b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_165_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "4b1054e2141d407dec2d9af74eefae30"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_166_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "454ca8d444d5b95ff9aafa136b4fb13f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_167_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "5e28c5c4ce005e9a398a234188bd1295"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_168_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "0ef9532b3bdedc401d1957d5be71f77c"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_169_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "7229a6027f503b939d738261682ea403"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_170_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "7b9e6fea2c62862bb98a5b9f56c41308"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_171_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "1e624e1413ccfb32b5f6e6caa2da1641"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_172_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "7c2fa741966375ed76551b640989b31b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_173_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "c76accabeba514e7d2b52dd54e06fcaa"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_174_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "6b8b5fb23f809ebac7ef19cadc2b7a2c"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_175_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "48a525d155a3dc31df5aec5879908ecd"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_176_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "c22552651562c0ef757c0ad379da9c24"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_177_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "12a9f732afadddb8060d93f10a8a4e17"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_178_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "92d32491dae6956b1467f52f91523866"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_179_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "2a6cd90debf29e6a07b748773c80f353"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_180_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "c204861fcb5af822f37e43586a85196c"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_181_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "75533c25c18eb9539c47bb6fc3a18dcd"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_182_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "253758f04b569b71c6a1475e3d22017b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_183_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "648f417a32cda73dec58fc6d5c3dd967"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_184_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "e0c61d6de7b36f6fd0998f277b823b13"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_185_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "0d3fbc5f017fb240ec5dd076f2162f72"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_186_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "a2fb826598569b8ae3e43a8b6e9e3a5e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_187_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "805ad8bd94609cb6cd4164b4756d10ac"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_188_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "9bbc2e6c2e1f745bb08393969a82de0e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_189_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "c0da4f8c91decde9bfd3c781d4a19682"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_190_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "897e6640c13ddde0d8000fc6b11d2955"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_191_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "634a204a4abcab00a9bdecfa1856b5e0"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_192_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "d165bdb343e6d06cc754e52789a67a9e"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_193_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "ed7ceccc97292f0e9553340283725cfb"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_194_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "3f543283d686d524b77e299533f68ca2"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_195_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "ede2414f32b242a9d0c329c8bfc84ea4"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_196_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "90f3678c3e49705ee151c5f767a50610"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_197_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "43f7cf230233116c28d903d813c3a80b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_198_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "64faf4c81e3cb4d45e8eefac85fa3d86"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_199_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "beb4c38269d1e99a6237b40e8858e09b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_200_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "47b3a0234f49b4638c9f24e16118b84f"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_201_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "bd19e94ddd3903ffb59206d4361e8395"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_202_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "036933b5b248bb678c557d8da19d8160"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_203_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "c1cf6a0e8dee94858fa52a4625ebe4bf"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_204_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "7748f7e478a421404c483324a53fa2cb"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_205_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "b17755635ff43b8692240a676e07bf20"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_206_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "b76bb5be24fdb519fd8e9056c11cc0cc"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_207_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "3c572d8dff7d87b70fc754ece908ee4b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_208_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "34e54cad2ea50041c126ebe270c93a05"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_209_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "d14f5da94b0a2dbefb668be6ecdb7e44"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_210_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "47abd71cf5d307469b773937dbda60f1"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_211_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "627ef76a60df35ea5a384ed73305fe15"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_212_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "87e93a93654e5ab545c50e512e4deb7b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_213_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "746fad6966faa2beda148429aeaf7f04"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_214_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "8bcdb48313d2c9044428d66adaa6e263"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_215_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "f5bfbbe458bceb9394111a3b0960eee7"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_216_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "505fa9d68ae7ee4be5d948de8b59e2bf"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_217_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "15fa016e726f78745c98e9ef8b450c83"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_218_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "475a21af73a1119ad7b203d040287a42"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_219_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "c503da49a5e3beed58bd95dbd4fabbda"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_220_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "4ac8122d32022140b317f8ff42222ad2"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_221_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "39c4cd0b3a784e666f6de61bff88ab3b"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_222_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "fad20790097a4c916c0bc206d6809fa0"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_223_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "425b367d3d462ce0eff2d3a9c7ea5bbb"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/sequence/frame_224_delay-0.067s.webp": {
+    "mtime": 1780756801000,
+    "hash": "8af590398738aa7147d8d7e5a22d8c29"
+  },
+  "C:/Users/vishw/Downloads/portfolio/portfolio-ba38f254624021afef547c10a99bb23b5daf21fa/public/v14 coer .png": {
+    "mtime": 1780756801000,
+    "hash": "041763dd45bc89847dfe7de37a4fdbc1"
+  }
+}

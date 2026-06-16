@@ -1,0 +1,269 @@
+{
+  "communities": {
+    "0": [
+      "components_background3d",
+      "components_background3d_background3d",
+      "components_background3d_particlefield",
+      "components_background3d_scene",
+      "components_letstalk_letstalk",
+      "components_toolsknown",
+      "components_toolsknown_toolsknown",
+      "src_about",
+      "src_about_about",
+      "src_app",
+      "src_app_app",
+      "src_app_scrolltotop",
+      "src_home",
+      "src_home_home",
+      "src_main",
+      "src_resume",
+      "src_resume_resume",
+      "ui_pixel_logo_grid_pixelcanvas"
+    ],
+    "1": [
+      "data_projects",
+      "data_projects_casestudysection",
+      "data_projects_project",
+      "data_projects_projects",
+      "src_payrollcasestudy",
+      "src_payrollcasestudy_herodashboardmockup",
+      "src_payrollcasestudy_payrollcasestudy",
+      "src_payrollcasestudy_phonemockup",
+      "src_payrollcasestudy_zoomableimage",
+      "src_projects",
+      "src_projects_projectcard",
+      "src_projects_projects",
+      "ui_impact_section",
+      "ui_impact_section_impactsection",
+      "ui_interactive_image_accordion",
+      "ui_interactive_image_accordion_accordionitem",
+      "ui_interactive_image_accordion_landingaccordionitem"
+    ],
+    "2": [
+      "lib_utils",
+      "lib_utils_cn",
+      "ui_button",
+      "ui_button_buttonprops",
+      "ui_pixel_logo_grid",
+      "ui_pixel_logo_grid_createpixel",
+      "ui_pixel_logo_grid_googlelogo",
+      "ui_pixel_logo_grid_linkedinlogo",
+      "ui_pixel_logo_grid_logosvgprops",
+      "ui_pixel_logo_grid_mailchimplogo",
+      "ui_pixel_logo_grid_mediumlogo",
+      "ui_pixel_logo_grid_microsoftlogo",
+      "ui_pixel_logo_grid_netflixlogo",
+      "ui_pixel_logo_grid_pixel",
+      "ui_pixel_logo_grid_pixelcanvasprops",
+      "ui_pixel_logo_grid_slacklogo",
+      "ui_pixel_logo_grid_stripelogo"
+    ],
+    "3": [
+      "components_letstalk",
+      "ui_button_button",
+      "ui_button_buttonvariants",
+      "ui_highlighter",
+      "ui_highlighter_hextorgb",
+      "ui_highlighter_highlighteritem",
+      "ui_highlighter_highlighteritemprops",
+      "ui_highlighter_highlightgroup",
+      "ui_highlighter_highlightgroupprops",
+      "ui_highlighter_mouseposition",
+      "ui_highlighter_particles",
+      "ui_highlighter_particlesprops",
+      "ui_highlighter_usemouseposition"
+    ],
+    "4": [
+      "src_seoprocasestudy",
+      "src_seoprocasestudy_heroaestheticshowcase",
+      "src_seoprocasestudy_modernbackground",
+      "src_seoprocasestudy_seoprocasestudy",
+      "src_seoprocasestudy_zoomableimage",
+      "ui_container_scroll_animation",
+      "ui_container_scroll_animation_card",
+      "ui_container_scroll_animation_containerscroll",
+      "ui_container_scroll_animation_header"
+    ],
+    "5": [
+      "src_agentic14casestudy",
+      "src_agentic14casestudy_agentic14casestudy",
+      "src_agentic14casestudy_herodashboardmockup",
+      "src_agentic14casestudy_modernbackground",
+      "src_agentic14casestudy_zoomableimage"
+    ],
+    "6": [
+      "src_educoursecasestudy",
+      "src_educoursecasestudy_educoursecasestudy",
+      "src_educoursecasestudy_herodevicescomposite",
+      "src_educoursecasestudy_modernbackground",
+      "src_educoursecasestudy_zoomableimage"
+    ],
+    "7": [
+      "src_loophrcasestudy",
+      "src_loophrcasestudy_heromobilecomposite",
+      "src_loophrcasestudy_loophrcasestudy",
+      "src_loophrcasestudy_modernbackground",
+      "src_loophrcasestudy_zoomableimage"
+    ],
+    "8": [
+      "src_p14casestudy",
+      "src_p14casestudy_heroperspectivemockup",
+      "src_p14casestudy_p14casestudy",
+      "src_p14casestudy_softbackground",
+      "src_p14casestudy_zoomableimage"
+    ],
+    "9": [
+      "src_smartyaircasestudy",
+      "src_smartyaircasestudy_heroindustrialmockup",
+      "src_smartyaircasestudy_modernbackground",
+      "src_smartyaircasestudy_smartyaircasestudy",
+      "src_smartyaircasestudy_zoomableimage"
+    ],
+    "10": [
+      "src_workflowaicasestudy",
+      "src_workflowaicasestudy_herolaptopmockup",
+      "src_workflowaicasestudy_modernbackground",
+      "src_workflowaicasestudy_workflowaicasestudy",
+      "src_workflowaicasestudy_zoomableimage"
+    ],
+    "11": [
+      "components_imageviewer",
+      "components_imageviewer_imageviewer",
+      "components_imageviewer_imageviewerprops"
+    ],
+    "12": [
+      "src_projectdetail",
+      "src_projectdetail_projectdetail"
+    ],
+    "13": [
+      "scratch_convert_theme"
+    ],
+    "14": [
+      "vite_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.1503267973856209,
+    "1": 0.15441176470588236,
+    "2": 0.1323529411764706,
+    "3": 0.23076923076923078,
+    "4": 0.25,
+    "5": 0.4,
+    "6": 0.4,
+    "7": 0.4,
+    "8": 0.4,
+    "9": 0.4,
+    "10": 0.4,
+    "11": 0.6666666666666666,
+    "12": 1,
+    "13": 1,
+    "14": 1
+  },
+  "gods": [
+    {
+      "id": "data_projects_project",
+      "label": "Project",
+      "edges": 12,
+      "degree": 12
+    },
+    {
+      "id": "components_imageviewer_imageviewer",
+      "label": "ImageViewer()",
+      "edges": 8,
+      "degree": 8
+    },
+    {
+      "id": "components_background3d_background3d",
+      "label": "Background3D()",
+      "edges": 5,
+      "degree": 5
+    },
+    {
+      "id": "ui_highlighter_particles",
+      "label": "Particles()",
+      "edges": 4,
+      "degree": 4
+    },
+    {
+      "id": "data_projects_projects",
+      "label": "projects",
+      "edges": 4,
+      "degree": 4
+    },
+    {
+      "id": "lib_utils_cn",
+      "label": "cn()",
+      "edges": 4,
+      "degree": 4
+    },
+    {
+      "id": "ui_highlighter_usemouseposition",
+      "label": "useMousePosition()",
+      "edges": 3,
+      "degree": 3
+    },
+    {
+      "id": "ui_highlighter_highlightgroup",
+      "label": "HighlightGroup()",
+      "edges": 3,
+      "degree": 3
+    },
+    {
+      "id": "components_letstalk_letstalk",
+      "label": "LetsTalk()",
+      "edges": 2,
+      "degree": 2
+    },
+    {
+      "id": "components_toolsknown_toolsknown",
+      "label": "ToolsKnown()",
+      "edges": 2,
+      "degree": 2
+    }
+  ],
+  "surprises": [],
+  "labels": {
+    "0": "Community 0",
+    "1": "Community 1",
+    "2": "Community 2",
+    "3": "Community 3",
+    "4": "Community 4",
+    "5": "Community 5",
+    "6": "Community 6",
+    "7": "Community 7",
+    "8": "Community 8",
+    "9": "Community 9",
+    "10": "Community 10",
+    "11": "Community 11",
+    "12": "Community 12",
+    "13": "Community 13",
+    "14": "Community 14"
+  },
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `Project` connect `Community 1` to `Community 5`, `Community 6`, `Community 7`, `Community 8`, `Community 4`, `Community 9`, `Community 10`?",
+      "why": "High betweenness centrality (0.079) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `ImageViewer()` connect `Community 11` to `Community 5`, `Community 6`, `Community 7`, `Community 8`, `Community 4`, `Community 9`, `Community 10`?",
+      "why": "High betweenness centrality (0.022) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `cn()` connect `Community 2` to `Community 3`?",
+      "why": "High betweenness centrality (0.018) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `ImageViewerProps`, `ButtonProps`, `MousePosition` to the rest of the system?",
+      "why": "10 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1323529411764706 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
