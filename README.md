@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 **Prerequisites:**  Node.js
@@ -10,3 +11,6 @@
    `npm run dev`
 =======
 >>>>>>> f12746747ae2056e88f6d0f316f6e9d28ecdee45
+=======
+# portfolio
+>>>>>>> c79dc25886de28f375bb024269c7fb2ff98f6b13
