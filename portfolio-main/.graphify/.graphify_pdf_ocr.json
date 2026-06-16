@@ -1,0 +1,21 @@
+[
+  {
+    "sourceFile": "C:\\Users\\vishw\\Downloads\\portfolio-main (1)\\portfolio-main\\public\\resume.pdf",
+    "markdownPath": "C:\\Users\\vishw\\Downloads\\portfolio-main (1)\\portfolio-main\\.graphify\\converted\\pdf\\resume_04f37e9cc202.md",
+    "provider": "unpdf",
+    "mode": "auto",
+    "status": "converted",
+    "reason": "text_extractable",
+    "preflight": {
+      "filePath": "C:\\Users\\vishw\\Downloads\\portfolio-main (1)\\portfolio-main\\public\\resume.pdf",
+      "sha256": "04f37e9cc20236fbf3b2ceac744c13f2299a13e9c4e290bdbf6e71513b6639e8",
+      "pageCount": 1,
+      "wordCount": 322,
+      "charCount": 2428,
+      "imageMarkerCount": 19,
+      "textLayerProvider": "unpdf",
+      "reason": "text_extractable",
+      "shouldOcr": false
+    }
+  }
+]
