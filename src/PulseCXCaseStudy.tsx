@@ -177,7 +177,7 @@ export default function PulseCXCaseStudy({ project }: { project: Project }) {
                 </div>
                 
                 <iframe 
-                  src="https://pulsecx-gold.vercel.app/login" 
+                  src="https://pulsecx-gold.vercel.app/" 
                   className="w-full h-full border-none relative z-10"
                   title="PulseCX Live Demo"
                   allow="fullscreen"
