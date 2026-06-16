@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Home from "./Home";
 import Resume from "./Resume";
@@ -20,7 +20,7 @@ function ScrollToTop() {
 export default function App() {
   return (
     <HelmetProvider>
-      <HashRouter>
+      <BrowserRouter>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,7 +29,7 @@ export default function App() {
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/about" element={<About />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </HelmetProvider>
   );
 }
