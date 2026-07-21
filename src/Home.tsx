@@ -18,7 +18,11 @@ export default function Home() {
   // Preload images
   const frameCount = 225;
   const imagesRef = useRef<HTMLImageElement[]>([]);
-  
+  // Shared between the loader and the scroll effect so newly-decoded frames
+  // can repaint the frame currently in view, coalesced through one rAF.
+  const targetIndexRef = useRef(100);
+  const requestDrawRef = useRef<() => void>(() => {});
+
   useEffect(() => {
     const loadedImages: HTMLImageElement[] = new Array(frameCount);
     
@@ -34,109 +38,63 @@ export default function Home() {
     firstImg.src = `/sequence/frame_${frameNumber}_delay-0.067s.webp`;
     
     firstImg.onload = () => {
-      if (canvasRef.current) {
-        canvasRef.current.width = firstImg.width;
-        canvasRef.current.height = firstImg.height;
-        const ctx = canvasRef.current.getContext('2d');
-        if (ctx && firstImg.naturalWidth > 0) {
-          try {
-            ctx.drawImage(firstImg, 0, 0, firstImg.width, firstImg.height);
-          } catch (error) {
-            console.warn("Canvas drawImage firstImg error:", error);
-          }
-        }
-      }
-      // Start downloading the remaining frames in a staged background queue
+      requestDrawRef.current();
       startStagedLoading();
     };
-    
+
     firstImg.onerror = () => {
       startStagedLoading();
     };
 
     const startStagedLoading = () => {
-      const groups: number[][] = [];
-      
-      // Stage 1: Critical early frames (101 to 140) for immediate scrolling response
-      const stage1: number[] = [];
-      for (let i = 101; i <= 140; i++) {
-        stage1.push(i);
-      }
-      groups.push(stage1);
-      
-      // Stage 2: Coarse interlaced timeline (every 4th frame) to cover full scroll range quickly
-      const stage2: number[] = [];
-      for (let i = 144; i < frameCount; i += 4) {
-        stage2.push(i);
-      }
-      groups.push(stage2);
-      
-      // Stage 3: Medium interlaced timeline (every 2nd frame)
-      const stage3: number[] = [];
-      for (let i = 142; i < frameCount; i += 4) {
-        stage3.push(i);
-      }
-      groups.push(stage3);
-      
-      // Stage 4: Fine details (all remaining odd frames)
-      const stage4: number[] = [];
-      for (let i = 141; i < frameCount; i += 2) {
-        stage4.push(i);
-      }
-      // Fill in previous frames just in case
-      for (let i = 0; i < 100; i++) {
-        stage4.push(i);
-      }
-      groups.push(stage4);
+      // Build a de-duplicated load order that covers the whole scroll range
+      // coarsely first (so any scroll position quickly has a near frame),
+      // then progressively fills in the detail. Frames only exist from 100.
+      const order: number[] = [];
+      const seen = new Set<number>();
+      const enqueue = (i: number) => {
+        if (i >= 100 && i < frameCount && !seen.has(i)) {
+          seen.add(i);
+          order.push(i);
+        }
+      };
+      enqueue(100);
+      [8, 4, 2, 1].forEach((step) => {
+        for (let i = 100; i < frameCount; i += step) enqueue(i);
+      });
 
-      const loadQueue = groups.flat();
-      
-      // Batch download with max concurrency of 6 to avoid network/thread congestion
+      // Modest concurrency keeps the pipe full without thrashing the network.
       const maxConcurrency = 6;
       let queueIndex = 0;
-      
+
       const loadNext = () => {
-        if (queueIndex >= loadQueue.length) return;
-        
-        const frameIndex = loadQueue[queueIndex++];
+        if (queueIndex >= order.length) return;
+        const frameIndex = order[queueIndex++];
         const img = loadedImages[frameIndex];
-        
-        const handleImageLoad = () => {
-          // Immediately schedule next request
+        if (!img) {
           loadNext();
-          
-          // Redraw current frame immediately if the user is currently viewing it
-          if (canvasRef.current && containerRef.current) {
-            const rect = containerRef.current.getBoundingClientRect();
-            const maxScroll = rect.height - window.innerHeight;
-            if (maxScroll > 0) {
-              let progress = -rect.top / maxScroll;
-              progress = Math.min(Math.max(progress, 0), 1);
-              let frameProgress = progress / 0.85;
-              frameProgress = Math.min(Math.max(frameProgress, 0), 1);
-              const startIndex = 100;
-              const currentIndex = Math.min(Math.max(Math.floor(startIndex + frameProgress * (frameCount - 1 - startIndex)), 0), frameCount - 1);
-              
-              if (currentIndex === frameIndex) {
-                const ctx = canvasRef.current.getContext('2d');
-                if (ctx && img.complete && img.naturalWidth > 0) {
-                  ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
-                  ctx.drawImage(img, 0, 0, canvasRef.current.width, canvasRef.current.height);
-                }
-              }
-            }
-          }
+          return;
+        }
+
+        const onReady = () => {
+          // Repaint whatever frame is in view now, then fetch the next one.
+          requestDrawRef.current();
+          loadNext();
         };
-        
-        img.onload = handleImageLoad;
-        img.onerror = handleImageLoad;
-        
-        // Start network request
+
         const fn = frameIndex.toString().padStart(3, '0');
         img.src = `/sequence/frame_${fn}_delay-0.067s.webp`;
+
+        // Decode off the main thread so the first draw never blocks or janks.
+        if (typeof img.decode === 'function') {
+          img.decode().then(onReady).catch(onReady);
+        } else {
+          img.onload = onReady;
+          img.onerror = onReady;
+        }
       };
-      
-      for (let i = 0; i < Math.min(maxConcurrency, loadQueue.length); i++) {
+
+      for (let i = 0; i < Math.min(maxConcurrency, order.length); i++) {
         loadNext();
       }
     };
@@ -150,63 +108,78 @@ export default function Home() {
       smoothWheel: true,
     });
 
-    const handleScroll = () => {
-      if (!containerRef.current || imagesRef.current.length === 0 || !canvasRef.current) return;
-      
-      const rect = containerRef.current.getBoundingClientRect();
-      const maxScroll = rect.height - window.innerHeight;
-      
-      if (maxScroll <= 0) return;
-      
-      let progress = -rect.top / maxScroll;
-      progress = Math.min(Math.max(progress, 0), 1);
-      
-      scrollProg.set(progress);
+    const canvas = canvasRef.current;
+    const ctx = canvas ? canvas.getContext('2d', { alpha: false }) : null;
+    let rafId: number | null = null;
 
-      let frameProgress = progress / 0.85;
-      frameProgress = Math.min(Math.max(frameProgress, 0), 1);
+    const draw = () => {
+      rafId = null;
+      if (!ctx || !canvas) return;
 
-      const startIndex = 100;
-      const index = Math.min(Math.max(Math.floor(startIndex + frameProgress * (frameCount - 1 - startIndex)), 0), frameCount - 1);
-      
+      const index = targetIndexRef.current;
       let img = imagesRef.current[index];
-      const ctx = canvasRef.current.getContext('2d');
-      
-      // Nearest loaded frame fallback to prevent blank frames or freezes during scrolling
-      if (img && (!img.complete || img.naturalWidth === 0)) {
-        let nearestImg = null;
-        let minDiff = Infinity;
-        for (let i = 0; i < imagesRef.current.length; i++) {
-          const tempImg = imagesRef.current[i];
-          if (tempImg && tempImg.complete && tempImg.naturalWidth > 0) {
-            const diff = Math.abs(i - index);
-            if (diff < minDiff) {
-              minDiff = diff;
-              nearestImg = tempImg;
-            }
-          }
+
+      // Fall back to the nearest already-decoded frame, searching outward,
+      // so scrubbing never shows a blank or frozen canvas mid-download.
+      if (!img || !img.complete || img.naturalWidth === 0) {
+        let nearest: HTMLImageElement | null = null;
+        for (let d = 1; d < frameCount; d++) {
+          const lo = imagesRef.current[index - d];
+          if (lo && lo.complete && lo.naturalWidth > 0) { nearest = lo; break; }
+          const hi = imagesRef.current[index + d];
+          if (hi && hi.complete && hi.naturalWidth > 0) { nearest = hi; break; }
         }
-        if (nearestImg) {
-          img = nearestImg;
-        }
+        if (!nearest) return;
+        img = nearest;
       }
-      
-      if (ctx && img && img.complete && img.naturalWidth > 0) {
-        ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
-        try {
-          ctx.drawImage(img, 0, 0, canvasRef.current.width, canvasRef.current.height);
-        } catch (error) {
-          console.warn("Canvas drawImage error:", error);
-        }
+
+      if (canvas.width !== img.naturalWidth) {
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+      }
+      // Opaque frames fully cover the canvas, so no clearRect is needed —
+      // painting straight over the previous frame avoids any flicker.
+      try {
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      } catch (error) {
+        console.warn("Canvas drawImage error:", error);
       }
     };
 
+    // Coalesce every scroll event / load callback into one paint per frame.
+    const requestDraw = () => {
+      if (rafId === null) rafId = requestAnimationFrame(draw);
+    };
+    requestDrawRef.current = requestDraw;
+
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const maxScroll = rect.height - window.innerHeight;
+      if (maxScroll <= 0) return;
+
+      const progress = Math.min(Math.max(-rect.top / maxScroll, 0), 1);
+      scrollProg.set(progress);
+
+      const frameProgress = Math.min(Math.max(progress / 0.85, 0), 1);
+      const startIndex = 100;
+      targetIndexRef.current = Math.min(
+        Math.max(Math.round(startIndex + frameProgress * (frameCount - 1 - startIndex)), startIndex),
+        frameCount - 1,
+      );
+      requestDraw();
+    };
+
     lenis.on('scroll', handleScroll);
+    window.addEventListener('resize', requestDraw);
     // Trigger once
     handleScroll();
 
     return () => {
       lenis.destroy();
+      window.removeEventListener('resize', requestDraw);
+      if (rafId !== null) cancelAnimationFrame(rafId);
+      requestDrawRef.current = () => {};
     };
   }, []);
 

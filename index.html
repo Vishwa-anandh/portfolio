@@ -21,6 +21,10 @@
     <meta name="theme-color" content="#818CF8" />
     <link rel="canonical" href="https://vishwaanandh.netlify.app/" />
 
+    <!-- Preload the hero sequence's first visible frame so it paints as soon
+         as possible, in parallel with the JS bundle. -->
+    <link rel="preload" as="image" href="/sequence/frame_100_delay-0.067s.webp" fetchpriority="high" />
+
     <!-- ============================================================= -->
     <!-- OPEN GRAPH (Facebook, LinkedIn, Slack, Discord)               -->
     <!-- ============================================================= -->
