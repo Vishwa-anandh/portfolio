@@ -3,7 +3,7 @@ import { motion, useMotionValue, useTransform } from "motion/react";
 import Lenis from "lenis";
 import { Link } from "react-router-dom";
 import { Seo } from "./components/Seo";
-import { graph, webPageNode, personNode } from "./lib/seo";
+import { graph, personNode } from "./lib/seo";
 import { projects } from "./data/projects";
 import { Background3D } from "./components/Background3D";
 import ImpactSection from "./components/ui/impact-section";
@@ -215,16 +215,7 @@ export default function Home() {
         path="/"
         type="profile"
         keywords="Vishwa Anandh, UI/UX Designer, Product Designer, AI-native design, enterprise UX, design systems, Figma, portfolio"
-        jsonLd={graph(
-          personNode(),
-          webPageNode({
-            path: "/",
-            name: "Vishwa Anandh — AI-Native Product & UI/UX Designer",
-            description:
-              "Portfolio of Vishwa Anandh, a Product Designer specializing in AI-native systems and complex enterprise workflows.",
-            type: "ProfilePage",
-          }),
-        )}
+        jsonLd={graph(personNode())}
       />
       <div className="fixed inset-0 z-[-2] bg-black"></div>
       <div className="fixed inset-0 z-[-1]">

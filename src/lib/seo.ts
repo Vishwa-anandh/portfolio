@@ -115,6 +115,9 @@ export function webPageNode(opts: {
     name: opts.name,
     description: opts.description,
     isPartOf: { "@id": WEBSITE_ID },
+    // `mainEntity` is required for the ProfilePage rich result; harmless and
+    // valid on every other WebPage type too.
+    mainEntity: { "@id": PERSON_ID },
     about: { "@id": PERSON_ID },
     inLanguage: "en",
   };
