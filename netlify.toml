@@ -1,5 +1,8 @@
 [build]
-  command = "npm run build"
+  # Full build = Vite bundle + prerender snapshot. If the headless-browser
+  # prerender fails in CI for any reason, fall back to a plain SPA build so a
+  # deploy is never blocked.
+  command = "npm run build || npm run build:spa"
   publish = "dist"
 
 # SPA fallback: serve index.html for client-side routes while letting

@@ -5,54 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ============================================================= -->
-    <!-- PRIMARY META (SEO)                                             -->
+    <!-- GLOBAL META                                                    -->
+    <!-- Per-page tags (title, description, canonical, Open Graph,      -->
+    <!-- Twitter) are set per-route by the <Seo> component and baked    -->
+    <!-- into every route's static HTML at build time by the prerender  -->
+    <!-- step (scripts/prerender.mjs). Only site-wide tags live here to -->
+    <!-- avoid duplicate/conflicting per-page tags in the snapshots.    -->
     <!-- ============================================================= -->
-    <title>Vishwa Anandh — AI-Native Product & UI/UX Designer | Portfolio</title>
-    <meta
-      name="description"
-      content="Vishwa Anandh is a Product Designer in Madurai, India specializing in AI-native systems and complex enterprise workflows. Explore case studies in monitoring dashboards, multi-agent orchestration, and design systems."
-    />
-    <meta
-      name="keywords"
-      content="Vishwa Anandh, Product Designer, UI/UX Designer, AI-native design, enterprise UX, design systems, Figma, SaaS dashboard design, Madurai designer, portfolio"
-    />
+    <!-- No static <title> here on purpose: the per-page <title> is set by the
+         <Seo> component and baked into every route by the prerender step.
+         A static one would produce a duplicate <title> in each snapshot. -->
     <meta name="author" content="Vishwa Anandh" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#818CF8" />
-    <link rel="canonical" href="https://vishwaanandh.netlify.app/" />
 
     <!-- Preload the hero sequence's first visible frame so it paints as soon
          as possible, in parallel with the JS bundle. -->
     <link rel="preload" as="image" href="/sequence/frame_100_delay-0.067s.webp" fetchpriority="high" />
-
-    <!-- ============================================================= -->
-    <!-- OPEN GRAPH (Facebook, LinkedIn, Slack, Discord)               -->
-    <!-- ============================================================= -->
-    <meta property="og:type" content="profile" />
-    <meta property="og:site_name" content="Vishwa Anandh — Portfolio" />
-    <meta property="og:title" content="Vishwa Anandh — AI-Native Product & UI/UX Designer" />
-    <meta
-      property="og:description"
-      content="Product Designer specializing in AI-native systems and complex enterprise workflows. Case studies in monitoring, multi-agent orchestration, and design systems."
-    />
-    <meta property="og:url" content="https://vishwaanandh.netlify.app/" />
-    <meta property="og:image" content="https://vishwaanandh.netlify.app/Cover.png" />
-    <meta property="og:image:alt" content="Vishwa Anandh — Product Designer portfolio cover" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="profile:first_name" content="Vishwa" />
-    <meta property="profile:last_name" content="Anandh" />
-
-    <!-- ============================================================= -->
-    <!-- TWITTER / X CARD                                               -->
-    <!-- ============================================================= -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Vishwa Anandh — AI-Native Product & UI/UX Designer" />
-    <meta
-      name="twitter:description"
-      content="Product Designer specializing in AI-native systems and complex enterprise workflows."
-    />
-    <meta name="twitter:image" content="https://vishwaanandh.netlify.app/Cover.png" />
-    <meta name="twitter:image:alt" content="Vishwa Anandh — Product Designer portfolio cover" />
 
     <link
       rel="icon"

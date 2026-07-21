@@ -86,6 +86,13 @@ function Scene() {
 }
 
 export function Background3D() {
+  // Skip the WebGL canvas during build-time prerendering (headless Chrome).
+  // It's purely decorative, and rendering it offscreen only slows the
+  // snapshot and adds no content for crawlers. Real users always get it.
+  if (typeof window !== "undefined" && (window as unknown as { __PRERENDER__?: boolean }).__PRERENDER__) {
+    return null;
+  }
+
   return (
     <div className="fixed inset-0 z-0 pointer-events-none opacity-60">
       <Canvas camera={{ position: [0, 0, 8], fov: 60 }}>
