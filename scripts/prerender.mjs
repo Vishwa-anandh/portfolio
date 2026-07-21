@@ -122,8 +122,11 @@ async function run() {
 
       const html = "<!doctype html>\n" + (await page.evaluate(() => document.documentElement.outerHTML));
 
+      // Flat files (about.html, projects/9.html) rather than directory
+      // indexes (about/index.html) so Netlify serves them at /about with no
+      // trailing-slash 301 — keeping the served URL identical to the canonical.
       const outPath =
-        route === "/" ? join(DIST, "index.html") : join(DIST, route, "index.html");
+        route === "/" ? join(DIST, "index.html") : join(DIST, `${route}.html`);
       await mkdir(dirname(outPath), { recursive: true });
       await writeFile(outPath, html, "utf-8");
 
