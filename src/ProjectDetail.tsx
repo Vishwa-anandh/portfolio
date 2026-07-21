@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "./components/Seo";
+import { graph, creativeWorkNode, breadcrumbNode } from "./lib/seo";
 import { projects } from "./data/projects";
 import WorkflowAICaseStudy from "./WorkflowAICaseStudy";
 import SeoProCaseStudy from "./SeoProCaseStudy";
@@ -26,9 +27,11 @@ export default function ProjectDetail() {
   if (!project) {
     return (
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
-        <Helmet>
-          <title>Project Not Found | Vishwa Anandh</title>
-        </Helmet>
+        <Seo
+          title="Project Not Found | Vishwa Anandh"
+          description="The requested project could not be found."
+          path="/projects"
+        />
         <div className="text-center">
           <h1 className="text-3xl mb-4">Project not found</h1>
           <button onClick={() => window.history.length > 2 ? navigate(-1) : navigate('/projects')} className="text-indigo-400 hover:text-indigo-300">← Back</button>
@@ -39,13 +42,35 @@ export default function ProjectDetail() {
 
   const keywords = project.technologies?.join(', ') || `${project.type}, portfolio, project, design`;
 
+  const projectSeo = (
+    <Seo
+      title={`${project.name} — ${project.type} | Vishwa Anandh`}
+      description={project.detailedDescription || project.description}
+      path={`/projects/${project.id}`}
+      image={project.img}
+      type="article"
+      keywords={`UI/UX Design, ${keywords}`}
+      jsonLd={graph(
+        creativeWorkNode({
+          path: `/projects/${project.id}`,
+          name: `${project.name} — ${project.type}`,
+          description: project.detailedDescription || project.description,
+          image: project.img,
+          keywords: project.technologies,
+        }),
+        breadcrumbNode([
+          ["Home", "/"],
+          ["Projects", "/projects"],
+          [project.name, `/projects/${project.id}`],
+        ]),
+      )}
+    />
+  );
+
   if (project.id === 9) {
     return (
       <div className="min-h-screen bg-neutral-950 font-sans w-full selection:bg-indigo-500/100/30 pb-24 text-neutral-300">
-        <Helmet>
-          <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
-          <meta name="description" content={project.detailedDescription || project.description} />
-        </Helmet>
+        {projectSeo}
         
         <div className="max-w-7xl mx-auto px-4 md:px-8 xl:px-0 pt-12 relative z-50">
           <button onClick={() => window.history.length > 2 ? navigate(-1) : navigate('/projects')} className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600/10 text-indigo-400 hover:bg-indigo-600/20 rounded-full mb-8 transition-colors font-mono text-sm underline-offset-4"><span>← Back</span></button>
@@ -69,10 +94,7 @@ export default function ProjectDetail() {
   if (project.id === 0) {
     return (
       <div className="min-h-screen bg-neutral-950 font-sans w-full selection:bg-blue-500/100/30 pb-24 text-neutral-300">
-        <Helmet>
-          <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
-          <meta name="description" content={project.detailedDescription || project.description} />
-        </Helmet>
+        {projectSeo}
         
         {/* Simple navigation back to projects */}
         <div className="max-w-7xl mx-auto px-4 md:px-8 xl:px-0 pt-12 relative z-50">
@@ -101,10 +123,7 @@ export default function ProjectDetail() {
   if (project.id === 1) {
     return (
       <div className="min-h-screen bg-neutral-950 font-sans w-full selection:bg-neutral-800/500/30 pb-24 text-neutral-300">
-        <Helmet>
-          <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
-          <meta name="description" content={project.detailedDescription || project.description} />
-        </Helmet>
+        {projectSeo}
         
         {/* Simple navigation back to projects */}
         <div className="max-w-7xl mx-auto px-4 md:px-8 xl:px-0 pt-12 relative z-50">
@@ -133,10 +152,7 @@ export default function ProjectDetail() {
   if (project.id === 2) {
     return (
       <div className="min-h-screen bg-neutral-950 font-sans w-full selection:bg-emerald-500/100/30 pb-24 text-neutral-300">
-        <Helmet>
-          <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
-          <meta name="description" content={project.detailedDescription || project.description} />
-        </Helmet>
+        {projectSeo}
         
         {/* Simple navigation back to projects */}
         <div className="max-w-7xl mx-auto px-4 md:px-8 xl:px-0 pt-12 relative z-50">
@@ -165,10 +181,7 @@ export default function ProjectDetail() {
   if (project.id === 3) {
     return (
       <div className="min-h-screen bg-neutral-950 font-sans w-full selection:bg-purple-500/100/30 pb-24 text-neutral-300">
-        <Helmet>
-          <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
-          <meta name="description" content={project.detailedDescription || project.description} />
-        </Helmet>
+        {projectSeo}
         
         {/* Simple navigation back to projects */}
         <div className="max-w-7xl mx-auto px-4 md:px-8 xl:px-0 pt-12 relative z-50">
@@ -197,10 +210,7 @@ export default function ProjectDetail() {
   if (project.id === 4) {
     return (
       <div className="min-h-screen bg-neutral-900 dark:bg-neutral-950 font-sans w-full selection:bg-indigo-500/100/30 pb-24 text-neutral-800 dark:text-neutral-300">
-        <Helmet>
-          <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
-          <meta name="description" content={project.detailedDescription || project.description} />
-        </Helmet>
+        {projectSeo}
         
         {/* Simple navigation back to projects */}
         <div className="max-w-7xl mx-auto px-4 md:px-8 xl:px-0 pt-12 relative z-50">
@@ -229,10 +239,7 @@ export default function ProjectDetail() {
   if (project.id === 5) {
     return (
       <div className="min-h-screen bg-neutral-900 dark:bg-neutral-950 font-sans w-full selection:bg-teal-500/30 pb-24 text-neutral-800 dark:text-neutral-300">
-        <Helmet>
-          <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
-          <meta name="description" content={project.detailedDescription || project.description} />
-        </Helmet>
+        {projectSeo}
         
         {/* Simple navigation back to projects */}
         <div className="max-w-7xl mx-auto px-4 md:px-8 xl:px-0 pt-12 relative z-50">
@@ -261,10 +268,7 @@ export default function ProjectDetail() {
   if (project.id === 6) {
     return (
       <div className="min-h-screen bg-black font-sans w-full selection:bg-cyan-500/30 pb-24 text-neutral-300">
-        <Helmet>
-          <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
-          <meta name="description" content={project.detailedDescription || project.description} />
-        </Helmet>
+        {projectSeo}
         
         {/* Simple navigation back to projects */}
         <div className="max-w-7xl mx-auto px-4 md:px-8 xl:px-0 pt-12 relative z-50">
@@ -293,10 +297,7 @@ export default function ProjectDetail() {
   if (project.id === 7) {
     return (
       <div className="min-h-screen bg-[#f7f8fc] dark:bg-neutral-950 font-sans w-full selection:bg-indigo-500/100/30 pb-24 text-neutral-800 dark:text-neutral-300">
-        <Helmet>
-          <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
-          <meta name="description" content={project.detailedDescription || project.description} />
-        </Helmet>
+        {projectSeo}
         
         {/* Simple navigation back to projects */}
         <div className="max-w-7xl mx-auto px-4 md:px-8 xl:px-0 pt-12 relative z-50">
@@ -325,10 +326,7 @@ export default function ProjectDetail() {
   if (project.id === 8) {
     return (
       <div className="min-h-screen bg-[#111111] dark:bg-[#111111] font-sans w-full text-white">
-        <Helmet>
-          <title>{`${project.name} - Case Study | Vishwa Anandh`}</title>
-          <meta name="description" content={project.detailedDescription || project.description} />
-        </Helmet>
+        {projectSeo}
         
         <div className="w-full relative z-50">
           <button onClick={() => window.history.length > 2 ? navigate(-1) : navigate('/projects')} className="fixed top-8 left-8 z-50 inline-flex items-center gap-2 px-4 py-2 bg-black/60 backdrop-blur-md text-white/90 hover:bg-black/80 hover:text-white rounded-full transition-colors font-mono text-sm border border-white/10 shadow-2xl shadow-black/50 underline-offset-4"><span>← Back</span></button>
@@ -355,15 +353,7 @@ export default function ProjectDetail() {
 
   return (
     <div className="min-h-screen bg-black text-white font-sans w-full selection:bg-indigo-500/100/30">
-      <Helmet>
-        <title>{`${project.name} - ${project.type} | Vishwa Anandh`}</title>
-        <meta name="description" content={project.detailedDescription || project.description} />
-        <meta name="keywords" content={`UI/UX Design, ${keywords}`} />
-        <meta property="og:title" content={`${project.name} | Vishwa Anandh`} />
-        <meta property="og:description" content={project.detailedDescription || project.description} />
-        <meta property="og:image" content={project.img} />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Helmet>
+      {projectSeo}
       <div className="max-w-7xl mx-auto px-4 md:px-8 xl:px-0 py-12 md:py-24">
         {/* Header */}
         <header className="mb-16">

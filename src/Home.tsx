@@ -2,7 +2,8 @@ import { useEffect, useRef, MouseEvent } from "react";
 import { motion, useMotionValue, useTransform } from "motion/react";
 import Lenis from "lenis";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "./components/Seo";
+import { graph, webPageNode, personNode } from "./lib/seo";
 import { projects } from "./data/projects";
 import { Background3D } from "./components/Background3D";
 import ImpactSection from "./components/ui/impact-section";
@@ -235,11 +236,23 @@ export default function Home() {
 
   return (
     <div className="w-full bg-transparent font-sans min-h-screen relative z-0">
-      <Helmet>
-        <title>Vishwa Anandh — AI UI/UX & Product Designer</title>
-        <meta name="description" content="Portfolio of Vishwa Anandh, a passionate UI/UX Designer crafting human-centered digital products integrated with artificial intelligence." />
-        <meta name="keywords" content="UI/UX, Product Design, Portfolio, AI Integration, Web Design, Figma, Vishwa Anandh" />
-      </Helmet>
+      <Seo
+        title="Vishwa Anandh — AI-Native Product & UI/UX Designer | Portfolio"
+        description="Portfolio of Vishwa Anandh, a Product Designer in Madurai, India specializing in AI-native systems and complex enterprise workflows — from architectural concept to deployed reality."
+        path="/"
+        type="profile"
+        keywords="Vishwa Anandh, UI/UX Designer, Product Designer, AI-native design, enterprise UX, design systems, Figma, portfolio"
+        jsonLd={graph(
+          personNode(),
+          webPageNode({
+            path: "/",
+            name: "Vishwa Anandh — AI-Native Product & UI/UX Designer",
+            description:
+              "Portfolio of Vishwa Anandh, a Product Designer specializing in AI-native systems and complex enterprise workflows.",
+            type: "ProfilePage",
+          }),
+        )}
+      />
       <div className="fixed inset-0 z-[-2] bg-black"></div>
       <div className="fixed inset-0 z-[-1]">
         <Background3D />

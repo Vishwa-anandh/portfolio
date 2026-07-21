@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "./components/Seo";
+import { graph, personNode, webPageNode, breadcrumbNode } from "./lib/seo";
 import { Background3D } from "./components/Background3D";
 
 export default function Resume() {
@@ -42,11 +43,26 @@ export default function Resume() {
 
   return (
     <div className="min-h-screen bg-transparent text-white font-sans selection:bg-indigo-500/30 pb-24 relative">
-      <Helmet>
-        <title>Resume | Vishwa Anandh — Product Designer</title>
-        <meta name="description" content="View the professional resume of Vishwa Anandh, detailing UI/UX expertise, key product experiences, and core competencies." />
-        <meta name="keywords" content="Resume, CV, UI/UX Design, Experience, Education, Vishwa Anandh" />
-      </Helmet>
+      <Seo
+        title="Resume — Vishwa Anandh, Product Designer"
+        description="Professional resume of Vishwa Anandh: UI/UX and product design expertise, enterprise product experience (Pappa.ai, Project.AI, Getherly), and core competencies."
+        path="/resume"
+        keywords="Resume, CV, UI/UX Design, Product Designer, Experience, Vishwa Anandh"
+        jsonLd={graph(
+          personNode(),
+          webPageNode({
+            path: "/resume",
+            name: "Resume — Vishwa Anandh",
+            description:
+              "Professional resume and experience of Vishwa Anandh, Product Designer.",
+            type: "ProfilePage",
+          }),
+          breadcrumbNode([
+            ["Home", "/"],
+            ["Resume", "/resume"],
+          ]),
+        )}
+      />
       <div className="fixed inset-0 z-[-2] bg-black"></div>
       <Background3D />
       <div className="relative z-10 block">

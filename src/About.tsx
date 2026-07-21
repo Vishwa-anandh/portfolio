@@ -1,7 +1,33 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "./components/Seo";
+import { graph, webPageNode, personNode, faqNode, breadcrumbNode } from "./lib/seo";
 import { Background3D } from "./components/Background3D";
+
+// Q&A content — rendered visibly AND emitted as FAQPage schema so answer
+// engines (Google AI Overviews, ChatGPT, Perplexity) can quote it directly.
+const FAQS = [
+  {
+    q: "Who is Vishwa Anandh?",
+    a: "Vishwa Anandh is a Product Designer based in Madurai, India, specializing in AI-native systems and complex enterprise workflows. He translates technical complexity into intuitive, scalable digital experiences and has over 4 years of experience shaping digital products.",
+  },
+  {
+    q: "What does Vishwa Anandh specialize in?",
+    a: "He specializes in UI/UX and product design for AI-native systems, enterprise dashboards, design systems, and data visualization. His work spans monitoring platforms, multi-agent orchestration tools, and industrial IoT dashboards.",
+  },
+  {
+    q: "What is Vishwa Anandh's design philosophy?",
+    a: "His philosophy centers on 'Architectural Honesty' and a distinctive, polished visual language. He believes good design comes from intentional pairings rather than defaults, using purposeful animation and intentional variation to craft interfaces that are both beautiful and foundational.",
+  },
+  {
+    q: "Can Vishwa Anandh build products, not just design them?",
+    a: "Yes. On PulseCX, an AI-native monitoring and incident response platform, he architected the UX and personally built and deployed the live web application using AI-assisted development, including training the platform's LLM chatbot.",
+  },
+  {
+    q: "How can I contact Vishwa Anandh?",
+    a: "You can reach Vishwa Anandh by email at Anandhvishwa12@gmail.com or via WhatsApp at +91 9150281870. He is based in Madurai, India and available for product design engagements.",
+  },
+];
 
 export default function About() {
   useEffect(() => {
@@ -11,11 +37,27 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-transparent text-white font-sans w-full selection:bg-indigo-500/30 pb-24 relative">
-      <Helmet>
-        <title>About | Vishwa Anandh | AI UI/UX & Product Designer</title>
-        <meta name="description" content="Learn more about Vishwa Anandh, a passionate UI/UX Designer who thrives on creating intuitive, AI driven digital experiences." />
-        <meta name="keywords" content="About, UI/UX, Product Designer, Experience, Background, Vishwa Anandh" />
-      </Helmet>
+      <Seo
+        title="About Vishwa Anandh — AI-Native Product & UI/UX Designer"
+        description="Learn about Vishwa Anandh, a Product Designer in Madurai, India with 4+ years shaping AI-native enterprise products — his philosophy, experience, and approach to design."
+        path="/about"
+        keywords="About Vishwa Anandh, UI/UX Designer, Product Designer, experience, design philosophy, Madurai"
+        jsonLd={graph(
+          personNode(),
+          webPageNode({
+            path: "/about",
+            name: "About Vishwa Anandh",
+            description:
+              "About Vishwa Anandh, a Product Designer specializing in AI-native systems and enterprise UX.",
+            type: "AboutPage",
+          }),
+          faqNode(FAQS),
+          breadcrumbNode([
+            ["Home", "/"],
+            ["About", "/about"],
+          ]),
+        )}
+      />
       <div className="fixed inset-0 z-[-2] bg-black"></div>
       <Background3D />
       <div className="relative z-10 block">
@@ -111,6 +153,27 @@ export default function About() {
           </div>
         </div>
         
+
+        <div className="mt-16 pt-16 border-t border-white/10">
+          <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-white mb-8">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-4">
+            {FAQS.map((faq) => (
+              <div
+                key={faq.q}
+                className="bg-neutral-900/30 border border-white/5 p-6 md:p-8 rounded-[1.5rem]"
+              >
+                <h3 className="text-lg md:text-xl font-medium text-white mb-3">
+                  {faq.q}
+                </h3>
+                <p className="text-white/70 leading-relaxed text-base md:text-lg font-light">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
 
         <div className="mt-16 pt-16 border-t border-white/10 flex justify-center">
             <Link

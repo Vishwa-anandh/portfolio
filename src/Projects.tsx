@@ -1,7 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "motion/react";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "./components/Seo";
+import { graph, webPageNode, breadcrumbNode, canonical } from "./lib/seo";
 import { projects, Project } from "./data/projects";
 import { Background3D } from "./components/Background3D";
 
@@ -95,11 +96,35 @@ export default function Projects() {
 
   return (
     <div className="min-h-screen bg-transparent text-white font-sans w-full selection:bg-indigo-500/30 relative">
-      <Helmet>
-        <title>Projects | Vishwa Anandh — AI UI/UX & Product Designer</title>
-        <meta name="description" content="Explore selected case studies and UI/UX projects designed by Vishwa Anandh." />
-        <meta name="keywords" content="Portfolio, UI/UX Projects, Case Studies, Product Design, Vishwa Anandh" />
-      </Helmet>
+      <Seo
+        title="Projects & Case Studies | Vishwa Anandh"
+        description="Explore selected UI/UX and product design case studies by Vishwa Anandh — AI-native monitoring platforms, multi-agent orchestration dashboards, and enterprise design systems."
+        path="/projects"
+        keywords="Portfolio, UI/UX Projects, Case Studies, Product Design, AI dashboards, Vishwa Anandh"
+        jsonLd={graph(
+          webPageNode({
+            path: "/projects",
+            name: "Projects & Case Studies",
+            description:
+              "Selected UI/UX and product design case studies by Vishwa Anandh.",
+            type: "CollectionPage",
+          }),
+          {
+            "@type": "ItemList",
+            name: "Design Case Studies by Vishwa Anandh",
+            itemListElement: projects.map((p, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              url: canonical(`/projects/${p.id}`),
+              name: `${p.name} — ${p.type}`,
+            })),
+          },
+          breadcrumbNode([
+            ["Home", "/"],
+            ["Projects", "/projects"],
+          ]),
+        )}
+      />
       <div className="fixed inset-0 z-[-2] bg-black"></div>
       <Background3D />
       <div className="max-w-7xl mx-auto px-2 md:px-4 xl:px-0 py-12 md:py-24 relative z-10">
