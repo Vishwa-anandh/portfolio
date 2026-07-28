@@ -154,26 +154,20 @@ export default function About() {
         </div>
         
 
-        <div className="mt-16 pt-16 border-t border-white/10">
-          <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-white mb-8">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-4">
-            {FAQS.map((faq) => (
-              <div
-                key={faq.q}
-                className="bg-neutral-900/30 border border-white/5 p-6 md:p-8 rounded-[1.5rem]"
-              >
-                <h3 className="text-lg md:text-xl font-medium text-white mb-3">
-                  {faq.q}
-                </h3>
-                <p className="text-white/70 leading-relaxed text-base md:text-lg font-light">
-                  {faq.a}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* FAQ — visually hidden, deliberately NOT removed. sr-only keeps the
+            Q&A in the DOM (and in the accessibility tree), so it stays in the
+            prerendered HTML for crawlers and AI answer engines to quote,
+            alongside the FAQPage schema emitted by <Seo> above. Don't swap
+            this for `hidden`/`display:none` — that drops it from both. */}
+        <section aria-label="Frequently Asked Questions" className="sr-only">
+          <h2>Frequently Asked Questions</h2>
+          {FAQS.map((faq) => (
+            <div key={faq.q}>
+              <h3>{faq.q}</h3>
+              <p>{faq.a}</p>
+            </div>
+          ))}
+        </section>
 
         <div className="mt-16 pt-16 border-t border-white/10 flex justify-center">
             <Link

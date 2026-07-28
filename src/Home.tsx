@@ -15,52 +15,63 @@ export default function Home() {
   
   const scrollProg = useMotionValue(0);
 
-  // Preload images
+  // The sequence only has frames from FIRST_FRAME upwards; indexes below it
+  // are never allocated or drawn.
+  const FIRST_FRAME = 100;
   const frameCount = 225;
   const imagesRef = useRef<HTMLImageElement[]>([]);
   // Shared between the loader and the scroll effect so newly-decoded frames
   // can repaint the frame currently in view, coalesced through one rAF.
-  const targetIndexRef = useRef(100);
+  const targetIndexRef = useRef(FIRST_FRAME);
   const requestDrawRef = useRef<() => void>(() => {});
 
   useEffect(() => {
+    let cancelled = false;
     const loadedImages: HTMLImageElement[] = new Array(frameCount);
-    
+
     // Create image objects without setting src to defer network load
-    for (let i = 0; i < frameCount; i++) {
+    for (let i = FIRST_FRAME; i < frameCount; i++) {
       loadedImages[i] = new Image();
     }
     imagesRef.current = loadedImages;
 
     // Load and draw the critical first frame immediately
-    const firstImg = loadedImages[100];
-    const frameNumber = '100';
-    firstImg.src = `/sequence/frame_${frameNumber}_delay-0.067s.webp`;
-    
+    const firstImg = loadedImages[FIRST_FRAME];
+    firstImg.src = `/sequence/frame_${FIRST_FRAME}_delay-0.067s.webp`;
+
     firstImg.onload = () => {
+      if (cancelled) return;
       requestDrawRef.current();
       startStagedLoading();
     };
 
     firstImg.onerror = () => {
+      if (cancelled) return;
       startStagedLoading();
     };
 
     const startStagedLoading = () => {
+      if (cancelled) return;
+      // Phones pay for every frame in data and decode time, and the canvas is
+      // physically smaller, so stop at every-other-frame there — the draw loop
+      // falls back to the nearest decoded frame, which is imperceptible at
+      // half the byte cost.
+      const finestStep = window.matchMedia("(max-width: 767px)").matches ? 2 : 1;
+
       // Build a de-duplicated load order that covers the whole scroll range
       // coarsely first (so any scroll position quickly has a near frame),
-      // then progressively fills in the detail. Frames only exist from 100.
+      // then progressively fills in the detail.
       const order: number[] = [];
       const seen = new Set<number>();
       const enqueue = (i: number) => {
-        if (i >= 100 && i < frameCount && !seen.has(i)) {
+        if (i >= FIRST_FRAME && i < frameCount && !seen.has(i)) {
           seen.add(i);
           order.push(i);
         }
       };
-      enqueue(100);
-      [8, 4, 2, 1].forEach((step) => {
-        for (let i = 100; i < frameCount; i += step) enqueue(i);
+      enqueue(FIRST_FRAME);
+      [8, 4, 2, 1].filter((step) => step >= finestStep).forEach((step) => {
+        for (let i = FIRST_FRAME; i < frameCount; i += step) enqueue(i);
       });
 
       // Modest concurrency keeps the pipe full without thrashing the network.
@@ -68,7 +79,7 @@ export default function Home() {
       let queueIndex = 0;
 
       const loadNext = () => {
-        if (queueIndex >= order.length) return;
+        if (cancelled || queueIndex >= order.length) return;
         const frameIndex = order[queueIndex++];
         const img = loadedImages[frameIndex];
         if (!img) {
@@ -77,6 +88,7 @@ export default function Home() {
         }
 
         const onReady = () => {
+          if (cancelled) return;
           // Repaint whatever frame is in view now, then fetch the next one.
           requestDrawRef.current();
           loadNext();
@@ -96,6 +108,18 @@ export default function Home() {
 
       for (let i = 0; i < Math.min(maxConcurrency, order.length); i++) {
         loadNext();
+      }
+    };
+
+    return () => {
+      cancelled = true;
+      loadedImages.forEach((img) => {
+        if (!img) return;
+        img.onload = null;
+        img.onerror = null;
+      });
+      if (imagesRef.current === loadedImages) {
+        imagesRef.current = [];
       }
     };
   }, []);
@@ -162,9 +186,8 @@ export default function Home() {
       scrollProg.set(progress);
 
       const frameProgress = Math.min(Math.max(progress / 0.85, 0), 1);
-      const startIndex = 100;
       targetIndexRef.current = Math.min(
-        Math.max(Math.round(startIndex + frameProgress * (frameCount - 1 - startIndex)), startIndex),
+        Math.max(Math.round(FIRST_FRAME + frameProgress * (frameCount - 1 - FIRST_FRAME)), FIRST_FRAME),
         frameCount - 1,
       );
       requestDraw();
@@ -222,18 +245,18 @@ export default function Home() {
         <Background3D />
       </div>
       
-      <div ref={containerRef} className="relative w-full bg-black h-[400vh] z-20">
-        <section className="sticky top-0 h-screen w-full overflow-hidden bg-black">
-          {/* Background sequence canvas */}
-          <div className="absolute inset-0 z-0 bg-neutral-900">
-            <canvas
-              ref={canvasRef}
-              className="absolute inset-0 w-full h-full object-cover object-center scale-[1.15]"
-            />
+      <div ref={containerRef} className="relative w-full h-[400vh] z-20">
+        <section className="sticky top-0 h-screen w-full overflow-hidden">
+          {/* Background sequence canvas. Sizing lives in .hero-sequence because
+              it keys off viewport aspect ratio, not width: the frames are 16:9,
+              so any portrait viewport (phone, but also a portrait tablet) would
+              have to crop them down to a face to fill the screen. See index.css. */}
+          <div className="absolute inset-0 z-0 flex items-center">
+            <canvas ref={canvasRef} className="hero-sequence" />
           </div>
 
           {/* Floating pill-shaped navbar with liquid glass UI */}
-          <header className="absolute top-4 md:top-6 left-0 right-0 z-50 px-2 md:px-4 max-w-[100vw] mx-auto w-full pointer-events-auto">
+          <header className="absolute top-4 md:top-6 left-0 right-0 z-50 px-2 md:px-4 pointer-events-auto">
             <nav className="flex items-center justify-between gap-4">
               {/* Navigation pill (visible on both mobile and desktop) */}
               <div className="flex items-center gap-0.5 md:gap-1 liquid-glass rounded-full p-1 md:px-3 md:py-2">
@@ -262,12 +285,15 @@ export default function Home() {
             </nav>
           </header>
 
-          {/* Foreground content wrapper */}
-          <div className="relative h-full w-full z-10 pointer-events-none overflow-hidden flex inset-0">
+          {/* Foreground content wrapper.
+              Every element keeps its desktop anchor and its size ratio to the
+              headline on mobile, so the composition reads the same at both
+              widths — only the absolute type scale changes. */}
+          <div className="relative h-full w-full z-10 pointer-events-none overflow-hidden">
             {/* Giant staggered headline words */}
             <motion.h1
               style={{ opacity: restOpacity, y: restY, filter: restBlur, x: restXRight }}
-              className="hero-title absolute text-white font-medium text-[9vw] md:text-[7vw] left-4 md:left-12 xl:left-16 top-[15%] md:top-[12%] mix-blend-plus-lighter leading-[1.05] tracking-tight z-10 drop-shadow-2xl"
+              className="hero-title absolute text-white font-medium text-[13vmin] md:text-[7vw] left-5 md:left-12 xl:left-16 top-[12%] mix-blend-plus-lighter leading-[1.05] tracking-tight z-10 drop-shadow-2xl"
             >
               Product <br />
               Designer
@@ -279,61 +305,57 @@ export default function Home() {
                 y: nameY,
                 filter: nameBlur,
               }}
-              className="hero-title absolute text-white font-medium text-[10vw] md:text-[7.5vw] right-4 md:right-12 xl:right-16 bottom-[15%] md:bottom-[12%] text-right mix-blend-plus-lighter leading-[1.05] tracking-tight z-10 drop-shadow-2xl"
+              className="hero-title absolute text-white font-medium text-[14vmin] md:text-[7.5vw] right-5 md:right-12 xl:right-16 bottom-[12%] text-right mix-blend-plus-lighter leading-[1.05] tracking-tight z-10 drop-shadow-2xl"
             >
               Vishwa <br />
               Anandh
             </motion.h1>
 
             {/* Description paragraph & CTA */}
-            <motion.div 
+            <motion.div
               style={{ opacity: restOpacity, y: restY, filter: restBlur }}
-              className="absolute left-6 md:left-16 top-[48%] md:top-[48%] lg:top-[46%] flex flex-col items-start gap-4 md:gap-6 pointer-events-auto z-30"
+              className="absolute left-5 md:left-16 top-[46%] md:top-[48%] lg:top-[46%] flex flex-col items-start gap-3 md:gap-6 pointer-events-auto z-30"
             >
-              <p className="max-w-[320px] md:max-w-[400px] text-base md:text-2xl leading-snug text-white/95 font-sans mix-blend-plus-lighter drop-shadow-sm font-light">
+              <p className="max-w-[240px] md:max-w-[400px] text-[15px] md:text-2xl leading-snug text-white/95 font-sans mix-blend-plus-lighter drop-shadow-sm font-light">
                 specializing in complex enterprise workflows and AI-native systems.
               </p>
               <Link
                 to="/projects"
-                className="px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 transition-all text-sm font-medium flex items-center gap-2 shadow-xl"
+                className="px-5 md:px-6 py-2.5 md:py-3 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 transition-all text-[13px] md:text-sm font-medium flex items-center gap-2 shadow-xl"
               >
                 Explore Case Studies &rarr;
               </Link>
             </motion.div>
 
             {/* Stat block — top-right */}
-            <motion.div 
+            <motion.div
               style={{ opacity: restOpacity, x: restXLeft }}
-              className="absolute right-6 md:right-20 top-[25%] md:top-[20%] flex flex-col items-end pointer-events-auto mix-blend-plus-lighter drop-shadow-sm"
+              className="absolute right-5 md:right-20 top-[22%] md:top-[20%] flex flex-col items-end pointer-events-auto mix-blend-plus-lighter drop-shadow-sm"
             >
               <div className="flex items-center gap-3 justify-end">
                 <div className="hidden md:block h-px w-16 bg-white/40 rotate-[20deg]" />
-                <span className="text-2xl md:text-3xl font-medium tracking-tight font-sans text-white text-right max-w-[200px] leading-tight">
+                <span className="text-[15px] md:text-3xl font-medium tracking-tight font-sans text-white text-right max-w-[110px] md:max-w-[200px] leading-tight">
                   AI UX Strategy & Systems
                 </span>
               </div>
             </motion.div>
 
-
-
             {/* Stat block — middle-left */}
-            <motion.div 
+            <motion.div
               style={{ opacity: restOpacity, x: restXRight }}
-              className="absolute left-6 md:left-20 top-[65%] md:top-[70%] flex flex-col items-start pointer-events-auto mix-blend-plus-lighter drop-shadow-sm z-20"
+              className="absolute left-5 md:left-20 top-[70%] flex flex-col items-start pointer-events-auto mix-blend-plus-lighter drop-shadow-sm z-20"
             >
               <div className="flex items-center gap-3 justify-start">
-                <span className="text-4xl md:text-5xl font-medium tracking-tight font-mono text-white">
+                <span className="text-[24px] md:text-5xl font-medium tracking-tight font-mono text-white">
                   5+
                 </span>
                 <div className="hidden md:block h-px w-16 bg-white/40 rotate-[20deg]" />
               </div>
-              <span className="text-xs md:text-sm text-white/80 mt-1 text-left font-sans uppercase tracking-widest max-w-[150px] leading-tight">
+              <span className="text-[10px] md:text-sm text-white/80 mt-1 text-left font-sans uppercase tracking-widest max-w-[110px] md:max-w-[150px] leading-tight">
                 Complex Systems Shipped
               </span>
             </motion.div>
           </div>
-
-          {/* Bottom gradient overlay removed */}
         </section>
       </div>
 

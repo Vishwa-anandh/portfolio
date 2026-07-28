@@ -82,6 +82,43 @@ html.lenis body {
   line-height: 0.95;
 }
 
+/* Hero frame sequence.
+   Landscape-ish viewports (>= 5:4) show it full-bleed: cover only trims a
+   little off the sides, so the head-and-shoulders framing survives. */
+.hero-sequence {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.15);
+}
+
+/* Portrait viewports — phones, and portrait tablets — can't do that: filling
+   the height with a 16:9 frame crops it down to a face. Keep the frame's own
+   proportions as a centred band instead, so the composition still reads like
+   the desktop one, and dissolve its edges into the 3D backdrop rather than
+   cutting off hard. */
+@media (max-aspect-ratio: 5/4) {
+  .hero-sequence {
+    height: 52vh;
+    transform: none;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000 14%,
+      #000 86%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000 14%,
+      #000 86%,
+      transparent 100%
+    );
+  }
+}
+
 .liquid-glass {
   background: rgba(255, 255, 255, 0.01);
   background-blend-mode: luminosity;
