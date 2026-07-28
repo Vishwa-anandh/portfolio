@@ -154,7 +154,7 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
               <div className="inline-block px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/100/10 text-blue-400 text-xs font-mono uppercase tracking-widest mb-6">Case Study</div>
               <h1 className="text-5xl md:text-7xl font-sans tracking-tighter text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-neutral-400">{project.name}</h1>
               <p className="text-2xl md:text-3xl font-light max-w-2xl leading-tight text-white/60 mb-12">
-                An AI-powered workspace that helps teams visualize, generate, and collaborate on ideas seamlessly securely in a spatial environment.
+                An AI-assisted canvas that turns goals and scattered ideas into structured, editable workflows without separating generation from the work itself.
               </p>
               
               <div className="flex flex-wrap gap-8 md:gap-16 pt-8 border-t border-white/5">
@@ -172,10 +172,14 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
                   </p>
                 </div>
                 <div>
+                  <p className="text-xs uppercase tracking-widest text-white/50 mb-2 font-mono">Role</p>
+                  <p className="text-lg text-white font-medium">{project.role}</p>
+                </div>
+                <div>
                   <p className="text-xs uppercase tracking-widest text-white/50 mb-2 font-mono">Tools</p>
                   <div className="flex flex-wrap gap-3 mt-1">
                     <span className="px-3 py-1 rounded-full bg-neutral-900/5 border border-white/10 text-sm text-white/70">Figma</span>
-                    <span className="px-3 py-1 rounded-full bg-neutral-900/5 border border-white/10 text-sm text-white/70">React</span>
+                    <span className="px-3 py-1 rounded-full bg-neutral-900/5 border border-white/10 text-sm text-white/70">Prototyping</span>
                   </div>
                 </div>
               </div>
@@ -209,13 +213,13 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
             
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 text-left group">
               <div className="col-span-1 md:col-span-4">
-                <h4 className="text-2xl font-light text-white group-hover:text-blue-400 transition-colors">The Blank Canvas Syndrome</h4>
+                <h4 className="text-2xl font-light text-white group-hover:text-blue-400 transition-colors">Starting Is the Hardest Step</h4>
               </div>
               <div className="col-span-1 md:col-span-8">
                 <p className="text-white/60 leading-relaxed font-light text-xl space-y-6">
-                  <span>Traditional digital whiteboarding tools all share a common flaw: the initial barrier to entry. Every time a team sits down to map out a new architecture or brainstorm a campaign, they are met with a completely blank stare. Staring at an empty grid can be paralyzing, leading to scattered workflows and chaotic starting points.</span>
+                  <span>Spatial canvases are flexible, but that flexibility can create a difficult first step. Teams often begin with an empty board, manually arrange early ideas, and spend time creating structure before they can evaluate the thinking itself.</span>
                   <br/><br/>
-                  <span>We envisioned Workflow AI not just as a drawing tool, but as an active collaborator. The mission was to revolutionize the way users map out ideas by introducing a context-aware generative engine right into the canvas. By merging spatial collaboration with language models, we transform ideation from a manual absolute chore into an intuitive dialogue with the workspace itself.</span>
+                  <span>Workflow AI explores a different starting point: users describe an objective, receive an editable visual structure, and continue working directly on the canvas. AI provides momentum, while familiar spatial controls keep the user in control of the result.</span>
                 </p>
               </div>
             </div>
@@ -223,37 +227,37 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
 
           {/* Defining the goals */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
-            <motion.h3 variants={itemVariants} className="text-sm font-mono text-blue-500 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-blue-500/30">02 // The Engineering Challenge</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-blue-500 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-blue-500/30">02 // Design Challenges</motion.h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div variants={itemVariants} className="p-8 rounded-3xl bg-neutral-900 shadow-lg shadow-black/50 border border-white/5 hover:bg-neutral-900 hover:border-blue-500/30 transition-all duration-300">
                  <div className="w-12 h-12 rounded-xl bg-blue-500/100/20 text-blue-400 flex items-center justify-center mb-6 text-xl">01</div>
-                 <h4 className="text-xl font-medium text-white mb-4">Combating Friction</h4>
-                 <p className="text-white/60 font-light leading-relaxed">Lower the activation energy needed to begin ideating. We engineered an initial setup where simply typing a goal dynamically generates an entire architectural template, complete with structured nodes, directly onto the canvas.</p>
+                 <h4 className="text-xl font-medium text-white mb-4">Reduce Start-Up Friction</h4>
+                 <p className="text-white/60 font-light leading-relaxed">Give users a meaningful first draft without forcing them through a configuration-heavy setup. A short objective can generate an initial node structure directly on the canvas.</p>
               </motion.div>
               <motion.div variants={itemVariants} className="p-8 rounded-3xl bg-neutral-900 shadow-lg shadow-black/50 border border-white/5 hover:bg-neutral-900 hover:border-blue-500/30 transition-all duration-300">
                  <div className="w-12 h-12 rounded-xl bg-indigo-500/100/20 text-indigo-400 flex items-center justify-center mb-6 text-xl">02</div>
-                 <h4 className="text-xl font-medium text-white mb-4">Empowering Synthesis</h4>
-                 <p className="text-white/60 font-light leading-relaxed">It is easy to generate noise. The real challenge is synthesis. We designed our generative engine to evaluate existing, chaotic notes, and seamlessly cluster, route, and group them into logical diagrams within milliseconds.</p>
+                 <h4 className="text-xl font-medium text-white mb-4">Keep AI Output Editable</h4>
+                 <p className="text-white/60 font-light leading-relaxed">Generated content should behave like normal canvas content, not a locked result. Users can move, regroup, rewrite, or delete nodes while preserving the relationships between them.</p>
               </motion.div>
               <motion.div variants={itemVariants} className="p-8 rounded-3xl bg-neutral-900 shadow-lg shadow-black/50 border border-white/5 hover:bg-neutral-900 hover:border-blue-500/30 transition-all duration-300">
                  <div className="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-6 text-xl">03</div>
-                 <h4 className="text-xl font-medium text-white mb-4">Synchronized Telemetry</h4>
-                 <p className="text-white/60 font-light leading-relaxed">Collaboration breaks down when it lags behind thought. We optimized our web-socket telemetry to guarantee sub-50ms latency for all multiplayer cursors and real-time element manipulations, creating a true sense of co-presence.</p>
+                 <h4 className="text-xl font-medium text-white mb-4">Make Collaboration Legible</h4>
+                 <p className="text-white/60 font-light leading-relaxed">Presence, comments, sharing, and notifications are placed around the canvas without competing with the work. The interface makes it clear who is participating and where feedback belongs.</p>
               </motion.div>
             </div>
           </motion.div>
           
           {/* Competitor Analysis */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
-            <motion.h3 variants={itemVariants} className="text-sm font-mono text-blue-500 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-blue-500/30">03 // Competitor Analysis</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-blue-500 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-blue-500/30">03 // Reference Review</motion.h3>
             
             <motion.div variants={itemVariants} className="space-y-8 bg-neutral-900 shadow-xl shadow-black/50 p-8 md:p-12 lg:p-16 rounded-[3rem] border border-white/5 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/100/10 rounded-full blur-[100px] pointer-events-none" />
               
               <div className="max-w-3xl relative z-10">
-                <h4 className="text-3xl font-medium text-white mb-6">Evaluating the Whiteboard Landscape</h4>
+                <h4 className="text-3xl font-medium text-white mb-6">Understanding Existing Work Patterns</h4>
                 <p className="text-white/60 leading-relaxed font-light text-xl mb-12">
-                  During our initial research, we mapped out the whiteboarding and documentation landscape. Existing tools forced users to choose between rigid structural documents or entirely unstructured brainstorming canvases, with AI feeling bolted on rather than natively integrated.
+                  The concept review compared two familiar work modes: spatial whiteboards for exploration and linear documents for structured output. The opportunity was not to replace either model, but to reduce the handoff between exploring an idea and organizing it into a usable workflow.
                 </p>
               </div>
 
@@ -265,9 +269,9 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
                   </div>
                   <p className="text-white/60 font-light mb-6">Miro, FigJam, Mural</p>
                   <ul className="space-y-3">
-                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Great for spatial thinking and brainstorming.</li>
-                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Lack deep structural capabilities.</li>
-                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> AI features are often superficial additions.</li>
+                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Strong support for non-linear exploration and teamwork.</li>
+                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Users still create and organize most structures manually.</li>
+                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Generated content can feel separate from normal canvas editing.</li>
                   </ul>
                 </div>
 
@@ -278,9 +282,9 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
                   </div>
                   <p className="text-white/60 font-light mb-6">Notion, Google Docs</p>
                   <ul className="space-y-3">
-                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Excellent for structured text and reading.</li>
-                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Native AI generation for prose.</li>
-                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Heavily constrain visual and non-linear ideation.</li>
+                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Strong support for structured writing and review.</li>
+                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> AI assistance fits naturally into text creation.</li>
+                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Linear pages make relationships and branching harder to see.</li>
                   </ul>
                 </div>
               </div>
@@ -290,26 +294,26 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
                 <div>
                   <h5 className="text-lg font-medium text-blue-300 mb-2">The Workflow AI Opportunity</h5>
                   <p className="text-white/60 text-sm leading-relaxed">
-                    A spatial engine infused with AI from the ground up, capable of seamlessly bridging creative chaos and structured output without forcing the user to switch platforms.
+                    Combine the freedom of a canvas with an AI-generated starting structure, then let users refine the result using the same direct-manipulation tools they already understand.
                   </p>
                 </div>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Analytics & Outcomes */}
+          {/* Validation & Measurement */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
-            <motion.h3 variants={itemVariants} className="text-sm font-mono text-blue-500 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-blue-500/30">03.5 // Analytics & Outcomes</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-blue-500 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-blue-500/30">04 // Validation & Measurement</motion.h3>
             
             <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 text-left">
               <div className="p-8 rounded-3xl bg-neutral-900 border border-blue-500/20 shadow-lg shadow-black/50">
-                <h4 className="text-xl font-medium text-blue-400 mb-4 flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span> Data-Informed Insight</h4>
+                <h4 className="text-xl font-medium text-blue-400 mb-4 flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span> Key Design Hypothesis</h4>
                 <p className="text-white/70 leading-relaxed font-light text-lg">
-                  Data showed 62% of users generated a workflow via prompt but immediately abandoned the canvas within 45 seconds, which told us the AI was producing logically sound outputs but the resulting spatial layout was too clustered and complex to navigate or edit.
+                  Generating a diagram is only useful if users can understand and edit it immediately. The design treats generation as the beginning of the workflow, with clear hierarchy, visible relationships, and familiar canvas controls available as soon as the result appears.
                 </p>
                 <div className="mt-6 pt-6 border-t border-white/5">
                   <p className="text-white font-medium text-lg leading-relaxed">
-                    We reduced the workflow creation process from a static 12-step form wizard to an interactive, prompt-driven generative canvas — estimated to improve core feature adoption by 2.5x.
+                    The first validation task should compare prompt-to-first-edit time against manually building the same structure, while observing whether users can confidently correct the generated result.
                   </p>
                 </div>
               </div>
@@ -318,35 +322,35 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
                 <h4 className="text-xl font-medium text-white mb-6">Success Metrics Strategy</h4>
                 <div className="space-y-4 w-full">
                   <div className="flex justify-between items-center border-b border-white/5 pb-2">
-                    <span className="text-white/60 font-light">Time-to-First-Workflow (TTFW)</span>
-                    <span className="text-blue-400 font-mono text-sm">Minimize</span>
+                    <span className="text-white/60 font-light">Time to First Meaningful Edit</span>
+                    <span className="text-blue-400 font-mono text-sm">Measure</span>
                   </div>
                   <div className="flex justify-between items-center border-b border-white/5 pb-2">
-                    <span className="text-white/60 font-light">AI Prompt Acceptance Rate</span>
-                    <span className="text-blue-400 font-mono text-sm">Target: High</span>
+                    <span className="text-white/60 font-light">Generated Structure Retention</span>
+                    <span className="text-blue-400 font-mono text-sm">Observe</span>
                   </div>
                   <div className="flex justify-between items-center pb-2">
-                    <span className="text-white/60 font-light">Canvas Interaction Depth</span>
-                    <span className="text-blue-400 font-mono text-sm">+pan/zoom events</span>
+                    <span className="text-white/60 font-light">Successful Collaborative Handoff</span>
+                    <span className="text-blue-400 font-mono text-sm">Validate</span>
                   </div>
                 </div>
               </div>
             </motion.div>
 
             <motion.div variants={itemVariants} className="p-8 rounded-3xl bg-blue-900/10 border border-blue-500/20 text-left">
-              <h4 className="text-sm font-medium text-blue-300 mb-4 font-mono uppercase tracking-widest">Post-Launch Telemetry</h4>
+              <h4 className="text-sm font-medium text-blue-300 mb-4 font-mono uppercase tracking-widest">Suggested Product Signals</h4>
               <ul className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <li>
-                  <div className="text-blue-400 font-mono text-xs mb-2 bg-blue-500/10 inline-block px-2 py-1 rounded">amplitude: node_drag_drop_event</div>
-                  <p className="text-white/60 text-sm font-light leading-relaxed">Tracking interaction frequency to validate the usability of our spatial mapping tools.</p>
+                  <div className="text-blue-400 font-mono text-xs mb-2 bg-blue-500/10 inline-block px-2 py-1 rounded">event: generated_node_edited</div>
+                  <p className="text-white/60 text-sm font-light leading-relaxed">Shows whether generation leads to active refinement instead of passive viewing.</p>
                 </li>
                 <li>
-                  <div className="text-blue-400 font-mono text-xs mb-2 bg-blue-500/10 inline-block px-2 py-1 rounded">mixpanel: ai_generation_rejection</div>
-                  <p className="text-white/60 text-sm font-light leading-relaxed">Logging when a user deletes a generated cluster within 10s of creation (hallucinations/poor UI).</p>
+                  <div className="text-blue-400 font-mono text-xs mb-2 bg-blue-500/10 inline-block px-2 py-1 rounded">event: generated_cluster_removed</div>
+                  <p className="text-white/60 text-sm font-light leading-relaxed">Highlights outputs that users reject and provides a starting point for quality review.</p>
                 </li>
                 <li>
-                  <div className="text-blue-400 font-mono text-xs mb-2 bg-blue-500/10 inline-block px-2 py-1 rounded">ws: collab_sessions</div>
-                  <p className="text-white/60 text-sm font-light leading-relaxed">Tracking concurrent presence metrics to validate the multiplayer value proposition.</p>
+                  <div className="text-blue-400 font-mono text-xs mb-2 bg-blue-500/10 inline-block px-2 py-1 rounded">event: collaborator_joined</div>
+                  <p className="text-white/60 text-sm font-light leading-relaxed">Measures whether generated work is shared and developed with other team members.</p>
                 </li>
               </ul>
             </motion.div>
@@ -354,18 +358,18 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
 
           {/* User Flow */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
-            <motion.h3 variants={itemVariants} className="text-sm font-mono text-blue-500 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-blue-500/30">04 // User Flow</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-blue-500 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-blue-500/30">05 // User Flow</motion.h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 group">
                <div className="lg:col-span-5 relative">
                  <motion.div variants={itemVariants} className="sticky top-32">
                    <h4 className="text-3xl font-medium text-white mb-6">From Chaos to Structure</h4>
                    <p className="text-white/60 leading-relaxed font-light text-lg mb-8">
-                     The primary user journey was designed to seamlessly bridge high-level ideation with structural synthesis. The flow mirrors natural human creative processes.
+                      The journey moves from a lightweight prompt to an editable spatial result. At every stage, users can ignore AI, work manually, or invoke generation on a selected part of the canvas.
                    </p>
                    <div className="p-6 rounded-2xl bg-neutral-900/5 border border-white/5 backdrop-blur-md">
                      <p className="text-white/60 font-mono text-sm leading-relaxed">
-                       "Ideas don't start in a grid. We must let users spread out spatially, and then utilize AI to gather, organize, and synthesize that spatial mess into a linear format."
+                        "AI should provide a useful starting structure without taking ownership of the canvas away from the user."
                      </p>
                    </div>
                  </motion.div>
@@ -402,8 +406,8 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
                           <p className="text-white/50 text-xs">AI automatically organizes chaotic notes into structured outlines.</p>
                         </div>
                         <div className="p-4 rounded-xl bg-neutral-900 shadow-md border border-white/5 hover:border-blue-500/30 transition-colors">
-                          <h6 className="text-white font-medium text-sm mb-2">Export Actionables</h6>
-                          <p className="text-white/50 text-xs">Transform canvas clusters into actionable JIRA or linear tickets.</p>
+                          <h6 className="text-white font-medium text-sm mb-2">Refine the Result</h6>
+                          <p className="text-white/50 text-xs">Move, regroup, rewrite, or remove generated nodes using normal canvas controls.</p>
                         </div>
                       </div>
                     </motion.div>
@@ -416,8 +420,8 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
           <div className="mb-32">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
               <div>
-                <motion.h3 variants={itemVariants} className="text-sm font-mono text-blue-500 uppercase tracking-widest inline-block pb-2 border-b border-blue-500/30">05 // Visual Execution</motion.h3>
-                <motion.h2 variants={itemVariants} className="text-4xl text-white font-light mt-8">Futuristic Interface Engineering</motion.h2>
+                <motion.h3 variants={itemVariants} className="text-sm font-mono text-blue-500 uppercase tracking-widest inline-block pb-2 border-b border-blue-500/30">06 // Visual Execution</motion.h3>
+                <motion.h2 variants={itemVariants} className="text-4xl text-white font-light mt-8">A Visual System for Spatial Clarity</motion.h2>
               </div>
               <motion.p variants={itemVariants} className="text-white/50 font-mono text-sm">Click any frame to examine.</motion.p>
             </motion.div>

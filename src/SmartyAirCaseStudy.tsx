@@ -169,7 +169,7 @@ export default function SmartyAirCaseStudy({ project }: { project: Project }) {
               <div className="inline-block px-4 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-mono uppercase tracking-widest mb-6 shadow-[0_0_15px_rgba(6,182,212,0.2)]">Case Study</div>
               <h1 className="text-5xl md:text-7xl font-sans tracking-tighter text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-500">{project.name}</h1>
               <p className="text-2xl md:text-3xl font-light max-w-2xl leading-tight text-white/60 mb-12">
-                An advanced industrial IoT dashboard focusing on real-time machine monitoring and AI-driven performance recommendations.
+                An industrial monitoring workspace that helps operators scan equipment health, compare performance, investigate anomalies, and plan maintenance from one interface.
               </p>
               
               <div className="flex flex-wrap gap-8 md:gap-16 pt-8 border-t border-white/5">
@@ -185,6 +185,10 @@ export default function SmartyAirCaseStudy({ project }: { project: Project }) {
                   <p className="text-lg text-white font-medium flex items-center gap-2">
                     Feb 2024
                   </p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-white/50 mb-2 font-mono">Role</p>
+                  <p className="text-lg text-white font-medium">{project.role}</p>
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-white/50 mb-2 font-mono">Tools</p>
@@ -212,18 +216,18 @@ export default function SmartyAirCaseStudy({ project }: { project: Project }) {
 
           {/* Project Overview */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
-            <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-cyan-500/30">01 // The Architecture</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-cyan-500/30">01 // The Operating Context</motion.h3>
             
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 text-left group">
               <div className="col-span-1 md:col-span-4">
-                <h4 className="text-2xl font-light text-white group-hover:text-cyan-400 transition-colors">Industrial Telemetry</h4>
+                <h4 className="text-2xl font-light text-white group-hover:text-cyan-400 transition-colors">Make Machine Health Scannable</h4>
               </div>
               <div className="col-span-1 md:col-span-8 space-y-6">
                 <p className="text-white/60 leading-relaxed font-light text-xl">
-                  SmartyAir functions as a central nervous system for factory floors and heavy machinery environments. Utilizing dark-mode aesthetics to reduce glare in industrial settings, the dashboard acts as a direct relay between IoT-enabled compressors and plant operators.
+                  Plant operators may need to monitor several compressors at once while separating routine variation from conditions that deserve attention. That task becomes harder when status, history, maintenance, and reporting live in separate views or manual records.
                 </p>
                 <p className="text-white/60 leading-relaxed font-light text-xl">
-                  Instead of static spreadsheets, the interface processes real-time sensor streams mapping active cycles, temperatures, efficiencies, and pressure gradients. By translating complex industrial metrics into highly visible, actionable widgets, operators can optimize output and perform predictive maintenance instantly.
+                  SmartyAir groups fleet status, runtime, cycle count, performance trends, historical comparison, and service planning into a consistent hierarchy. Dark surfaces support prolonged monitoring, while status is communicated through labels and values as well as color.
                 </p>
               </div>
             </div>
@@ -236,34 +240,34 @@ export default function SmartyAirCaseStudy({ project }: { project: Project }) {
               <motion.div variants={itemVariants} className="p-8 rounded-2xl bg-[#111] border border-white/5 hover:bg-[#1a1a1a] hover:border-cyan-500/20 transition-all duration-300">
                  <div className="w-12 h-12 rounded-xl bg-neutral-900/5 text-cyan-400 flex items-center justify-center mb-6 text-xl font-mono">01</div>
                  <h4 className="text-xl font-medium text-white mb-4">Live Performance Matrix</h4>
-                 <p className="text-white/60 font-light leading-relaxed">Continuous data relays present operational efficiencies, compressor utilization, runtime statuses, and energy consumption metrics across intuitive, glanceable chart visualizations.</p>
+                 <p className="text-white/60 font-light leading-relaxed">Fleet cards and dashboard summaries prioritize current status, utilization, runtime, cycle count, and performance trends so operators can decide which machine needs investigation.</p>
               </motion.div>
               <motion.div variants={itemVariants} className="p-8 rounded-2xl bg-[#111] border border-white/5 hover:bg-[#1a1a1a] hover:border-cyan-500/20 transition-all duration-300">
                  <div className="w-12 h-12 rounded-xl bg-neutral-900/5 text-cyan-400 flex items-center justify-center mb-6 text-xl font-mono">02</div>
                  <h4 className="text-xl font-medium text-white mb-4">AI Diagnostic Agent</h4>
-                 <p className="text-white/60 font-light leading-relaxed">Integrated AI capabilities process historical incident logs and ongoing anomalies, providing "chat-room" style recommendations to engineers—preventing mechanical failures before they arise.</p>
+                 <p className="text-white/60 font-light leading-relaxed">The AI recommendation panel brings anomaly context, historical patterns, and suggested checks into a conversational view. Recommendations support an engineer's diagnosis rather than presenting an automatic decision.</p>
               </motion.div>
               <motion.div variants={itemVariants} className="p-8 rounded-2xl bg-[#111] border border-white/5 hover:bg-[#1a1a1a] hover:border-cyan-500/20 transition-all duration-300">
                  <div className="w-12 h-12 rounded-xl bg-neutral-900/5 text-cyan-400 flex items-center justify-center mb-6 text-xl font-mono">03</div>
                  <h4 className="text-xl font-medium text-white mb-4">Lifecycle Management</h4>
-                 <p className="text-white/60 font-light leading-relaxed">Deep dive technical profiles for individual machines, combining documentation, scheduled service calendars, operational lifespans, and direct QR-code-based inventory addition protocols.</p>
+                 <p className="text-white/60 font-light leading-relaxed">Each machine profile connects telemetry with historical comparison, service schedules, reports, and setup information. QR-assisted device addition reduces manual identification during onboarding.</p>
               </motion.div>
             </div>
           </motion.div>
 
-          {/* Analytics & Outcomes */}
+          {/* Validation & Measurement */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
-            <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-cyan-500/30">02.5 // Analytics & Outcomes</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-cyan-500/30">03 // Validation & Measurement</motion.h3>
             
             <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 text-left">
               <div className="p-8 rounded-3xl bg-[#111] border border-cyan-500/20 shadow-lg shadow-black/50">
-                <h4 className="text-xl font-medium text-cyan-400 mb-4 flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span> Data-Informed Insight</h4>
+                <h4 className="text-xl font-medium text-cyan-400 mb-4 flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span> Key Design Hypothesis</h4>
                 <p className="text-white/70 leading-relaxed font-light text-lg">
-                  Data showed plant managers spent an average of 14 minutes aggregating manual log spreadsheets just to verify nightly machine runtime statuses — time diverted from active troubleshooting.
+                  A fleet overview should help an operator identify the machine that needs attention without comparing several reports. Status, severity, recency, and the most relevant performance signal must be visible before drill-down.
                 </p>
                 <div className="mt-6 pt-6 border-t border-white/5">
                   <p className="text-white font-medium text-lg leading-relaxed">
-                    By pulling telemetry into an immediate top-level "Active Grid" interface, we aimed to cut that 14-minute manual verification time down to a 30-second visual scan.
+                    Validation should compare the dashboard with the existing monitoring workflow and test whether operators can identify an abnormal machine, explain why it is abnormal, and choose the next action.
                   </p>
                 </div>
               </div>
@@ -272,35 +276,35 @@ export default function SmartyAirCaseStudy({ project }: { project: Project }) {
                 <h4 className="text-xl font-medium text-white mb-6">Success Metrics Strategy</h4>
                 <div className="space-y-4 w-full">
                   <div className="flex justify-between items-center border-b border-white/5 pb-2">
-                    <span className="text-white/60 font-light">Anomaly Detection Speed</span>
-                    <span className="text-cyan-400 font-mono text-sm">+60% target</span>
+                    <span className="text-white/60 font-light">Time to Identify Abnormal Equipment</span>
+                    <span className="text-cyan-400 font-mono text-sm">Compare</span>
                   </div>
                   <div className="flex justify-between items-center border-b border-white/5 pb-2">
-                    <span className="text-white/60 font-light">Daily Active Use (DAU)</span>
-                    <span className="text-cyan-400 font-mono text-sm">Increase</span>
+                    <span className="text-white/60 font-light">Correct Severity Interpretation</span>
+                    <span className="text-cyan-400 font-mono text-sm">Validate</span>
                   </div>
                   <div className="flex justify-between items-center pb-2">
-                    <span className="text-white/60 font-light">Alert-to-Action Rate</span>
-                    <span className="text-cyan-400 font-mono text-sm">Target: High</span>
+                    <span className="text-white/60 font-light">Alert to Investigation</span>
+                    <span className="text-cyan-400 font-mono text-sm">Observe</span>
                   </div>
                 </div>
               </div>
             </motion.div>
 
             <motion.div variants={itemVariants} className="p-8 rounded-3xl bg-cyan-900/10 border border-cyan-500/20 text-left">
-              <h4 className="text-sm font-medium text-cyan-300 mb-4 font-mono uppercase tracking-widest">Post-Launch Telemetry</h4>
+              <h4 className="text-sm font-medium text-cyan-300 mb-4 font-mono uppercase tracking-widest">Suggested Product Signals</h4>
               <ul className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <li>
-                  <div className="text-cyan-400 font-mono text-xs mb-2 bg-cyan-500/10 inline-block px-2 py-1 rounded">event: ai_chat_initiated</div>
-                  <p className="text-white/60 text-sm font-light leading-relaxed">Measure the adoption rate of the AI diagnostic tool over traditional manual manuals.</p>
+                  <div className="text-cyan-400 font-mono text-xs mb-2 bg-cyan-500/10 inline-block px-2 py-1 rounded">event: recommendation_opened</div>
+                  <p className="text-white/60 text-sm font-light leading-relaxed">Shows which anomaly types lead operators to request AI-assisted guidance.</p>
                 </li>
                 <li>
-                  <div className="text-cyan-400 font-mono text-xs mb-2 bg-cyan-500/10 inline-block px-2 py-1 rounded">event: historical_compare</div>
-                  <p className="text-white/60 text-sm font-light leading-relaxed">Track how often engineers utilize historical comparison graphs to diagnose current anomalies.</p>
+                  <div className="text-cyan-400 font-mono text-xs mb-2 bg-cyan-500/10 inline-block px-2 py-1 rounded">event: historical_comparison_opened</div>
+                  <p className="text-white/60 text-sm font-light leading-relaxed">Measures when historical trends are used to support an active investigation.</p>
                 </li>
                 <li>
-                  <div className="text-cyan-400 font-mono text-xs mb-2 bg-cyan-500/10 inline-block px-2 py-1 rounded">metric: time_on_page</div>
-                  <p className="text-white/60 text-sm font-light leading-relaxed">Unlike consumer apps, we want a LOWER time-on-page indicating operators find what they need instantly.</p>
+                  <div className="text-cyan-400 font-mono text-xs mb-2 bg-cyan-500/10 inline-block px-2 py-1 rounded">metric: alert_to_action_time</div>
+                  <p className="text-white/60 text-sm font-light leading-relaxed">Tracks the time between opening an alert and starting a diagnostic or maintenance action.</p>
                 </li>
               </ul>
             </motion.div>
@@ -310,8 +314,8 @@ export default function SmartyAirCaseStudy({ project }: { project: Project }) {
           <div className="mb-32">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
               <div>
-                <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest inline-block pb-2 border-b border-cyan-500/30">03 // System Schematics</motion.h3>
-                <motion.h2 variants={itemVariants} className="text-4xl text-white font-light mt-8">Monitoring Terminals</motion.h2>
+                <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest inline-block pb-2 border-b border-cyan-500/30">04 // System Schematics</motion.h3>
+                <motion.h2 variants={itemVariants} className="text-4xl text-white font-light mt-8">A Consistent Monitoring System</motion.h2>
               </div>
               <motion.p variants={itemVariants} className="text-white/50 font-mono text-sm">Click any frame to examine.</motion.p>
             </motion.div>

@@ -182,7 +182,7 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
               <div className="inline-block px-4 py-1.5 rounded-full border border-emerald-600/30 bg-emerald-800/20 text-emerald-300 text-xs font-mono uppercase tracking-widest mb-6">Case Study</div>
               <h1 className="text-5xl md:text-7xl font-sans tracking-tighter text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-emerald-100 via-teal-200 to-emerald-500">{project.name}</h1>
               <p className="text-2xl md:text-3xl font-light max-w-2xl leading-tight text-white/60 mb-12">
-                A command center for orchestrating autonomous AI agents, deploying global knowledge bases, and monitoring live token feeds.
+                A systems dashboard that helps operations teams configure, observe, and investigate AI agents without losing the path from fleet status to individual execution.
               </p>
               
               <div className="flex flex-wrap gap-8 md:gap-16 pt-8 border-t border-white/5">
@@ -198,6 +198,10 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
                   <p className="text-lg text-white font-medium flex items-center gap-2">
                     Apr 2025
                   </p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-white/50 mb-2 font-mono">Role</p>
+                  <p className="text-lg text-white font-medium">{project.role}</p>
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-white/50 mb-2 font-mono">Tools</p>
@@ -237,14 +241,14 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
             
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 text-left group">
               <div className="col-span-1 md:col-span-4">
-                <h4 className="text-2xl font-light text-white group-hover:text-emerald-400 transition-colors">Agents at Scale</h4>
+                <h4 className="text-2xl font-light text-white group-hover:text-emerald-400 transition-colors">From Raw Activity to Operational Clarity</h4>
               </div>
               <div className="col-span-1 md:col-span-8 space-y-6">
                 <p className="text-white/60 leading-relaxed font-light text-xl">
-                  As AI transitions from static chatbots to autonomous agents, teams require an entirely new operational paradigm. Current solutions fall short when attempting to manage complex agent behaviors, parallel pipelines, and multi-node clusters simultaneously. Agentic14 was created as an enterprise-grade control panel allowing users to orchestrate a vast workforce of specialized AI entities.
+                  Agent-based systems introduce a new observability problem. Operators need to know what is running, what changed, where cost is accumulating, and which failure needs attention. Raw logs contain the detail, but they are inefficient as the primary interface for scanning system health.
                 </p>
                 <p className="text-white/60 leading-relaxed font-light text-xl">
-                  Through real-time telemetry, model performance tracking, and direct integration with multiple LLM providers, Agentic14 transforms the chaotic nature of autonomous deployments into a seamless, highly observable experience.
+                  Agentic14 organizes that complexity into a hierarchy: fleet health at the top, workflow and cluster activity in the middle, and agent configuration, logs, knowledge, and run history at the deepest level. The goal is to make investigation progressive instead of overwhelming.
                 </p>
               </div>
             </div>
@@ -257,24 +261,24 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
               <motion.div variants={itemVariants} className="p-8 rounded-3xl bg-neutral-900 shadow-lg shadow-black/50 border border-white/5 hover:bg-neutral-900 hover:border-emerald-500/20 transition-all duration-300">
                  <div className="w-12 h-12 rounded-xl bg-neutral-900/5 text-emerald-300 flex items-center justify-center mb-6 text-xl">01</div>
                  <h4 className="text-xl font-medium text-white mb-4">Live Telemetry</h4>
-                 <p className="text-white/60 font-light leading-relaxed">Agent deployments run in extreme scales. Providing live log streaming and cluster status without crippling the browser required designing highly optimized terminal-like components with virtualized list rendering patterns.</p>
+                 <p className="text-white/60 font-light leading-relaxed">Dense activity streams are summarized into health, failure, latency, and usage states. Raw execution logs remain available on demand, so operators can scan first and inspect evidence only when needed.</p>
               </motion.div>
               <motion.div variants={itemVariants} className="p-8 rounded-3xl bg-neutral-900 shadow-lg shadow-black/50 border border-white/5 hover:bg-neutral-900 hover:border-emerald-500/20 transition-all duration-300">
                  <div className="w-12 h-12 rounded-xl bg-neutral-900/5 text-emerald-300 flex items-center justify-center mb-6 text-xl">02</div>
                  <h4 className="text-xl font-medium text-white mb-4">Agent Detail Topology</h4>
-                 <p className="text-white/60 font-light leading-relaxed">Understanding an agent's knowledge base and parameter behaviors can get complicated. We unified API configurations, semantic knowledge bases, and metric visualizers into a singular detail hub for every agent archetype.</p>
+                 <p className="text-white/60 font-light leading-relaxed">Configuration, provider settings, knowledge sources, performance, and run history are grouped into one agent workspace. This keeps investigation context attached to the agent being reviewed.</p>
               </motion.div>
               <motion.div variants={itemVariants} className="p-8 rounded-3xl bg-neutral-900 shadow-lg shadow-black/50 border border-white/5 hover:bg-neutral-900 hover:border-emerald-500/20 transition-all duration-300">
                  <div className="w-12 h-12 rounded-xl bg-neutral-900/5 text-emerald-300 flex items-center justify-center mb-6 text-xl">03</div>
-                 <h4 className="text-xl font-medium text-white mb-4">Visual Execution</h4>
-                 <p className="text-white/60 font-light leading-relaxed">Agentic14 avoids sterile corporate layouts by leaning into a cyber-physical identity. Combining deep blacks with electric emerald accents bridges the gap between raw backend infrastructure and high-end consumer usability.</p>
+                 <h4 className="text-xl font-medium text-white mb-4">State-Driven Visual Hierarchy</h4>
+                 <p className="text-white/60 font-light leading-relaxed">A restrained dark interface keeps dense data readable, while emerald, amber, and red are reserved for meaningful system states. Decorative styling supports the product identity without replacing status labels or hierarchy.</p>
               </motion.div>
             </div>
           </motion.div>
 
           {/* Architectural Trade-offs */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
-            <motion.h3 variants={itemVariants} className="text-sm font-mono text-emerald-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-emerald-600/30">02.5 // Architectural Trade-offs</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-emerald-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-emerald-600/30">03 // Key Trade-off</motion.h3>
             
             <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-12 gap-8 text-left group">
               <div className="col-span-1 md:col-span-4">
@@ -282,10 +286,10 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
               </div>
               <div className="col-span-1 md:col-span-8 space-y-6">
                 <p className="text-white/60 leading-relaxed font-light text-xl">
-                  One of the most difficult decisions during the design of Agentic14 was balancing the sheer volume of live telemetry data against cognitive overload. Engineers wanted every token log, latency spike, and pipeline error surfaced immediately on the global dashboard.
+                  The central design decision was how much live telemetry to expose before the dashboard became another log viewer. Fleet status, usage, failures, and latency all matter, but they do not need equal prominence at every level.
                 </p>
                 <p className="text-white/60 leading-relaxed font-light text-xl">
-                  <strong>The Trade-off:</strong> We could have designed dense, spreadsheet-like tables to expose all raw metrics simultaneously (maximizing data availability). Instead, we chose a progressive disclosure model with spatial clustering. We sacrificed immediate raw data visibility at the top level to introduce "Visual State Indicators"—where health is color-coded and abstracted, and raw logs are only queried upon drill-down. This decision reduced cognitive load and estimated incident response time, even though it added one extra click to reach raw JSON logs.
+                  <strong>The Trade-off:</strong> A dense table could expose every metric at once, but it would make prioritization harder. The selected approach uses progressive disclosure: health and urgency are summarized at the fleet level, while exact logs and parameters sit one level deeper. This adds a deliberate click before raw detail, in exchange for a dashboard that communicates what deserves investigation first.
                 </p>
               </div>
             </motion.div>
@@ -293,7 +297,7 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
 
           {/* Competitor Analysis */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
-            <motion.h3 variants={itemVariants} className="text-sm font-mono text-emerald-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-emerald-600/30">03 // Competitor Analysis</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-emerald-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-emerald-600/30">04 // Reference Review</motion.h3>
             
             <motion.div variants={itemVariants} className="space-y-8 bg-neutral-900 shadow-xl shadow-black/50 p-8 md:p-12 lg:p-16 rounded-[3rem] border border-white/5 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/100/5 rounded-full blur-[100px] pointer-events-none" />
@@ -301,7 +305,7 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
               <div className="max-w-3xl relative z-10">
                 <h4 className="text-3xl font-medium text-white mb-6">Mapping the Orchestration Landscape</h4>
                 <p className="text-white/60 leading-relaxed font-light text-xl mb-12">
-                  During our discovery phase, we mapped the orchestration landscape. Existing platforms were heavily fractured—either overly technical developer-first terminals that lacked UX, or highly abstracted consumer tools lacking deep cluster controls.
+                  The reference review compared infrastructure consoles with visual automation products. Infrastructure tools offer deep control but assume technical familiarity; visual automation tools lower the entry barrier but intentionally hide much of the underlying runtime detail.
                 </p>
               </div>
 
@@ -313,9 +317,9 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
                   </div>
                   <p className="text-white/60 font-light mb-6">AWS, Google Cloud, Azure</p>
                   <ul className="space-y-3">
-                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Powerful, but require extensive onboarding.</li>
-                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Lack visual agent topologies.</li>
-                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Overwhelming for non-engineers.</li>
+                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Deep operational control and detailed telemetry.</li>
+                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Navigation follows infrastructure rather than agent workflows.</li>
+                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> High learning cost for cross-functional operators.</li>
                   </ul>
                 </div>
 
@@ -326,9 +330,9 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
                   </div>
                   <p className="text-white/60 font-light mb-6">Zapier Actions, Make</p>
                   <ul className="space-y-3">
-                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Excellent UX and easy onboarding.</li>
-                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Unable to handle dynamic LLM pipelines.</li>
-                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> No support for live token streaming.</li>
+                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Clear setup flows and approachable visual builders.</li>
+                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Runtime complexity is intentionally abstracted.</li>
+                    <li className="flex items-start gap-3 text-white/50 text-sm"><span className="text-red-500/70 mt-0.5">•</span> Less suited to detailed model and agent investigation.</li>
                   </ul>
                 </div>
               </div>
@@ -338,26 +342,26 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
                 <div>
                   <h5 className="text-lg font-medium text-emerald-300 mb-2">The Agentic14 Opportunity</h5>
                   <p className="text-white/60 text-sm leading-relaxed">
-                    A mid-point solution offering the uncompromised power and granularity of a developer terminal, wrapped in the clarity, responsiveness, and approachability of a modern product dashboard.
+                    Preserve access to operational evidence while organizing it around the questions an operator asks: what is unhealthy, what changed, and where should I investigate next?
                   </p>
                 </div>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Analytics & Outcomes */}
+          {/* Validation & Measurement */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
-            <motion.h3 variants={itemVariants} className="text-sm font-mono text-emerald-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-emerald-600/30">03.5 // Analytics & Outcomes</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-emerald-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-emerald-600/30">05 // Validation & Measurement</motion.h3>
             
             <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 text-left">
               <div className="p-8 rounded-3xl bg-neutral-900 border border-emerald-500/20 shadow-lg shadow-black/50">
-                <h4 className="text-xl font-medium text-emerald-400 mb-4 flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Data-Informed Insight</h4>
+                <h4 className="text-xl font-medium text-emerald-400 mb-4 flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Key Design Hypothesis</h4>
                 <p className="text-white/70 leading-relaxed font-light text-lg">
-                  Data showed 78% of users abandoned the orchestration setup at the "model parameters" configuration step, which told us the interface lacked contextual scaffolding and presumed too much technical backend knowledge from automation managers.
+                  Operators should be able to identify an unhealthy agent and reach supporting evidence without scanning every log stream. Status summaries must be specific enough to guide action, while configuration forms should explain technical choices in context.
                 </p>
                 <div className="mt-6 pt-6 border-t border-white/5">
                   <p className="text-white font-medium text-lg leading-relaxed">
-                    We reduced visual noise from a raw streaming JSON log to a color-coded "Visual State Indicator" model — estimated to decrease cognitive load and cut incident diagnostic time by 40%.
+                    Validation should test whether users can move from fleet alert to probable cause, then verify the diagnosis in logs or run history without losing the selected agent and workflow context.
                   </p>
                 </div>
               </div>
@@ -366,35 +370,35 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
                 <h4 className="text-xl font-medium text-white mb-6">Success Metrics Strategy</h4>
                 <div className="space-y-4 w-full">
                   <div className="flex justify-between items-center border-b border-white/5 pb-2">
-                    <span className="text-white/60 font-light">Agent Config Success Rate</span>
-                    <span className="text-emerald-400 font-mono text-sm">Target: High</span>
+                    <span className="text-white/60 font-light">Configuration Completion</span>
+                    <span className="text-emerald-400 font-mono text-sm">Measure</span>
                   </div>
                   <div className="flex justify-between items-center border-b border-white/5 pb-2">
-                    <span className="text-white/60 font-light">Time-to-Resolution (TTR)</span>
-                    <span className="text-emerald-400 font-mono text-sm">-40% impact</span>
+                    <span className="text-white/60 font-light">Time to Probable Cause</span>
+                    <span className="text-emerald-400 font-mono text-sm">Compare</span>
                   </div>
                   <div className="flex justify-between items-center pb-2">
-                    <span className="text-white/60 font-light">Alert Fatigue Ratio</span>
-                    <span className="text-emerald-400 font-mono text-sm">Minimize</span>
+                    <span className="text-white/60 font-light">Alerts Leading to Investigation</span>
+                    <span className="text-emerald-400 font-mono text-sm">Observe</span>
                   </div>
                 </div>
               </div>
             </motion.div>
 
             <motion.div variants={itemVariants} className="p-8 rounded-3xl bg-emerald-900/10 border border-emerald-500/20 text-left">
-              <h4 className="text-sm font-medium text-emerald-300 mb-4 font-mono uppercase tracking-widest">Post-Launch Telemetry</h4>
+              <h4 className="text-sm font-medium text-emerald-300 mb-4 font-mono uppercase tracking-widest">Suggested Product Signals</h4>
               <ul className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <li>
-                  <div className="text-emerald-400 font-mono text-xs mb-2 bg-emerald-500/10 inline-block px-2 py-1 rounded">amplitude: agent_deployment_completed</div>
-                  <p className="text-white/60 text-sm font-light leading-relaxed">Funnel to track exact drop-off points between the 3-step automation configuration flow.</p>
+                  <div className="text-emerald-400 font-mono text-xs mb-2 bg-emerald-500/10 inline-block px-2 py-1 rounded">event: agent_configuration_completed</div>
+                  <p className="text-white/60 text-sm font-light leading-relaxed">Measures whether users can finish setup and identifies the fields that create friction.</p>
                 </li>
                 <li>
-                  <div className="text-emerald-400 font-mono text-xs mb-2 bg-emerald-500/10 inline-block px-2 py-1 rounded">mixpanel: alert_interaction_type</div>
-                  <p className="text-white/60 text-sm font-light leading-relaxed">Measure if users are actively resolving, investigating, or simply dismissing telemetry warnings.</p>
+                  <div className="text-emerald-400 font-mono text-xs mb-2 bg-emerald-500/10 inline-block px-2 py-1 rounded">event: alert_investigation_started</div>
+                  <p className="text-white/60 text-sm font-light leading-relaxed">Distinguishes actionable alerts from warnings that users repeatedly dismiss.</p>
                 </li>
                 <li>
-                  <div className="text-emerald-400 font-mono text-xs mb-2 bg-emerald-500/10 inline-block px-2 py-1 rounded">ga: avg_session_length vs uptime</div>
-                  <p className="text-white/60 text-sm font-light leading-relaxed">Validate that shorter session lengths paired with high agent uptime indicate an efficient dashboard.</p>
+                  <div className="text-emerald-400 font-mono text-xs mb-2 bg-emerald-500/10 inline-block px-2 py-1 rounded">metric: alert_to_evidence_time</div>
+                  <p className="text-white/60 text-sm font-light leading-relaxed">Tracks how quickly an operator reaches the relevant log, run, or configuration evidence.</p>
                 </li>
               </ul>
             </motion.div>
@@ -402,18 +406,18 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
 
           {/* User Flow */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
-            <motion.h3 variants={itemVariants} className="text-sm font-mono text-emerald-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-emerald-600/30">04 // User Flow</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-emerald-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-emerald-600/30">06 // Investigation Flow</motion.h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 group">
                <div className="lg:col-span-5 relative">
                  <motion.div variants={itemVariants} className="sticky top-32">
-                   <h4 className="text-3xl font-medium text-white mb-6">Seamless Execution Flow</h4>
+                   <h4 className="text-3xl font-medium text-white mb-6">From Fleet Signal to Evidence</h4>
                    <p className="text-white/60 leading-relaxed font-light text-lg mb-8">
-                     The primary user journey was designed to smoothly bridge high-level monitoring with low-level execution. Users start at a high-level systemic view before drilling down into specific node telemetry, never losing their context.
+                      The primary investigation flow begins with a fleet-level signal, narrows to a workflow or agent, and ends with the logs, run history, knowledge source, or configuration responsible for the state.
                    </p>
                    <div className="p-6 rounded-2xl bg-neutral-900/5 border border-white/5 backdrop-blur-md">
                      <p className="text-white/60 font-mono text-sm leading-relaxed">
-                       "A well-designed orchestration flow should feel like macro-management that seamlessly scales down into micro-management only when an anomaly is detected."
+                        "Summaries should guide attention; evidence should remain one deliberate step away."
                      </p>
                    </div>
                  </motion.div>
@@ -425,7 +429,7 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
                       <div className="absolute w-8 h-8 rounded-full bg-neutral-900 border-2 border-indigo-800 text-indigo-400 left-[-17px] top-0 flex items-center justify-center text-xs font-mono text-white/50">1</div>
                       <h4 className="text-2xl font-medium text-white mb-4">Global Dashboard</h4>
                       <p className="text-white/60 font-light text-lg leading-relaxed">
-                        The entry point. Users are greeted with a high-level systemic overview showing active nodes, general token burn rates across LLMs, and quick alerts for any pipeline failures. 
+                        The entry point summarizes active agents, usage, workflow health, and recent alerts. It answers whether the system needs attention before asking the operator to inspect individual runs.
                       </p>
                     </motion.div>
                     
@@ -433,7 +437,7 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
                       <div className="absolute w-8 h-8 rounded-full bg-neutral-900 border-2 border-indigo-800 text-indigo-400 left-[-17px] top-0 flex items-center justify-center text-xs font-mono text-white/50">2</div>
                       <h4 className="text-2xl font-medium text-white mb-4">Swarm Activity Index</h4>
                       <p className="text-white/60 font-light text-lg leading-relaxed">
-                        Filtering down into specific clusters. Users can oversee multiple agents working in tandem on a specific objective, checking parallel pipeline runs and swarm cohesion matrices.
+                        Workflow and swarm views show task status, agent ownership, dependencies, and run progress for a shared objective. This connects a fleet-level warning to the work currently in motion.
                       </p>
                     </motion.div>
                     
@@ -441,13 +445,13 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
                       <div className="absolute w-8 h-8 rounded-full bg-emerald-900/30 border-2 border-emerald-500 left-[-17px] top-0 flex items-center justify-center text-xs font-mono text-emerald-400 animate-pulse">3</div>
                       <h4 className="text-2xl font-medium text-emerald-400 mb-4">Individual Agent Hub</h4>
                       <p className="text-white/60 font-light text-lg leading-relaxed mb-6">
-                        The core drill-down. By selecting a specific agent, users enter its dedicated workspace. Here, abstract concepts turn into tangible data.
+                        Selecting an agent opens a consistent investigation workspace where configuration, knowledge sources, performance, execution history, and live activity can be reviewed together.
                       </p>
                       
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="p-4 rounded-xl bg-neutral-900 shadow-md border border-white/5 hover:border-emerald-500/30 transition-colors">
                           <h6 className="text-white font-medium text-sm mb-2">Live Logs</h6>
-                          <p className="text-white/50 text-xs">Real-time terminal output of the agent's thought process.</p>
+                          <p className="text-white/50 text-xs">Timestamped execution, tool, and error events for the selected run.</p>
                         </div>
                         <div className="p-4 rounded-xl bg-neutral-900 shadow-md border border-white/5 hover:border-emerald-500/30 transition-colors">
                           <h6 className="text-white font-medium text-sm mb-2">Knowledge Base</h6>
@@ -472,8 +476,8 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
           <div className="mb-32">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
               <div>
-                <motion.h3 variants={itemVariants} className="text-sm font-mono text-emerald-400 uppercase tracking-widest inline-block pb-2 border-b border-emerald-600/30">05 // Full Architecture</motion.h3>
-                <motion.h2 variants={itemVariants} className="text-4xl text-white font-light mt-8">Extensive Dashboard Views</motion.h2>
+                <motion.h3 variants={itemVariants} className="text-sm font-mono text-emerald-400 uppercase tracking-widest inline-block pb-2 border-b border-emerald-600/30">07 // Full Product System</motion.h3>
+                <motion.h2 variants={itemVariants} className="text-4xl text-white font-light mt-8">A Complete Operational Workspace</motion.h2>
               </div>
               <motion.p variants={itemVariants} className="text-white/50 font-mono text-sm">Click any frame to examine.</motion.p>
             </motion.div>

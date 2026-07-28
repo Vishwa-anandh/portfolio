@@ -34,9 +34,9 @@ export const projects: Project[] = [
     id: 0,
     name: "Workflow AI",
     type: "Generative Canvas & Workspace (Web)",
-    description: "Knowledge workers needed a spatial way to chain AI prompts without writing code; I designed a visual canvas workspace that translated complex logic into drag-and-drop nodes, enabling non-technical users to build workflows 3x faster.",
+    description: "Teams needed a faster way to turn loosely structured ideas into editable workflows; I designed an AI-assisted spatial canvas that combines prompt-based generation, direct manipulation, and collaboration in one workspace.",
     img: "/v14 coer .png",
-    detailedDescription: "Workflow AI represents a new generation of visual workspace. Combining endless canvas interaction with native AI tools, it allows users to 'Generate' workflows on the fly. The design scales from simple onboarding directly into an advanced spatial editor featuring templates, smart object modeling (notes, shapes, texts, sections), deep collaboration (comments sidebar, member invites, real-time presence), and a modular settings architecture. Both a sleek Dark Theme and a clean Light Theme were developed to support various user preferences and lighting contexts.",
+    detailedDescription: "Workflow AI is a visual workspace for turning goals and scattered notes into editable diagrams. Rather than treating AI as a separate chat surface, the concept places generation inside an infinite canvas: users can create a starting structure, refine nodes, organize sections, and collaborate through comments and sharing. The case study explores onboarding, generative states, spatial editing, collaboration, and a settings system across light and dark themes.",
     images: [
       "/V14 Workflow AI/6. Homepage.png",
       "/V14 Workflow AI/11. Default.png",
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     caseStudy: [
       {
         title: "Authentication & Onboarding",
-        description: "A streamlined sign-in and sign-up experience designed to get users into their workspace quickly. The layout features a split-screen design highlighting core platform capabilities.",
+        description: "A focused sign-in and sign-up flow introduces the product without delaying access to the workspace. A split-screen layout pairs the form with a concise preview of the canvas experience.",
         images: [
           "/V14 Workflow AI/1. Sign In.png",
           "/V14 Workflow AI/2. Sign Up.png"
@@ -59,7 +59,7 @@ export const projects: Project[] = [
       },
       {
         title: "The Canvas & Core Interaction",
-        description: "The main workspace is an infinite canvas optimized for spatial organization. Users can map out ideas, create flowcharts, and arrange sticky notes with ease. The toolbar provides quick access to shapes, texts, and hand tools.",
+        description: "The main workspace is an infinite canvas for mapping ideas, creating flows, and arranging notes. A compact toolbar keeps shapes, text, selection, and navigation tools available without competing with the work.",
         images: [
           "/V14 Workflow AI/11. Default.png",
           "/V14 Workflow AI/22. Shape - Open.png",
@@ -67,16 +67,16 @@ export const projects: Project[] = [
         ]
       },
       {
-        title: "AI Workflows Integration",
-        description: "Moving beyond a static whiteboard, the platform integrates AI directly into the canvas. Users can prompt the system to generate complex layouts and workflow diagrams automatically, drastically reducing manual setup time.",
+        title: "AI-Assisted Workflow Creation",
+        description: "AI generation sits inside the canvas rather than in a separate chat. Users can describe a goal, review the proposed structure, and edit every generated node with the same tools used for manual work.",
         images: [
           "/V14 Workflow AI/31. Generating.png",
           "/V14 Workflow AI/32. Generating Result.png"
         ]
       },
       {
-        title: "Real-Time Collaboration",
-        description: "Built for teams, the platform supports real-time presence, contextual commenting, and easy sharing. A dedicated comment sidebar and inline sticker reactions foster asynchronous and synchronous collaboration.",
+        title: "Collaboration and Handoff",
+        description: "Presence indicators, contextual comments, sharing controls, and a dedicated discussion sidebar keep feedback attached to the work. The interface supports both live collaboration and asynchronous review.",
         images: [
           "/V14 Workflow AI/28. Comment.png",
           "/V14 Workflow AI/30. Comment Sidebar.png",
@@ -84,8 +84,8 @@ export const projects: Project[] = [
         ]
       },
       {
-        title: "Account & Enterprise Settings",
-        description: "A robust settings dashboard handles profile management, team permissions, security, and third-party integrations, catering to both individual power users and enterprise teams.",
+        title: "Account and Workspace Controls",
+        description: "The settings area groups profile details, team permissions, security, and integrations into predictable categories for both individual and shared workspaces.",
         images: [
           "/V14 Workflow AI/38. Settings - Profile.png",
           "/V14 Workflow AI/43. Settings - Permissions.png"
@@ -93,7 +93,7 @@ export const projects: Project[] = [
       },
       {
         title: "Light & Dark Mode Parity",
-        description: "Recognizing that power users have diverse preferences and lighting environments, a complete light mode was designed with a soft, clean aesthetic, ensuring parity with the sleek default dark theme.",
+        description: "Light and dark themes use the same hierarchy, interaction states, and component structure so changing appearance does not change how the workspace behaves.",
         images: [
           "/V14 Workflow AI/11. Default.png",
           "/V14 Workflow AI/38. Settings - Profile.png"
@@ -105,9 +105,9 @@ export const projects: Project[] = [
     id: 2,
     name: "Agentic14",
     type: "Multi-Agent Orchestration Dashboard",
-    description: "Enterprise automation teams needed a way to monitor multi-agent systems without getting overwhelmed by logs; I designed an orchestration dashboard that abstracted technical noise into actionable visual states, reducing estimated incident response time by 40%.",
+    description: "Automation teams need to understand agent health, cost, and failures without reading every raw log; I designed an orchestration dashboard that uses progressive disclosure to connect fleet-level status with detailed agent telemetry.",
     img: "/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Orchestrate AI Agents At Scale.png",
-    detailedDescription: "Agentic14 is an orchestration platform designed to help teams orchestrate AI agents at scale. The platform allows users to deploy agents, track real-time logs, monitor token usages and model performance, and seamlessly integrate API providers. Built with a futuristic dark mode identity, Agentic14 provides a unified environment to scale your artificial workforce.",
+    detailedDescription: "Agentic14 is a product concept for deploying and monitoring AI agents from one operational workspace. It organizes agent configuration, workflow runs, live logs, model usage, knowledge bases, alerts, and provider settings into a hierarchy that supports both fleet-level scanning and detailed investigation. The visual system uses clear health states and progressive disclosure to keep dense technical information actionable.",
     images: [
       "/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Home Dashboard.png",
       "/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - All Agents.png",
@@ -117,16 +117,17 @@ export const projects: Project[] = [
       "/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Token Usage.png"
     ],
     role: "Lead Product Designer",
-    timeline: "Apr 2025"
+    timeline: "Apr 2025",
+    technologies: ["Figma", "Enterprise UX", "Data Visualization", "AI Operations"]
   },
 
   {
     id: 6,
     name: "SmartyAir",
     type: "Predictive Industrial Monitoring Dashboard",
-    description: "Industrial plant operators struggled to identify critical machine failures within dense data streams; I designed a predictive monitoring dashboard that surfaced high-priority anomalies natively, cutting diagnostic time in half.",
+    description: "Plant operators need to identify abnormal machine behavior without cross-referencing multiple reports; I designed an industrial monitoring dashboard that prioritizes equipment health, trend comparison, and maintenance actions.",
     img: "/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Dashboard - Performance.png",
-    detailedDescription: "SmartyAir is a robust industrial monitoring panel designed to oversee factories and heavy machinery operations. Through real-time data streams and connected sensors, plant managers can monitor compressor statuses, analyze cycle counts, and review machine runtime hours. Built with dark-mode optimized components to reduce glare in industrial environments, it features deeper analytical views, AI performance recommendations (chat-room style diagnostics), and comprehensive historical data comparisons to prevent breakdowns before they happen.",
+    detailedDescription: "SmartyAir is an industrial monitoring concept for compressor fleets and connected machinery. It brings equipment status, runtime, cycle count, performance trends, historical comparison, AI-assisted diagnostics, maintenance schedules, and reporting into one interface. The design emphasizes glanceable status, consistent drill-down patterns, and dark surfaces intended for prolonged monitoring environments.",
     role: "Lead Product Designer",
     timeline: "Feb 2024",
     technologies: ["Figma", "Data Dashboard", "IoT UX", "Industrial Design"],
