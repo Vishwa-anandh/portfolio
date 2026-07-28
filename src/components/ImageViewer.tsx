@@ -24,6 +24,9 @@ export function ImageViewer({ src, alt, onClose }: ImageViewerProps) {
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
             src={src}
             alt={alt}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             className="max-w-full max-h-full object-contain rounded-xl shadow-2xl ring-1 ring-white/10"
           />
         </motion.div>

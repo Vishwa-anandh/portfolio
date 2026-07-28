@@ -117,7 +117,7 @@ function ZoomableImage({ src, alt, onClick, className = "" }: { src: string, alt
       onClick={() => onClick(src, alt)}
     >
       <div className="absolute inset-0 bg-black/0 group-hover:bg-neutral-900/5 transition-colors duration-300 z-10" />
-      <img src={src} alt={alt} className="w-full h-auto object-cover relative z-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
+      <img src={src} alt={alt} loading="lazy" decoding="async" fetchPriority="low" className="w-full h-auto object-cover relative z-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
     </motion.div>
   );
 }
@@ -220,7 +220,7 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
               >
                  <div className="absolute -inset-8 bg-gradient-to-tr from-emerald-600/20 via-teal-700/10 to-emerald-800/20 rounded-[2rem] blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
                  <HeroDashboardMockup className="transform transition-transform duration-500 hover:scale-[1.02]">
-                   <img src="/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Home Dashboard.png" className="absolute inset-0 w-full h-full object-cover object-left-top bg-neutral-900 cursor-zoom-in" alt="Hero" onClick={() => openImage("/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Home Dashboard.png", "Hero")} />
+                   <img src="/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Home Dashboard.png" loading="eager" decoding="async" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover object-left-top bg-neutral-900 cursor-zoom-in" alt="Hero" onClick={() => openImage("/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Home Dashboard.png", "Hero")} />
                  </HeroDashboardMockup>
               </motion.div>
             </div>
@@ -228,7 +228,7 @@ export default function Agentic14CaseStudy({ project }: { project: Project }) {
             <motion.div variants={itemVariants} className="w-full md:hidden relative flex justify-center mt-12 mb-16 px-4">
                <div className="absolute -inset-1 bg-gradient-to-tr from-emerald-600/20 to-teal-800/20 rounded-3xl blur-xl opacity-50" />
                <HeroDashboardMockup>
-                 <img src="/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Home Dashboard.png" className="absolute inset-0 w-full h-full object-cover cursor-zoom-in bg-neutral-900" alt="Hero" onClick={() => openImage("/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Home Dashboard.png", "Hero")} />
+                 <img src="/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Home Dashboard.png" loading="eager" decoding="async" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover cursor-zoom-in bg-neutral-900" alt="Hero" onClick={() => openImage("/Agentic14 - AI Agent Orchestration Dashboard/AgentOS - Home Dashboard.png", "Hero")} />
                </HeroDashboardMockup>
             </motion.div>
           </motion.div>

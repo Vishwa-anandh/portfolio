@@ -85,7 +85,7 @@ function ZoomableImage({ src, alt, onClick, className = "" }: { src: string, alt
       onClick={() => onClick(src, alt)}
     >
       <div className="absolute inset-0 bg-blue-500/100/0 group-hover:bg-blue-500/100/20 transition-colors duration-300 z-10" />
-      <img src={src} alt={alt} className="w-full h-auto object-cover relative z-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
+      <img src={src} alt={alt} loading="lazy" decoding="async" fetchPriority="low" className="w-full h-auto object-cover relative z-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
     </motion.div>
   );
 }
@@ -192,7 +192,7 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
               >
                  <div className="absolute -inset-8 bg-gradient-to-tr from-blue-500/30 via-indigo-500/20 to-purple-500/30 rounded-[2rem] blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
                  <HeroLaptopMockup className="transform transition-transform duration-500 hover:scale-[1.02]">
-                   <img src="/V14 Workflow AI/6. Homepage.png" className="absolute inset-0 w-full h-full object-cover object-[center_top] bg-neutral-900 cursor-zoom-in" alt="Hero" onClick={() => openImage("/V14 Workflow AI/6. Homepage.png", "Hero")} />
+                   <img src="/V14 Workflow AI/6. Homepage.png" loading="eager" decoding="async" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover object-[center_top] bg-neutral-900 cursor-zoom-in" alt="Hero" onClick={() => openImage("/V14 Workflow AI/6. Homepage.png", "Hero")} />
                  </HeroLaptopMockup>
               </motion.div>
             </div>
@@ -200,7 +200,7 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
             <motion.div variants={itemVariants} className="w-full md:hidden relative flex justify-center mt-32 mb-16 px-4">
                <div className="absolute -inset-1 bg-gradient-to-tr from-blue-500/30 to-indigo-500/30 rounded-3xl blur-xl opacity-50" />
                <HeroLaptopMockup>
-                 <img src="/V14 Workflow AI/6. Homepage.png" className="absolute inset-0 w-full h-full object-cover object-[center_top] cursor-zoom-in bg-neutral-900" alt="Hero" onClick={() => openImage("/V14 Workflow AI/6. Homepage.png", "Hero")} />
+                 <img src="/V14 Workflow AI/6. Homepage.png" loading="eager" decoding="async" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover object-[center_top] cursor-zoom-in bg-neutral-900" alt="Hero" onClick={() => openImage("/V14 Workflow AI/6. Homepage.png", "Hero")} />
                </HeroLaptopMockup>
             </motion.div>
           </motion.div>

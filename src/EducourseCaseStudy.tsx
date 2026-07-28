@@ -58,7 +58,7 @@ function HeroDevicesComposite({ desktopSrc, mobileSrc, className = "", onDesktop
           </div>
 
           <div className="relative w-full aspect-[16/10] bg-neutral-900 group">
-             <img src={desktopSrc} alt="Desktop View" onClick={onDesktopClick} className="absolute inset-0 w-full h-full object-cover object-left-top cursor-zoom-in" />
+             <img src={desktopSrc} alt="Desktop View" loading="eager" decoding="async" fetchPriority="high" onClick={onDesktopClick} className="absolute inset-0 w-full h-full object-cover object-left-top cursor-zoom-in" />
              <div className="absolute inset-0 bg-black/0 group-hover:bg-neutral-900/5 transition-colors duration-300 pointer-events-none" />
              <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/0 mix-blend-overlay pointer-events-none" />
           </div>
@@ -77,7 +77,7 @@ function HeroDevicesComposite({ desktopSrc, mobileSrc, className = "", onDesktop
            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-4 md:h-6 bg-neutral-200 dark:bg-neutral-800 rounded-b-[10px] md:rounded-b-[14px] z-30" />
            
            <div className="relative w-full aspect-[9/19.5] bg-neutral-900 group">
-             <img src={mobileSrc} alt="Mobile View" onClick={onMobileClick} className="w-full h-full object-cover object-top cursor-zoom-in" />
+             <img src={mobileSrc} alt="Mobile View" loading="lazy" decoding="async" fetchPriority="low" onClick={onMobileClick} className="w-full h-full object-cover object-top cursor-zoom-in" />
              <div className="absolute inset-0 bg-black/0 group-hover:bg-neutral-900/5 transition-colors duration-300 pointer-events-none" />
              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent mix-blend-overlay pointer-events-none opacity-50" />
            </div>
@@ -98,7 +98,7 @@ function ZoomableImage({ src, alt, onClick, className = "" }: { src: string, alt
       onClick={() => onClick(src, alt)}
     >
       <div className="absolute inset-0 bg-black/0 group-hover:bg-neutral-900/5 group-hover:bg-neutral-900/5 transition-colors duration-300 z-10" />
-      <img src={src} alt={alt} className="w-full h-auto object-cover relative z-0 opacity-100" />
+      <img src={src} alt={alt} loading="lazy" decoding="async" fetchPriority="low" className="w-full h-auto object-cover relative z-0 opacity-100" />
     </motion.div>
   );
 }

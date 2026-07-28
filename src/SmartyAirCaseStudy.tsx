@@ -106,7 +106,7 @@ function ZoomableImage({ src, alt, onClick, className = "" }: { src: string, alt
       onClick={() => onClick(src, alt)}
     >
       <div className="absolute inset-0 bg-black/0 group-hover:bg-neutral-900/5 transition-colors duration-300 z-10" />
-      <img src={src} alt={alt} className="w-full h-auto object-cover relative z-0 opacity-100" />
+      <img src={src} alt={alt} loading="lazy" decoding="async" fetchPriority="low" className="w-full h-auto object-cover relative z-0 opacity-100" />
     </motion.div>
   );
 }
@@ -206,7 +206,7 @@ export default function SmartyAirCaseStudy({ project }: { project: Project }) {
                 className="relative flex justify-center"
               >
                  <HeroIndustrialMockup className="transform transition-transform duration-500 hover:scale-[1.02]">
-                   <img src="/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Dashboard-9.png" className="absolute inset-0 w-full h-full object-cover object-left-top cursor-zoom-in" alt="Hero Dashboard" onClick={() => openImage("/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Dashboard-9.png", "Hero Dashboard")} />
+                   <img src="/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Dashboard-9.png" loading="eager" decoding="async" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover object-left-top cursor-zoom-in" alt="Hero Dashboard" onClick={() => openImage("/SmartyAir - AI-Powered Industrial Monitoring Dashboard/Dashboard-9.png", "Hero Dashboard")} />
                  </HeroIndustrialMockup>
               </motion.div>
             </div>
@@ -233,9 +233,197 @@ export default function SmartyAirCaseStudy({ project }: { project: Project }) {
             </div>
           </motion.div>
 
+          {/* Operator Research & Environmental Constraints */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-cyan-500/30">02 // Operator Research & Constraints</motion.h3>
+
+            <motion.div variants={itemVariants} className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
+              <div className="lg:col-span-5 p-8 md:p-10 rounded-3xl bg-[#111] border border-cyan-500/20">
+                <p className="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-5">Research Plan</p>
+                <h4 className="text-3xl font-light text-white mb-6">Validate the workflow with the people responsible for the machines</h4>
+                <p className="text-white/60 leading-relaxed font-light text-lg mb-8">
+                  The current concept is based on a task analysis of monitoring, diagnosis, maintenance, and handoff. Before treating those assumptions as findings, the next research round should involve control-room operators, maintenance engineers, and a reliability or safety lead.
+                </p>
+                <div className="p-5 rounded-2xl bg-cyan-950/30 border border-cyan-500/20">
+                  <p className="text-cyan-100/80 text-sm leading-relaxed">
+                    This case study does not claim completed field interviews. The plan below defines the evidence needed before product decisions are finalized.
+                  </p>
+                </div>
+              </div>
+
+              <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-7 rounded-3xl bg-[#111] border border-white/5">
+                  <div className="text-cyan-400 font-mono text-sm mb-5">01 / PARTICIPANTS</div>
+                  <p className="text-white/70 leading-relaxed">Recruit operators from different shifts, maintenance engineers who diagnose faults, and a safety or reliability lead who defines escalation rules.</p>
+                </div>
+                <div className="p-7 rounded-3xl bg-[#111] border border-white/5">
+                  <div className="text-cyan-400 font-mono text-sm mb-5">02 / CONTEXTUAL INQUIRY</div>
+                  <p className="text-white/70 leading-relaxed">Observe shift handover, routine monitoring, alarm response, and maintenance coordination. Record the tools, workarounds, and evidence used at each step.</p>
+                </div>
+                <div className="p-7 rounded-3xl bg-[#111] border border-white/5">
+                  <div className="text-cyan-400 font-mono text-sm mb-5">03 / QUESTIONS</div>
+                  <p className="text-white/70 leading-relaxed">Learn how teams distinguish nuisance alerts from urgent conditions, decide ownership, verify a diagnosis, and preserve context during escalation.</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="p-8 md:p-12 rounded-[2rem] bg-[#0d0d0d] border border-white/5">
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+                <div>
+                  <p className="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-4">Environmental Design Inputs</p>
+                  <h4 className="text-3xl font-light text-white">The interface has to work beyond a quiet desktop</h4>
+                </div>
+                <p className="text-white/50 max-w-xl leading-relaxed">These constraints are design requirements to validate on-site, not assumptions that should be hidden behind visual polish.</p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="p-6 rounded-2xl bg-black/30 border border-white/5">
+                  <h5 className="text-white font-medium mb-3">Viewing Distance</h5>
+                  <p className="text-white/55 text-sm leading-relaxed">Primary status and severity must remain legible at a seated workstation and on a shared control-room display. Dense detail is reserved for drill-down.</p>
+                </div>
+                <div className="p-6 rounded-2xl bg-black/30 border border-white/5">
+                  <h5 className="text-white font-medium mb-3">Lighting and Glare</h5>
+                  <p className="text-white/55 text-sm leading-relaxed">Dark surfaces reduce large bright areas, while text contrast, focus states, and charts must remain readable under low light and reflected overhead lighting.</p>
+                </div>
+                <div className="p-6 rounded-2xl bg-black/30 border border-white/5">
+                  <h5 className="text-white font-medium mb-3">Noise, PPE, and Attention</h5>
+                  <p className="text-white/55 text-sm leading-relaxed">Critical information cannot depend on sound, hover, or fine pointer control. Actions need visible labels, generous targets, and keyboard support.</p>
+                </div>
+                <div className="p-6 rounded-2xl bg-black/30 border border-white/5">
+                  <h5 className="text-white font-medium mb-3">Safety and Accountability</h5>
+                  <p className="text-white/55 text-sm leading-relaxed">AI guidance never suppresses a safety alert or makes the final operational decision. Acknowledgment, ownership, timestamps, and action history stay visible.</p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Incident Journey */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-cyan-500/30">03 // Incident Journey</motion.h3>
+
+            <motion.div variants={itemVariants} className="p-8 md:p-12 rounded-[2rem] bg-gradient-to-br from-[#111] to-cyan-950/20 border border-cyan-500/20 mb-8">
+              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-12">
+                <div className="max-w-3xl">
+                  <p className="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-4">Prototype Evaluation Scenario</p>
+                  <h4 className="text-3xl md:text-4xl font-light text-white mb-5">Compressor 07 shows rising discharge temperature and declining efficiency</h4>
+                  <p className="text-white/60 text-lg leading-relaxed">
+                    This is a designed test scenario—not a reported production incident. It checks whether an operator can move from a fleet-level signal to evidence, ownership, and a safe next action without losing context.
+                  </p>
+                </div>
+                <div className="shrink-0 rounded-2xl border border-red-500/30 bg-red-950/20 px-6 py-5">
+                  <div className="text-red-300 font-mono text-xs uppercase tracking-widest mb-2">Priority</div>
+                  <div className="text-white text-2xl font-medium">Critical</div>
+                  <div className="text-white/50 text-sm mt-1">Multiple signals • Active</div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+                {[
+                  ["01", "Detect", "The fleet view raises Compressor 07 above healthy assets and shows severity, duration, and the signals outside their expected range."],
+                  ["02", "Triage", "The operator confirms that temperature and efficiency changed together, then checks whether the alert is acknowledged or already owned."],
+                  ["03", "Investigate", "Machine detail compares the current window with a stable period and connects telemetry with recent maintenance history."],
+                  ["04", "Decide", "AI guidance suggests checks and explains its evidence. The operator chooses to monitor, assign maintenance, or escalate."],
+                  ["05", "Handoff", "The decision, owner, timestamp, and notes remain attached to the incident for the next shift and the maintenance team."]
+                ].map(([number, title, description]) => (
+                  <div key={number} className="relative p-6 rounded-2xl bg-black/30 border border-white/5">
+                    <div className="text-cyan-400 font-mono text-sm mb-6">{number}</div>
+                    <h5 className="text-white text-lg font-medium mb-3">{title}</h5>
+                    <p className="text-white/55 text-sm leading-relaxed">{description}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Alert Prioritization */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-cyan-500/30">04 // Alert Prioritization</motion.h3>
+
+            <motion.div variants={itemVariants} className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+              <div className="lg:col-span-4">
+                <h4 className="text-3xl font-light text-white mb-6">Rank alerts by operational risk—not by notification volume</h4>
+                <p className="text-white/60 text-lg leading-relaxed mb-6">
+                  The proposed queue sorts first by safety severity, then considers corroborating signals, duration, asset criticality, and whether someone already owns the issue. Recency is visible, but a new low-risk alert should not hide an older critical condition.
+                </p>
+                <p className="text-white/50 leading-relaxed">
+                  Color reinforces the state but never carries it alone. Every alert includes a severity label, affected asset, location, start time, duration, contributing signals, acknowledgment state, and owner.
+                </p>
+              </div>
+
+              <div className="lg:col-span-8 space-y-3">
+                {[
+                  ["Critical", "Immediate safety risk or rapid multi-signal deviation", "Persistent placement • acknowledgment and escalation required", "border-red-500/30 bg-red-950/20", "text-red-300"],
+                  ["High", "Material performance degradation or repeated warning", "Top of the active queue • investigate during the current shift", "border-amber-500/30 bg-amber-950/20", "text-amber-300"],
+                  ["Advisory", "Early drift, maintenance due, or a single low-confidence signal", "Non-interruptive • review and schedule follow-up", "border-cyan-500/30 bg-cyan-950/20", "text-cyan-300"],
+                  ["Normal", "Operating within the expected range", "Visible in fleet status • no action required", "border-white/10 bg-white/[0.02]", "text-white/70"]
+                ].map(([level, condition, response, surface, accent]) => (
+                  <div key={level} className={`grid grid-cols-1 md:grid-cols-12 gap-4 items-center p-6 rounded-2xl border ${surface}`}>
+                    <div className={`md:col-span-2 font-mono uppercase tracking-widest text-sm ${accent}`}>{level}</div>
+                    <div className="md:col-span-5 text-white/75">{condition}</div>
+                    <div className="md:col-span-5 text-white/50 text-sm">{response}</div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Prototype Iteration */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-cyan-500/30">05 // Prototype Evaluation & Iteration</motion.h3>
+
+            <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div className="p-8 md:p-10 rounded-3xl bg-[#111] border border-white/5">
+                <p className="text-xs font-mono uppercase tracking-widest text-white/40 mb-5">Initial Direction</p>
+                <h4 className="text-2xl font-light text-white mb-6">A dashboard optimized for data availability</h4>
+                <ul className="space-y-4">
+                  <li className="flex gap-3 text-white/60 leading-relaxed"><span className="text-red-300">•</span> Severity, trend evidence, and the next action appeared in separate views.</li>
+                  <li className="flex gap-3 text-white/60 leading-relaxed"><span className="text-red-300">•</span> Status depended too heavily on red, amber, and green.</li>
+                  <li className="flex gap-3 text-white/60 leading-relaxed"><span className="text-red-300">•</span> AI recommendations could appear before the operator reviewed supporting signals.</li>
+                </ul>
+              </div>
+
+              <div className="p-8 md:p-10 rounded-3xl bg-cyan-950/20 border border-cyan-500/30">
+                <p className="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-5">Revised Direction</p>
+                <h4 className="text-2xl font-light text-white mb-6">An incident-first path from signal to accountable action</h4>
+                <ul className="space-y-4">
+                  <li className="flex gap-3 text-white/70 leading-relaxed"><span className="text-cyan-300">•</span> The alert summary groups severity, recency, deviation, ownership, and the primary action.</li>
+                  <li className="flex gap-3 text-white/70 leading-relaxed"><span className="text-cyan-300">•</span> Labels, ordering, and persistent placement communicate state without relying on color.</li>
+                  <li className="flex gap-3 text-white/70 leading-relaxed"><span className="text-cyan-300">•</span> Telemetry and history establish evidence before optional AI guidance proposes diagnostic checks.</li>
+                </ul>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="p-8 rounded-3xl bg-[#0d0d0d] border border-white/5">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div className="lg:col-span-4">
+                  <p className="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-4">Evaluation Method</p>
+                  <h4 className="text-2xl font-light text-white mb-4">Internal scenario walkthrough completed; operator validation remains next</h4>
+                  <p className="text-white/55 leading-relaxed">The incident scenario was used to expose gaps in hierarchy, evidence, and accountability. The revised prototype should now be tested with representative operators before these decisions are treated as validated.</p>
+                </div>
+                <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="p-6 rounded-2xl bg-black/30 border border-white/5">
+                    <div className="text-cyan-400 font-mono text-xs mb-3">TASK 01</div>
+                    <p className="text-white/70 mb-2">Identify the machine requiring attention.</p>
+                    <p className="text-white/40 text-sm">Observe scan path, time, and severity interpretation.</p>
+                  </div>
+                  <div className="p-6 rounded-2xl bg-black/30 border border-white/5">
+                    <div className="text-cyan-400 font-mono text-xs mb-3">TASK 02</div>
+                    <p className="text-white/70 mb-2">Explain the evidence behind the alert.</p>
+                    <p className="text-white/40 text-sm">Check whether trend, history, and confidence are understood.</p>
+                  </div>
+                  <div className="p-6 rounded-2xl bg-black/30 border border-white/5">
+                    <div className="text-cyan-400 font-mono text-xs mb-3">TASK 03</div>
+                    <p className="text-white/70 mb-2">Choose, assign, and hand off the next action.</p>
+                    <p className="text-white/40 text-sm">Observe safety, ownership, and context preservation.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+
           {/* Core Features */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
-            <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-cyan-500/30">02 // Key Instrumentation</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-cyan-500/30">06 // Key Instrumentation</motion.h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div variants={itemVariants} className="p-8 rounded-2xl bg-[#111] border border-white/5 hover:bg-[#1a1a1a] hover:border-cyan-500/20 transition-all duration-300">
                  <div className="w-12 h-12 rounded-xl bg-neutral-900/5 text-cyan-400 flex items-center justify-center mb-6 text-xl font-mono">01</div>
@@ -257,7 +445,7 @@ export default function SmartyAirCaseStudy({ project }: { project: Project }) {
 
           {/* Validation & Measurement */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-32">
-            <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-cyan-500/30">03 // Validation & Measurement</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest mb-16 inline-block pb-2 border-b border-cyan-500/30">07 // Validation & Measurement</motion.h3>
             
             <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 text-left">
               <div className="p-8 rounded-3xl bg-[#111] border border-cyan-500/20 shadow-lg shadow-black/50">
@@ -314,7 +502,7 @@ export default function SmartyAirCaseStudy({ project }: { project: Project }) {
           <div className="mb-32">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
               <div>
-                <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest inline-block pb-2 border-b border-cyan-500/30">04 // System Schematics</motion.h3>
+                <motion.h3 variants={itemVariants} className="text-sm font-mono text-cyan-400 uppercase tracking-widest inline-block pb-2 border-b border-cyan-500/30">08 // System Schematics</motion.h3>
                 <motion.h2 variants={itemVariants} className="text-4xl text-white font-light mt-8">A Consistent Monitoring System</motion.h2>
               </div>
               <motion.p variants={itemVariants} className="text-white/50 font-mono text-sm">Click any frame to examine.</motion.p>

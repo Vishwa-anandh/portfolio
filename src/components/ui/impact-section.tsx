@@ -95,6 +95,9 @@ export default function ImpactSection({ projects }: { projects: Project[] }) {
                         <img
                           src={project.img}
                           alt={project.name}
+                          loading="lazy"
+                          decoding="async"
+                          fetchPriority="low"
                           className="absolute inset-0 w-full h-full object-cover"
                           onError={(e) => { (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2940'; }}
                         />

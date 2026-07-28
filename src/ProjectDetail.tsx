@@ -330,7 +330,7 @@ export default function ProjectDetail() {
         
         <div className="w-full relative z-50">
           <button onClick={() => window.history.length > 2 ? navigate(-1) : navigate('/projects')} className="fixed top-8 left-8 z-50 inline-flex items-center gap-2 px-4 py-2 bg-black/60 backdrop-blur-md text-white/90 hover:bg-black/80 hover:text-white rounded-full transition-colors font-mono text-sm border border-white/10 shadow-2xl shadow-black/50 underline-offset-4"><span>← Back</span></button>
-          <img src={project.img} alt={project.name} className="w-full h-auto block" />
+          <img src={project.img} alt={project.name} loading="eager" decoding="async" fetchPriority="high" className="w-full h-auto block" />
           
           {/* Next Project / Footer Nav */}
           <div className="pt-24 border-t border-white/5 text-center pb-24 bg-[#111111]">
@@ -415,6 +415,9 @@ export default function ProjectDetail() {
           <img
             src={project.img}
             alt={project.name}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             className="w-full h-full object-cover"
           />
         </div>
@@ -443,6 +446,9 @@ export default function ProjectDetail() {
                       <img
                         src={imgUrl}
                         alt={`${section.title} preview`}
+                        loading="lazy"
+                        decoding="async"
+                        fetchPriority="low"
                         className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700"
                       />
                     </div>
@@ -471,6 +477,9 @@ export default function ProjectDetail() {
                     <img
                       src={imgUrl}
                       alt={`${project.name} frame ${i + 1}`}
+                      loading="lazy"
+                      decoding="async"
+                      fetchPriority="low"
                       className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700"
                     />
                   </div>

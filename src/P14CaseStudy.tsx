@@ -71,7 +71,7 @@ function ZoomableImage({ src, alt, onClick, className = "" }: { src: string, alt
       onClick={() => onClick(src, alt)}
     >
       <div className="absolute inset-0 bg-black/0 group-hover:bg-neutral-900/5 group-hover:bg-neutral-900/5 transition-colors duration-300 z-10" />
-      <img src={src} alt={alt} className="w-full h-auto object-cover relative z-0 opacity-100" />
+      <img src={src} alt={alt} loading="lazy" decoding="async" fetchPriority="low" className="w-full h-auto object-cover relative z-0 opacity-100" />
     </motion.div>
   );
 }
@@ -160,7 +160,7 @@ export default function P14CaseStudy({ project: _project }: { project: Project }
                 className="relative flex justify-center"
               >
                  <HeroPerspectiveMockup className="transform transition-transform duration-500 hover:scale-[1.02]">
-                   <img src="/P14 - AI Project Management Dashboard/Dashboard.png" className="absolute inset-0 w-full h-full object-cover object-left-top cursor-zoom-in" alt="Hero Dashboard" onClick={() => openImage("/P14 - AI Project Management Dashboard/Dashboard.png", "Hero Dashboard")} />
+                   <img src="/P14 - AI Project Management Dashboard/Dashboard.png" loading="eager" decoding="async" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover object-left-top cursor-zoom-in" alt="Hero Dashboard" onClick={() => openImage("/P14 - AI Project Management Dashboard/Dashboard.png", "Hero Dashboard")} />
                  </HeroPerspectiveMockup>
               </motion.div>
             </div>

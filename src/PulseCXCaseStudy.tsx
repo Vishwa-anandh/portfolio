@@ -70,7 +70,7 @@ function ZoomableImage({ src, alt, onClick, caption, className = "" }: { src: st
         onClick={() => onClick(src, alt)}
       >
         <div className="absolute inset-0 bg-black/0 group-hover:bg-neutral-900/5 transition-colors duration-300 z-10" />
-        <img src={src} alt={alt} className="w-full h-auto object-cover relative z-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
+        <img src={src} alt={alt} loading="lazy" decoding="async" fetchPriority="low" className="w-full h-auto object-cover relative z-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
       </motion.div>
       {caption && <p className="text-white/60 text-sm font-light px-3 py-2 border-l-2 border-indigo-500/40 bg-indigo-900/10 rounded-r">{caption}</p>}
     </div>
@@ -438,6 +438,9 @@ export default function PulseCXCaseStudy({ project }: { project: Project }) {
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               src={activeImage.src} 
               alt={activeImage.alt} 
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
               className="max-w-[95vw] max-h-[95vh] object-contain rounded-xl shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             />

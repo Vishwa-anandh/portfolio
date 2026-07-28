@@ -11,6 +11,9 @@ function ZoomableImage({ src, alt, onClick }: { src: string, alt: string, onClic
        <img 
          src={src} 
          alt={alt} 
+         loading="lazy"
+         decoding="async"
+         fetchPriority="low"
          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
        />
        <div className="absolute inset-0 bg-indigo-500/100/0 group-hover:bg-indigo-500/100/10 transition-colors duration-300 flex items-center justify-center">
@@ -26,7 +29,7 @@ function PhoneMockup({ src, alt }: { src: string, alt: string }) {
   return (
     <div className="relative w-full max-w-[320px] mx-auto overflow-hidden rounded-[2.5rem] md:rounded-[3rem] border-[6px] md:border-[8px] border-neutral-900 bg-neutral-950 shadow-2xl shadow-black/50">
        <div className="absolute top-0 inset-x-0 h-6 bg-neutral-900 z-20 flex justify-center rounded-b-xl max-w-[150px] mx-auto blur-[1px]"></div>
-       <img src={src} alt={alt} className="w-full h-auto relative z-10" />
+       <img src={src} alt={alt} loading="lazy" decoding="async" fetchPriority="low" className="w-full h-auto relative z-10" />
     </div>
   );
 }
@@ -144,6 +147,9 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
                transition={{ type: "spring", stiffness: 300, damping: 30 }}
                src={fullscreenImage.src} 
                alt={fullscreenImage.alt}
+               loading="eager"
+               decoding="async"
+               fetchPriority="high"
                className="max-w-full max-h-full object-contain rounded-lg rounded-xl shadow-2xl shadow-black/50"
                onClick={(e) => e.stopPropagation()} // Prevent clicking image from closing if we wanted, but zoom out on image click is nice
             />
@@ -194,7 +200,7 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
               >
                  <div className="absolute -inset-8 bg-gradient-to-tr from-indigo-600/20 via-violet-700/10 to-indigo-800/20 rounded-[2rem] blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
                  <HeroDashboardMockup className="transform transition-transform duration-500 hover:scale-[1.02]">
-                   <img src="/Payroll Management System/Dashboard.png" className="absolute inset-0 w-full h-full object-cover object-left-top bg-neutral-900 cursor-zoom-in" alt="Hero" onClick={() => openImage("/Payroll Management System/Dashboard.png", "Hero")} />
+                   <img src="/Payroll Management System/Dashboard.png" loading="eager" decoding="async" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover object-left-top bg-neutral-900 cursor-zoom-in" alt="Hero" onClick={() => openImage("/Payroll Management System/Dashboard.png", "Hero")} />
                  </HeroDashboardMockup>
               </motion.div>
             </div>
@@ -202,7 +208,7 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
             <motion.div variants={itemVariants} className="w-full md:hidden relative flex justify-center mt-12 mb-16 px-4">
                <div className="absolute -inset-1 bg-gradient-to-tr from-indigo-600/20 to-violet-800/20 rounded-3xl blur-xl opacity-50" />
                <HeroDashboardMockup>
-                 <img src="/Payroll Management System/Dashboard.png" className="absolute inset-0 w-full h-full object-cover cursor-zoom-in bg-neutral-900" alt="Hero" onClick={() => openImage("/Payroll Management System/Dashboard.png", "Hero")} />
+                 <img src="/Payroll Management System/Dashboard.png" loading="eager" decoding="async" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover cursor-zoom-in bg-neutral-900" alt="Hero" onClick={() => openImage("/Payroll Management System/Dashboard.png", "Hero")} />
                </HeroDashboardMockup>
             </motion.div>
           </motion.div>
@@ -295,7 +301,7 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
                 <div className="p-8 rounded-3xl bg-neutral-800/50 border border-white/5">
                   <h5 className="text-xl font-medium text-white mb-3">Shift Approvals</h5>
                   <p className="text-white/60 font-light text-sm leading-relaxed mb-6">Review, approve, or reject shift requests natively with complete transparency on shift overlaps.</p>
-                  <img src="/Payroll Management System/Dashboard - Approve Staff.png" className="rounded-xl w-full border border-white/5 shadow-md" alt="Flow" />
+                  <img src="/Payroll Management System/Dashboard - Approve Staff.png" loading="lazy" decoding="async" fetchPriority="low" className="rounded-xl w-full border border-white/5 shadow-md" alt="Flow" />
                 </div>
 
                 <div className="p-8 rounded-3xl bg-neutral-800/50 border border-white/5">
@@ -304,8 +310,8 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
                     <p className="text-white/60 font-light text-sm leading-relaxed mb-6">Quickly add admins, onboard new staff members, and assign them to various physical branches.</p>
                   </div>
                   <div className="flex gap-4">
-                     <img src="/Payroll Management System/Branches.png" className="rounded-xl w-1/2 object-cover object-left-top h-32 border border-white/5 shadow-md" alt="Branches" />
-                     <img src="/Payroll Management System/Staffs.png" className="rounded-xl w-1/2 object-cover object-left-top h-32 border border-white/5 shadow-md" alt="Staffs" />
+                     <img src="/Payroll Management System/Branches.png" loading="lazy" decoding="async" fetchPriority="low" className="rounded-xl w-1/2 object-cover object-left-top h-32 border border-white/5 shadow-md" alt="Branches" />
+                     <img src="/Payroll Management System/Staffs.png" loading="lazy" decoding="async" fetchPriority="low" className="rounded-xl w-1/2 object-cover object-left-top h-32 border border-white/5 shadow-md" alt="Staffs" />
                   </div>
                 </div>
               </div>

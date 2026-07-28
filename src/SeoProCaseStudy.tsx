@@ -80,7 +80,7 @@ function ZoomableImage({ src, alt, onClick, className = "" }: { src: string, alt
       onClick={() => onClick(src, alt)}
     >
       <div className="absolute inset-0 bg-black/0 group-hover:bg-neutral-900/5 transition-colors duration-300 z-10" />
-      <img src={src} alt={alt} className="w-full h-auto object-cover relative z-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
+      <img src={src} alt={alt} loading="lazy" decoding="async" fetchPriority="low" className="w-full h-auto object-cover relative z-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
     </motion.div>
   );
 }
@@ -186,6 +186,9 @@ export default function SeoProCaseStudy({ project }: { project: Project }) {
               <img
                 src="/SEO PRO/SEO Dashboard - Desktop 1441.png"
                 alt="Hero"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
                 className="mx-auto rounded-2xl object-cover h-full w-full object-left-top bg-neutral-900 cursor-zoom-in"
                 onClick={() => openImage("/SEO PRO/SEO Dashboard - Desktop 1441.png", "Hero")}
                 draggable={false}

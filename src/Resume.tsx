@@ -1,60 +1,124 @@
-import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Seo } from "./components/Seo";
-import { graph, personNode, webPageNode, breadcrumbNode } from "./lib/seo";
 import { Background3D } from "./components/Background3D";
+import { breadcrumbNode, graph, personNode, webPageNode } from "./lib/seo";
+
+const maitsysAchievements = [
+  <>
+    Sole designer across <strong>7 enterprise products</strong> (web and mobile), owning research through developer handoff for platforms serving <strong>650+ users across 5 client organisations</strong>.
+  </>,
+  <>
+    Rebuilt Getherly&apos;s onboarding from <strong>30 clicks to 5 - an 83% reduction</strong>, removing the platform&apos;s largest setup drop-off point.
+  </>,
+  <>
+    Built and maintain the Maitsys design system - <strong>30+ components across 6 products</strong> - so new screens ship from existing, tested parts.
+  </>,
+  <>
+    Ran <strong>10+ usability tests and user interviews</strong>, feeding findings into flow and information architecture decisions before build.
+  </>,
+  <>
+    Embedded with <strong>20 engineers and 4 PMs</strong>, turning ambiguous requirements into specced, buildable flows and presenting direction to the CEO.
+  </>,
+];
+
+const selectedProducts = [
+  {
+    name: "Project.AI",
+    type: "Timesheet, Projects & Payroll (Web & Mobile)",
+    description: <>Role-based timesheets and automated payroll used by <strong>4 organisations and 500+ employees</strong>, replacing manual spreadsheet tracking.</>,
+  },
+  {
+    name: "Pappa.ai",
+    type: "School Management (Web & Mobile)",
+    description: <>Unified attendance, fees, communication, and notifications for parents, teachers, and admins, live with <strong>100+ users</strong>.</>,
+  },
+  {
+    name: "Getherly",
+    type: "Family Social Network (Mobile redesign)",
+    description: <>Multi-age accessibility and granular privacy controls designed to <strong>WCAG 2.2 AA</strong> standards.</>,
+  },
+  {
+    name: "LobbyLink",
+    type: "Visitor & Employee Management (Web)",
+    description: <>Check-in flows, digital badging, and analytics for <strong>50+ users</strong>, replacing paper logs.</>,
+  },
+  {
+    name: "Additional products",
+    type: "Web & mobile",
+    description: <>Also shipped NC STEM Academy for research tracking, Getherly Workspace for enterprise communication, and Recycle Contamination Log for sustainability analytics.</>,
+  },
+];
+
+const highlights = [
+  ["650+", "users across 5 client organisations"],
+  ["83%", "fewer clicks in onboarding (30 to 5)"],
+  ["30+", "design system components in 6 products"],
+  ["7", "enterprise products shipped, web and mobile"],
+];
+
+const skills = [
+  "Product & Interaction Design",
+  "Design Systems",
+  "Enterprise UX Architecture",
+  "Information Architecture",
+  "Prototyping & Wireframing",
+  "User Research & Testing",
+  "Accessibility (WCAG 2.2 AA)",
+  "Data-Informed Design",
+  "AI-Native Product Design",
+  "LLM Chatbot UX & Training",
+];
+
+const tools = [
+  "Figma",
+  "Framer",
+  "Adobe Illustrator",
+  "Affinity Designer",
+  "Google AI Studio",
+  "Google Antigravity",
+  "Claude",
+  "VS Code",
+  "GitHub",
+];
+
+function SectionTitle({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex items-center gap-4">
+      <div className="h-px w-12 bg-indigo-500" />
+      <h2 className="text-3xl font-medium tracking-tight text-white">{children}</h2>
+    </div>
+  );
+}
+
+function BulletList({ children }: { children: React.ReactNode[] }) {
+  return (
+    <ul className="space-y-3 text-[15px] leading-relaxed text-white/65">
+      {children.map((item, index) => (
+        <li key={index} className="flex gap-3">
+          <span className="mt-[0.65rem] h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-400" />
+          <span className="[&_strong]:font-semibold [&_strong]:text-white">{item}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export default function Resume() {
   const navigate = useNavigate();
-  useEffect(() => {
-    
-  }, []);
-
-  const projects = [
-    {
-      title: "Pappa.ai – School Management (Web & Mobile)",
-      desc: <>Streamlined <strong className="text-white font-medium">multi-role school management</strong> (parents, teachers, admins) into a unified <strong className="text-white font-medium">AI-driven platform</strong>, reducing administrative overhead through <strong className="text-white font-medium">smart alerts</strong> and intuitive dashboards.</>,
-    },
-    {
-      title: "NC STEM Academy – Research Program App (Web & Mobile)",
-      desc: <>Designed <strong className="text-white font-medium">end-to-end research tracking</strong> workflows and mentor dashboards, simplifying <strong className="text-white font-medium">complex lab scheduling</strong> and certification processes into a centralized portal.</>,
-    },
-    {
-      title: "LobbyLink – Visitor & Employee Management (Web)",
-      desc: <>Optimized <strong className="text-white font-medium">enterprise visitor management</strong> by designing <strong className="text-white font-medium">scalable check-in flows</strong> and robust <strong className="text-white font-medium">analytics dashboards</strong>, replacing manual tracking with a digital badge ecosystem.</>,
-    },
-    {
-      title: "Project.AI – Timesheet, Project & Payroll App (Web & Mobile)",
-      desc: <>Architected a <strong className="text-white font-medium">comprehensive timesheet</strong> and <strong className="text-white font-medium">automated payroll platform</strong>, reducing reporting friction through <strong className="text-white font-medium">real-time analytics</strong> and role-based mobile and web interfaces.</>,
-    },
-    {
-      title: "Getherly – Family Social Network (Redesign) (Mobile)",
-      desc: <>Overhauled the mobile app experience for <strong className="text-white font-medium">multi-age accessibility</strong> and <strong className="text-white font-medium">strict privacy controls</strong>, driving safer family-based sharing and communication.</>,
-    },
-    {
-      title: "Getherly Workspace – Enterprise Social Intranet (Web & Mobile)",
-      desc: <>Designed an <strong className="text-white font-medium">enterprise social intranet</strong> from the ground up, streamlining corporate communication and engagement through <strong className="text-white font-medium">role-based community spaces</strong> and project channels.</>,
-    },
-    {
-      title: "Recycle Contamination Log – Sustainability Tracker (Web)",
-      desc: <>Improved <strong className="text-white font-medium">sustainability compliance</strong> by designing intuitive issue-reporting flows and location dashboards that translate <strong className="text-white font-medium">complex analytics</strong> into <strong className="text-white font-medium">actionable insights</strong>.</>,
-    },
-  ];
 
   return (
-    <div className="min-h-screen bg-transparent text-white font-sans selection:bg-indigo-500/30 pb-24 relative">
+    <div className="relative min-h-screen bg-transparent pb-24 font-sans text-white selection:bg-indigo-500/30">
       <Seo
-        title="Resume — Vishwa Anandh, Product Designer"
-        description="Professional resume of Vishwa Anandh: UI/UX and product design expertise, enterprise product experience (Pappa.ai, Project.AI, Getherly), and core competencies."
+        title="Resume - Vishwa Anandh, Product Designer"
+        description="Resume of Vishwa Anandh, a Product Designer with 5+ years of experience across enterprise SaaS, AI-native systems, design systems, and user research."
         path="/resume"
-        keywords="Resume, CV, UI/UX Design, Product Designer, Experience, Vishwa Anandh"
+        keywords="Resume, Product Designer, Enterprise UX, AI-Native Design, Design Systems, User Research, Vishwa Anandh"
         jsonLd={graph(
           personNode(),
           webPageNode({
             path: "/resume",
-            name: "Resume — Vishwa Anandh",
-            description:
-              "Professional resume and experience of Vishwa Anandh, Product Designer.",
+            name: "Resume - Vishwa Anandh",
+            description: "Professional experience, impact, skills, tools, and education of Product Designer Vishwa Anandh.",
             type: "ProfilePage",
           }),
           breadcrumbNode([
@@ -63,408 +127,230 @@ export default function Resume() {
           ]),
         )}
       />
-      <div className="fixed inset-0 z-[-2] bg-black"></div>
+
+      <div className="fixed inset-0 z-[-2] bg-black" />
       <Background3D />
-      <div className="relative z-10 block">
-      {/* Top Navigation Bar */}
-      <nav className="border-b border-white/10 sticky top-0 bg-black/80 backdrop-blur-md z-50 print:hidden">
-        <div className="max-w-6xl mx-auto px-2 md:px-4 xl:px-0 py-4 flex justify-between items-center">
-          <button onClick={() => window.history.length > 2 ? navigate(-1) : navigate('/')} className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors font-mono text-sm underline-offset-4 hover:underline"><span>← Back</span></button>
-          <a
-            href="/resume.pdf"
-            download="Vishwa_Anandh_Resume.pdf"
-            className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-indigo-50 transition-colors"
-          >
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+
+      <div className="relative z-10">
+        <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md print:hidden">
+          <div className="flex w-full items-center justify-between px-4 py-4 sm:px-6 lg:px-10 xl:px-12">
+            <button
+              onClick={() => (window.history.length > 2 ? navigate(-1) : navigate("/"))}
+              className="font-mono text-sm text-white/50 underline-offset-4 transition-colors hover:text-white hover:underline"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-            Download PDF
-          </a>
-        </div>
-      </nav>
-
-      <div className="max-w-6xl mx-auto px-2 md:px-4 xl:px-0 mt-8 md:mt-16">
-        {/* Header Section */}
-        <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-10 mb-12 md:mb-16 pb-8 md:pb-10 border-b border-white/10">
-          <div className="flex-1">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70">
-              VISHWA ANANDH
-            </h1>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
-              <h2 className="text-2xl md:text-3xl text-white font-medium tracking-tight">
-                PRODUCT DESIGNER
-              </h2>
-              <span className="hidden sm:block w-2 h-2 rounded-full bg-indigo-500"></span>
-              <span className="inline-block px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-sm font-mono uppercase tracking-widest self-start">
-                AI-Powered Design Innovation
-              </span>
-            </div>
-            <p className="max-w-2xl text-lg text-white/70 leading-relaxed font-light">
-              Product Designer specializing in complex enterprise workflows and AI-native systems. I translate technical complexity into intuitive, scalable product experiences from architectural concept to deployed reality.
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-3 text-sm text-left md:text-right font-mono text-white/60 bg-neutral-900/50 p-6 rounded-2xl border border-white/5">
+              ← Back
+            </button>
             <a
-              href="mailto:Anandhvishwa12@gmail.com"
-              className="hover:text-indigo-400 transition-colors flex items-center md:justify-end gap-3 group"
+              href="/resume.pdf"
+              download="Vishwa_Anandh_Resume.pdf"
+              className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-black transition-colors hover:bg-indigo-50"
             >
-              <span className="hidden md:inline">Anandhvishwa12@gmail.com</span>
-              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-indigo-500/20 group-hover:text-indigo-400 text-white">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <span className="md:hidden">Anandhvishwa12@gmail.com</span>
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download PDF
             </a>
-            <div className="flex items-center md:justify-end gap-3">
-              <span className="hidden md:inline">+91 9150281870</span>
-              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-              </div>
-              <span className="md:hidden">+91 9150281870</span>
-            </div>
-            <div className="flex items-center md:justify-end gap-3">
-              <span className="hidden md:inline">Madurai, India</span>
-              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <span className="md:hidden">Madurai, India</span>
-            </div>
-            <Link
-              to="/"
-              className="hover:text-indigo-400 transition-colors flex items-center md:justify-end gap-3 group"
-            >
-              <span className="hidden md:inline">Portfolio Site</span>
-              <div className="w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center border border-indigo-500/30">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                </svg>
-              </div>
-              <span className="md:hidden">Portfolio</span>
-            </Link>
           </div>
-        </header>
+        </nav>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
-          {/* Main Column */}
-          <div className="lg:col-span-8 flex flex-col gap-16">
-            {/* Experience */}
-            <section>
-              <div className="flex items-center gap-4 mb-10">
-                <div className="w-12 h-px bg-indigo-500"></div>
-                <h3 className="text-3xl font-medium tracking-tight text-white">
-                  Experience
-                </h3>
+        <main className="mt-8 w-full px-4 sm:px-6 md:mt-12 lg:px-10 xl:px-12">
+          <header className="relative mb-8 grid overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.07] via-white/[0.025] to-indigo-950/20 p-6 shadow-2xl shadow-black/30 md:p-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-16">
+            <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-32 left-1/3 h-64 w-64 rounded-full bg-indigo-500/10 blur-3xl" />
+            <div>
+              <div className="mb-6 flex items-center gap-3">
+                <span className="h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_14px_rgba(34,211,238,0.8)]" />
+                <span className="font-mono text-xs uppercase tracking-[0.22em] text-white/45">Resume / 2026</span>
               </div>
+              <h1 className="mb-3 bg-gradient-to-r from-white via-white to-white/55 bg-clip-text text-5xl font-bold tracking-[-0.055em] text-transparent md:text-7xl xl:text-8xl">
+                VISHWA ANANDH
+              </h1>
+              <p className="mb-7 text-lg font-medium tracking-[0.2em] text-cyan-300 md:text-xl">PRODUCT DESIGNER</p>
+              <p className="max-w-4xl text-base font-light leading-[1.8] text-white/65 md:text-lg">
+                Product designer with 5+ years in enterprise SaaS and AI-native systems, owning multi-role workflow platforms end to end for <strong className="font-semibold text-white">650+ users across 5 organisations</strong>. I also independently designed, built, and deployed a live AI monitoring platform with an LLM chatbot I trained myself.
+              </p>
+            </div>
 
-              {/* Independent Projects Entry */}
-              <div className="mb-16">
-                <div className="sticky top-[68px] bg-black/90 backdrop-blur pb-6 pt-6 z-10 -mx-2 px-2 md:-mx-4 md:px-4 xl:mx-0 xl:px-0">
-                  <div className="flex flex-col sm:flex-row justify-between sm:items-end gap-2">
-                    <div>
-                      <h4 className="text-2xl font-semibold text-white">
-                        Independent Enterprise Projects
-                      </h4>
-                      <p className="text-indigo-400 font-mono mt-1 text-lg">
-                        Product Design & AI Development
-                      </p>
-                    </div>
-                    <span className="inline-block px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 font-mono text-sm self-start sm:self-auto">
-                      2024 to Present
-                    </span>
-                  </div>
+            <address className="relative mt-8 grid min-w-[260px] gap-1 rounded-2xl border border-white/10 bg-black/25 p-2 text-sm not-italic text-white/60 backdrop-blur-sm lg:mt-0">
+              <a href="mailto:Anandhvishwa12@gmail.com" className="rounded-xl px-4 py-3 transition-colors hover:bg-white/5 hover:text-cyan-300">Anandhvishwa12@gmail.com</a>
+              <a href="tel:+919150281870" className="rounded-xl px-4 py-3 transition-colors hover:bg-white/5 hover:text-cyan-300">+91 9150281870</a>
+              <span className="rounded-xl px-4 py-3">Madurai, India</span>
+              <Link to="/" className="rounded-xl px-4 py-3 transition-colors hover:bg-white/5 hover:text-cyan-300">vishwaanandh.netlify.app</Link>
+            </address>
+          </header>
+
+          <section className="mb-14 grid grid-cols-2 overflow-hidden rounded-2xl border border-white/10 bg-black/20 md:grid-cols-4">
+            {highlights.map(([value, label], index) => (
+              <div key={value} className={`relative p-5 md:p-6 ${index % 2 === 1 ? "border-l border-white/10" : ""} ${index > 0 ? "md:border-l md:border-white/10" : ""} ${index > 1 ? "border-t border-white/10 md:border-t-0" : ""}`}>
+                <div className="mb-2 text-3xl font-bold tracking-tight text-cyan-400 md:text-4xl">{value}</div>
+                <p className="max-w-[18rem] text-xs leading-relaxed text-white/50 md:text-sm">{label}</p>
+              </div>
+            ))}
+          </section>
+
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.7fr)_minmax(320px,0.75fr)] xl:gap-12">
+            <div className="min-w-0">
+              <section>
+                <div className="mb-9 flex flex-col justify-between gap-4 border-b border-white/10 pb-6 sm:flex-row sm:items-end">
+                  <SectionTitle>Work Experience</SectionTitle>
+                  <p className="max-w-md text-sm leading-relaxed text-white/40 sm:text-right">Enterprise systems, independent AI products, and client work from research through delivery.</p>
                 </div>
 
-                <div className="relative border-l border-indigo-500/30 ml-3 pl-8 md:pl-12 flex flex-col gap-10 mt-4">
-                  <div className="relative group">
-                    <div className="absolute w-3 h-3 bg-indigo-500 rounded-full -left-[38px] md:-left-[54px] top-1.5 ring-4 ring-black shadow-[0_0_10px_rgba(99,102,241,0.5)]"></div>
-                    <div className="flex items-center gap-3 mb-3">
-                      <h6 className="text-white font-medium text-lg leading-snug text-indigo-300">
-                        <Link to="/projects/9" className="hover:text-white hover:underline underline-offset-4 transition-colors">PulseCX</Link> — AI-Native Monitoring Platform
-                      </h6>
-                      <span className="text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Deployed - Jun 2026</span>
+                <article className="relative mb-10 overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.055] to-white/[0.015] p-6 shadow-xl shadow-black/20 md:p-8">
+                  <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-cyan-400 via-indigo-500 to-transparent" />
+                  <div className="mb-7 flex flex-col justify-between gap-3 border-b border-white/10 pb-6 sm:flex-row sm:items-end">
+                    <div>
+                      <h3 className="text-2xl font-semibold text-white">UI/UX Designer</h3>
+                      <p className="mt-1 font-mono text-lg text-cyan-400">Maitsys</p>
                     </div>
-                    <p className="text-white/80 leading-relaxed text-[15px]">
-                      Architected and designed the end-to-end UX for an <strong className="text-indigo-300 font-medium">AI-native enterprise monitoring</strong> and incident response platform, featuring an integrated <strong className="text-indigo-300 font-medium">AI chatbot</strong> powered by an LLM that I <strong className="text-indigo-300 font-medium">personally trained</strong> for intelligent diagnostic support. Leveraged AI-assisted development to independently <strong className="text-indigo-300 font-medium">build and deploy</strong> the fully functional web application, demonstrating the ability to bridge complex system design with live product execution.
+                    <span className="font-mono text-sm text-white/45">July 2024 - Present</span>
+                  </div>
+
+                  <BulletList>{maitsysAchievements}</BulletList>
+
+                  <h4 className="mb-5 mt-9 font-mono text-xs uppercase tracking-[0.2em] text-white/40">Selected Products</h4>
+                  <div className="grid grid-cols-1 gap-4 xl:grid-cols-2">
+                    {selectedProducts.map((product) => (
+                      <div key={product.name} className={`rounded-2xl border border-white/5 bg-black/20 p-5 transition-colors hover:border-white/10 hover:bg-white/[0.035] ${product.name === "Additional products" ? "xl:col-span-2" : ""}`}>
+                        <h5 className="font-semibold text-white">
+                          {product.name}
+                          <span className="font-normal text-white/45"> - {product.type}</span>
+                        </h5>
+                        <p className="mt-2 text-sm leading-relaxed text-white/60 [&_strong]:font-semibold [&_strong]:text-white">{product.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </article>
+
+                <article className="relative mb-10 overflow-hidden rounded-[2rem] border border-indigo-500/20 bg-gradient-to-br from-indigo-950/30 to-cyan-950/10 p-6 shadow-xl shadow-black/20 md:p-8">
+                  <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-indigo-500/10 blur-3xl" />
+                  <div className="mb-7 flex flex-col justify-between gap-3 border-b border-white/10 pb-6 sm:flex-row sm:items-end">
+                    <div>
+                      <h3 className="text-2xl font-semibold text-white">Product Designer & Developer</h3>
+                      <p className="mt-1 font-mono text-lg text-cyan-400">Independent Products</p>
+                    </div>
+                    <span className="font-mono text-sm text-white/45">2025 - Present</span>
+                  </div>
+
+                  <div className="mb-8">
+                    <div className="mb-4 flex flex-wrap items-center gap-3">
+                      <Link to="/projects/9" className="text-xl font-semibold text-indigo-300 transition-colors hover:text-white hover:underline">
+                        PulseCX
+                      </Link>
+                      <span className="rounded-full border border-indigo-500/30 bg-indigo-500/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-indigo-300">
+                        Deployed June 2026
+                      </span>
+                    </div>
+                    <BulletList>
+                      {[
+                        <>Designed and independently built and deployed an AI-native enterprise monitoring and incident-response platform linking API and infrastructure health to real customer-journey impact.</>,
+                        <>Trained and integrated an LLM diagnostic chatbot that surfaces probable root cause in plain language, collapsing alert-to-hypothesis into one conversational step.</>,
+                        <>Built the full production front end with AI-assisted development as a non-developer.</>,
+                      ]}
+                    </BulletList>
+                  </div>
+
+                  <div className="border-t border-white/10 pt-7">
+                    <div className="mb-3 flex flex-wrap items-center gap-3">
+                      <h4 className="text-xl font-semibold text-white">Enterprise HRMS</h4>
+                      <span className="rounded-full border border-amber-500/20 bg-amber-500/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-amber-300">
+                        In progress
+                      </span>
+                    </div>
+                    <p className="text-[15px] leading-relaxed text-white/65">
+                      Leading UX architecture for a platform scaling from <strong className="font-semibold text-white">500 to 50,000 employees</strong>, covering organisation modelling, role hierarchies, and approval automation.
                     </p>
                   </div>
+                </article>
 
-                  <div className="relative group">
-                    <div className="absolute w-3 h-3 bg-indigo-500 rounded-full -left-[38px] md:-left-[54px] top-1.5 ring-4 ring-black shadow-[0_0_10px_rgba(99,102,241,0.5)]"></div>
-                    <div className="flex items-center gap-3 mb-3">
-                      <h6 className="text-white font-medium text-lg leading-snug text-indigo-300">
-                        Enterprise HRMS 
-                      </h6>
-                      <span className="text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-500/80 border border-amber-500/20">Currently Building</span>
-                    </div>
-                    <p className="text-white/80 leading-relaxed text-[15px]">
-                      Currently leading the <strong className="text-indigo-300 font-medium">UX architecture</strong> for an <strong className="text-indigo-300 font-medium">enterprise HRMS platform</strong> designed to handle <strong className="text-indigo-300 font-medium">500 to 50,000 employees</strong>, focusing on <strong className="text-indigo-300 font-medium">scalable organizational structures</strong> and <strong className="text-indigo-300 font-medium">complex workflow automation</strong>.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Maitsys Entry */}
-              <div className="mb-16">
-                <div className="sticky top-[68px] bg-black/90 backdrop-blur pb-6 pt-6 z-10 -mx-2 px-2 md:-mx-4 md:px-4 xl:mx-0 xl:px-0">
-                  <div className="flex flex-col sm:flex-row justify-between sm:items-end gap-2">
+                <article className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.045] to-transparent p-6 shadow-xl shadow-black/20 md:p-8">
+                  <div className="mb-7 flex flex-col justify-between gap-3 border-b border-white/10 pb-6 sm:flex-row sm:items-end">
                     <div>
-                      <h4 className="text-2xl font-semibold text-white">
-                        UI/UX Designer
-                      </h4>
-                      <p className="text-indigo-400 font-mono mt-1 text-lg">
-                        Maitsys
-                      </p>
+                      <h3 className="text-2xl font-semibold text-white">Freelance Brand & Digital Designer</h3>
+                      <p className="mt-1 font-mono text-lg text-cyan-400">Self-Employed</p>
                     </div>
-                    <span className="inline-block px-3 py-1 rounded-full border border-white/20 text-white/60 font-mono text-sm self-start sm:self-auto">
-                      July 2024 to Present
-                    </span>
+                    <span className="font-mono text-sm text-white/45">2019 - Present</span>
                   </div>
+                  <BulletList>
+                    {[
+                      <>Sole designer for <strong>5 clients across 4 industries</strong> - granite manufacturing, food and beverage, IT startups, and e-commerce - delivering brand identity, guidelines, and shipped web and app UI.</>,
+                      <>Ran engagements end to end with founders, from discovery to launch.</>,
+                    ]}
+                  </BulletList>
+                </article>
+              </section>
+
+            </div>
+
+            <aside className="flex flex-col gap-6">
+              <section className="overflow-hidden rounded-[2rem] border border-cyan-500/20 bg-gradient-to-br from-cyan-950/25 to-white/[0.025] p-7">
+                <div className="mb-6 flex items-center justify-between border-b border-white/10 pb-4">
+                  <h2 className="font-mono text-sm uppercase tracking-widest text-cyan-300">Education</h2>
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-white/30">Academic</span>
                 </div>
-
-                <h5 className="text-white/50 font-mono text-sm uppercase tracking-widest mt-4 mb-8">
-                  Enterprise Product Experience
-                </h5>
-
-                <div className="relative border-l border-white/10 ml-3 pl-8 md:pl-12 flex flex-col gap-10">
-                  {projects.map((proj, idx) => (
-                    <div key={idx} className="relative group">
-                      <div className="absolute w-3 h-3 bg-neutral-600 rounded-full -left-[38px] md:-left-[54px] top-1.5 ring-4 ring-black group-hover:bg-white transition-colors"></div>
-                      <h6 className="text-white font-medium text-lg leading-snug mb-3 group-hover:text-white transition-colors">
-                        {proj.title}
-                      </h6>
-                      <p className="text-white/60 leading-relaxed text-[15px]">
-                        {proj.desc}
-                      </p>
+                <div className="space-y-6">
+                  {[
+                    ["2021 - 2023", "Master of Computer Applications", "KLN College of Engineering", "Pottapalayam"],
+                    ["2018 - 2021", "Bachelor of Computer Applications", "Hindusthan College of Arts and Science", "Coimbatore"],
+                  ].map(([dates, degree, institution, location]) => (
+                    <div key={degree} className="relative border-l border-cyan-400/30 pl-5">
+                      <span className="absolute -left-1 top-1 h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.65)]" />
+                      <span className="mb-2 block font-mono text-xs text-cyan-400">{dates}</span>
+                      <h3 className="font-semibold leading-snug text-white">{degree}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-white/55">{institution}</p>
+                      <p className="mt-1 text-xs text-white/30">{location}</p>
                     </div>
                   ))}
                 </div>
-              </div>
+              </section>
 
-              <div>
-                <div className="sticky top-[68px] bg-black/90 backdrop-blur pb-6 pt-6 z-10 -mx-2 px-2 md:-mx-4 md:px-4 xl:mx-0 xl:px-0">
-                  <div className="flex flex-col sm:flex-row justify-between sm:items-end gap-2">
-                    <div>
-                      <h4 className="text-2xl font-semibold text-white">
-                        Freelance Brand & Digital Designer
-                      </h4>
-                      <p className="text-indigo-400 font-mono mt-1 text-lg">
-                        Self-Employed
-                      </p>
-                    </div>
-                    <span className="inline-block px-3 py-1 rounded-full border border-white/20 text-white/60 font-mono text-sm self-start sm:self-auto">
-                      2019 to Present
+              <section className="rounded-[2rem] border border-white/10 bg-white/[0.025] p-7">
+                <h2 className="mb-6 border-b border-white/10 pb-4 font-mono text-sm uppercase tracking-widest text-white/45">Skills</h2>
+                <ul className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-1">
+                  {skills.map((skill) => (
+                    <li key={skill} className="flex items-center gap-3 rounded-xl border border-transparent px-3 py-2 text-sm text-white/70 transition-colors hover:border-white/5 hover:bg-white/[0.035]">
+                      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-400 shadow-[0_0_8px_rgba(129,140,248,0.5)]" />
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+
+              <section className="rounded-[2rem] border border-white/10 bg-white/[0.025] p-7">
+                <h2 className="mb-6 border-b border-white/10 pb-4 font-mono text-sm uppercase tracking-widest text-white/45">Tools</h2>
+                <div className="flex flex-wrap gap-2">
+                  {tools.map((tool) => (
+                    <span key={tool} className="rounded-full border border-white/10 bg-black/20 px-3 py-1.5 text-sm text-white/65 transition-colors hover:border-cyan-400/30 hover:text-cyan-200">
+                      {tool}
                     </span>
+                  ))}
+                </div>
+              </section>
+
+              <section className="rounded-[2rem] border border-white/10 bg-white/[0.025] p-7">
+                <h2 className="mb-6 border-b border-white/10 pb-4 font-mono text-sm uppercase tracking-widest text-white/45">Language</h2>
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1">
+                  <div className="flex items-center justify-between rounded-xl border border-white/5 bg-black/20 px-4 py-3">
+                    <span>Tamil</span>
+                    <span className="font-mono text-xs uppercase tracking-wider text-cyan-400">Native</span>
+                  </div>
+                  <div className="flex items-center justify-between rounded-xl border border-white/5 bg-black/20 px-4 py-3">
+                    <span>English</span>
+                    <span className="font-mono text-xs uppercase tracking-wider text-indigo-400">Proficient</span>
                   </div>
                 </div>
+              </section>
 
-                <div className="mt-4">
-                  <p className="text-white/70 leading-relaxed text-[15px] mb-4">
-                    I have been freelancing since 2019, working with startups and established businesses across industries such as granite manufacturing, food outlets, IT startups, and e-commerce brands. My focus has been on creating strong branding assets and digital design solutions that help businesses build a professional and impactful market presence.
-                  </p>
-                  <p className="text-white/70 leading-relaxed text-[15px] mb-4">
-                    I collaborated closely with business owners, founders, and marketing teams to understand brand goals and transform ideas into effective visual experiences that improve customer engagement, brand visibility, and business growth.
-                  </p>
-
-                  <h5 className="text-white/50 font-mono text-sm uppercase tracking-widest mt-6 mb-4">
-                    Key Deliverables
-                  </h5>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-white/70 text-[15px]">
-                    <li className="flex items-start"><span className="text-indigo-400 mr-2">•</span> Brand Identity Design</li>
-                    <li className="flex items-start"><span className="text-indigo-400 mr-2">•</span> Logo Design & Brand Guidelines</li>
-                    <li className="flex items-start"><span className="text-indigo-400 mr-2">•</span> Website UI/UX & Landing Pages</li>
-                    <li className="flex items-start"><span className="text-indigo-400 mr-2">•</span> Mobile App UI Design</li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-
-            {/* Education */}
-            <section>
-              <div className="flex items-center gap-4 mb-10">
-                <div className="w-12 h-px bg-pink-500"></div>
-                <h3 className="text-3xl font-medium tracking-tight text-white">
-                  Education
-                </h3>
-              </div>
-
-              <div className="relative border-l border-white/10 ml-3 pl-8 md:pl-12 flex flex-col gap-8 md:gap-10">
-                <div className="relative group">
-                  <div className="absolute w-3 h-3 bg-pink-500 rounded-full -left-[38px] md:-left-[54px] top-1.5 ring-4 ring-black shadow-[0_0_10px_rgba(236,72,153,0.5)]"></div>
-                  <span className="text-pink-400 font-mono text-xs tracking-wider mb-2 block">
-                    2021 to 2023
-                  </span>
-                  <h4 className="text-xl font-medium text-white mb-1">
-                    MASTER OF COMPUTER APPLICATIONS
-                  </h4>
-                  <p className="text-white/60">
-                    KLN College of Engineering, Pottapalayam
-                  </p>
-                </div>
-
-                <div className="relative group">
-                  <div className="absolute w-3 h-3 bg-pink-500 rounded-full -left-[38px] md:-left-[54px] top-1.5 ring-4 ring-black shadow-[0_0_10px_rgba(236,72,153,0.5)]"></div>
-                  <span className="text-pink-400 font-mono text-xs tracking-wider mb-2 block">
-                    2018 to 2021
-                  </span>
-                  <h4 className="text-xl font-medium text-white mb-1">
-                    BACHELOR OF COMPUTER APPLICATIONS
-                  </h4>
-                  <p className="text-white/60">
-                    Hindusthan College of Arts and Science, Coimbatore
-                  </p>
-                </div>
-
-                <div className="relative group">
-                  <div className="absolute w-3 h-3 bg-neutral-600 rounded-full -left-[38px] md:-left-[54px] top-1.5 ring-4 ring-black"></div>
-                  <span className="text-neutral-400 font-mono text-xs tracking-wider mb-2 block">
-                    2017 to 2018
-                  </span>
-                  <h4 className="text-xl font-medium text-neutral-300 mb-1">
-                    HSC
-                  </h4>
-                  <p className="text-neutral-500">
-                    Mahatma Montessori Hr Sec School, Madurai
-                  </p>
-                </div>
-              </div>
-            </section>
+              <section className="rounded-[2rem] border border-indigo-500/20 bg-gradient-to-br from-indigo-950/30 to-transparent p-7">
+                <div className="mb-4 h-1 w-10 rounded-full bg-indigo-400" />
+                <p className="mb-3 font-mono text-xs uppercase tracking-widest text-indigo-300">Current focus</p>
+                <p className="text-sm leading-relaxed text-white/60">
+                  Designing enterprise systems where complex workflows, responsible AI, and clear operational decision-making meet.
+                </p>
+              </section>
+            </aside>
           </div>
-
-          {/* Sidebar */}
-          <div className="lg:col-span-4 flex flex-col gap-10 lg:gap-16 mt-8 lg:mt-0">
-            {/* Skills */}
-            <section className="bg-neutral-900/40 border border-white/5 rounded-3xl p-8">
-              <h3 className="text-lg font-mono text-white/50 uppercase tracking-widest mb-6 border-b border-white/10 pb-4">
-                Competencies
-              </h3>
-              <ul className="flex flex-col gap-4 text-white/90">
-                <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.6)]"></span>{" "}
-                  AI-powered Design Innovation
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.6)]"></span>{" "}
-                  Enterprise UX & Architecture
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.6)]"></span>{" "}
-                  User Research & Testing
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.6)]"></span>{" "}
-                  UI/UX Design
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.6)]"></span>{" "}
-                  Interaction Design
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.6)]"></span>{" "}
-                  Prototyping & Wireframing
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.6)]"></span>{" "}
-                  Design Systems
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.6)]"></span>{" "}
-                  Data-Informed Design
-                </li>
-              </ul>
-            </section>
-
-            {/* Tools */}
-            <section className="bg-neutral-900/40 border border-white/5 rounded-3xl p-8">
-              <h3 className="text-lg font-mono text-white/50 uppercase tracking-widest mb-6 border-b border-white/10 pb-4">
-                Tools
-              </h3>
-              <div className="flex flex-wrap gap-2.5">
-                {[
-                  "Figma",
-                  "Google Labs",
-                  "Google Antigravity",
-                  "AI Studio",
-                  "Claude",
-                  "VS Code",
-                  "Framer",
-                  "GitHub",
-                  "Adobe Creative Suite",
-                ].map((tool) => (
-                  <span
-                    key={tool}
-                    className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-white/80 text-sm hover:bg-white/10 transition-colors cursor-default"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </section>
-
-            {/* Languages */}
-            <section className="bg-neutral-900/40 border border-white/5 rounded-3xl p-8">
-              <h3 className="text-lg font-mono text-white/50 uppercase tracking-widest mb-6 border-b border-white/10 pb-4">
-                Language
-              </h3>
-              <div className="flex flex-col gap-5">
-                <div className="flex justify-between items-center bg-white/5 px-4 py-3 rounded-xl border border-white/5">
-                  <h4 className="text-white font-medium">Tamil</h4>
-                  <span className="text-pink-400 text-xs px-2 py-1 rounded-full bg-pink-500/10 border border-pink-500/20 uppercase tracking-wider font-mono">
-                    Native
-                  </span>
-                </div>
-                <div className="flex justify-between items-center bg-white/5 px-4 py-3 rounded-xl border border-white/5">
-                  <h4 className="text-white font-medium">English</h4>
-                  <span className="text-indigo-400 text-xs px-2 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 uppercase tracking-wider font-mono">
-                    Proficient
-                  </span>
-                </div>
-              </div>
-            </section>
-
-            {/* Interests */}
-            <section className="bg-neutral-900/40 border border-white/5 rounded-3xl p-8">
-              <h3 className="text-lg font-mono text-white/50 uppercase tracking-widest mb-6 border-b border-white/10 pb-4">
-                Interests
-              </h3>
-              <div className="flex flex-wrap gap-x-4 gap-y-3 text-white/70">
-                <span className="flex items-center gap-2">
-                  <div className="w-1 h-1 rounded-full bg-indigo-500"></div>Enterprise UX
-                </span>
-                <span className="flex items-center gap-2">
-                  <div className="w-1 h-1 rounded-full bg-indigo-500"></div>AI
-                </span>
-                <span className="flex items-center gap-2">
-                  <div className="w-1 h-1 rounded-full bg-pink-500"></div>Basketball
-                </span>
-                <span className="flex items-center gap-2">
-                  <div className="w-1 h-1 rounded-full bg-pink-500"></div>Technology
-                </span>
-                <span className="flex items-center gap-2">
-                  <div className="w-1 h-1 rounded-full bg-pink-500"></div>Arts
-                </span>
-                <span className="flex items-center gap-2">
-                  <div className="w-1 h-1 rounded-full bg-pink-500"></div>Photography
-                </span>
-                <span className="flex items-center gap-2">
-                  <div className="w-1 h-1 rounded-full bg-pink-500"></div>Video Games
-                </span>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
+        </main>
       </div>
     </div>
   );
