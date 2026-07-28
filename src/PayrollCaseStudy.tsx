@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { motion, useMotionValue, useTransform, AnimatePresence } from "framer-motion";
+import { motion, useMotionValue, useTransform } from "framer-motion";
 import { Project } from "./data/projects";
+import { ImageViewer } from "./components/ImageViewer";
 
 function ZoomableImage({ src, alt, onClick }: { src: string, alt: string, onClick: (src: string, alt: string) => void }) {
   return (
@@ -130,42 +131,13 @@ export default function PayrollCaseStudy({ project: _project }: { project: Proje
 
   return (
     <div className="w-full">
-      {/* Fullscreen Image Modal */}
-      <AnimatePresence>
-        {fullscreenImage && (
-          <motion.div 
-            initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
-            animate={{ opacity: 1, backdropFilter: "blur(12px)" }}
-            exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 md:p-8 cursor-zoom-out"
-            onClick={() => setFullscreenImage(null)}
-          >
-            <motion.img 
-               initial={{ scale: 0.95, y: 10, opacity: 0 }}
-               animate={{ scale: 1, y: 0, opacity: 1 }}
-               exit={{ scale: 0.98, opacity: 0, transition: { duration: 0.2 } }}
-               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-               src={fullscreenImage.src} 
-               alt={fullscreenImage.alt}
-               loading="eager"
-               decoding="async"
-               fetchPriority="high"
-               className="max-w-full max-h-full object-contain rounded-lg rounded-xl shadow-2xl shadow-black/50"
-               onClick={(e) => e.stopPropagation()} // Prevent clicking image from closing if we wanted, but zoom out on image click is nice
-            />
-            <button 
-              className="absolute top-6 right-6 md:top-8 md:right-8 w-12 h-12 bg-neutral-900/10 hover:bg-neutral-900/20 rounded-full flex items-center justify-center text-white transition-colors backdrop-blur-md border border-white/5"
-              onClick={() => setFullscreenImage(null)}
-            >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <ImageViewer
+        src={fullscreenImage?.src || ""}
+        alt={fullscreenImage?.alt || ""}
+        onClose={() => setFullscreenImage(null)}
+      />
 
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full">
           {/* Header */}
           <motion.div initial="hidden" animate="visible" variants={containerVariants} className="pt-20">
             <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-8 text-white mix-blend-plus-lighter">

@@ -1,9 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&family=Readex+Pro:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Readex Pro", system-ui, -apple-system, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", "SF Mono", ui-monospace, Menlo, Monaco,
+    Consolas, monospace;
+}
+
+:root {
+  color-scheme: dark;
+  --apple-blue: #0a84ff;
+  --apple-blue-hover: #409cff;
+  --apple-background: #000;
+  --apple-surface: rgba(28, 28, 30, 0.72);
+  --apple-surface-elevated: rgba(44, 44, 46, 0.72);
+  --apple-border: rgba(255, 255, 255, 0.12);
+  --apple-label: #fff;
+  --apple-secondary-label: rgba(235, 235, 245, 0.6);
 }
 
 /* Custom Scrollbar for matching the theme */
@@ -49,10 +62,54 @@
 html,
 body,
 #root {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--apple-background);
+  color: var(--apple-label);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  text-wrap: pretty;
+}
+
+button,
+[role="button"] {
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(a, button, [role="button"], input, textarea, select):focus-visible {
+  outline: 3px solid var(--apple-blue);
+  outline-offset: 3px;
+}
+
+:where(button, [role="button"])[disabled],
+:where(button, [role="button"])[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+::selection {
+  background: rgba(10, 132, 255, 0.38);
+  color: #fff;
 }
 
 html.lenis,
@@ -77,7 +134,8 @@ html.lenis body {
 }
 
 .hero-title {
-  font-family: "Manrope", "Readex Pro", system-ui, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "Helvetica Neue", Arial, sans-serif;
   letter-spacing: -0.04em;
   line-height: 0.95;
 }
@@ -120,32 +178,83 @@ html.lenis body {
 }
 
 .liquid-glass {
-  background: rgba(255, 255, 255, 0.01);
-  background-blend-mode: luminosity;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: none;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  background: var(--apple-surface);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid var(--apple-border);
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.24);
   position: relative;
   overflow: hidden;
 }
+
 .liquid-glass::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1.4px;
-  background: linear-gradient(
-  180deg,
-  rgba(255, 255, 255, 0.45) 0%,
-  rgba(255, 255, 255, 0.15) 20%,
-  rgba(255, 255, 255, 0) 40%,
-  rgba(255, 255, 255, 0) 60%,
-  rgba(255, 255, 255, 0.15) 80%,
-  rgba(255, 255, 255, 0.45) 100%
-  );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 45%);
   pointer-events: none;
+}
+
+.apple-material {
+  background: var(--apple-surface);
+  border: 1px solid var(--apple-border);
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.06),
+    0 12px 40px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+}
+
+.apple-card {
+  background: linear-gradient(
+    145deg,
+    rgba(44, 44, 46, 0.76),
+    rgba(28, 28, 30, 0.72)
+  );
+  border: 1px solid var(--apple-border);
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.05),
+    0 20px 60px rgba(0, 0, 0, 0.22);
+}
+
+.apple-control {
+  min-height: 44px;
+  border-radius: 999px;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.case-study-shell {
+  border-color: var(--apple-border) !important;
+  border-radius: clamp(1.25rem, 2vw, 2rem);
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.04),
+    0 24px 80px rgba(0, 0, 0, 0.18);
+}
+
+@media (pointer: coarse) {
+  :where(a, button, [role="button"]) {
+    min-height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -139,7 +139,7 @@ export default function LoopHRCaseStudy({ project }: { project: Project }) {
     <>
       <ModernBackground />
 
-      <div className="w-full bg-neutral-900/5 bg-neutral-950/80 backdrop-blur-xl border border-white/5 text-white/80 font-sans mt-8 pt-12 lg:pt-24 rounded-[3rem] px-4 md:px-12 lg:px-24 mb-12 shadow-xl shadow-black/50 dark:shadow-[0_0_80px_-20px_rgba(0,0,0,0.05)] relative overflow-hidden">
+      <div className="case-study-shell w-full bg-neutral-900/5 bg-neutral-950/80 backdrop-blur-xl border border-white/5 text-white/80 font-sans mt-8 pt-12 lg:pt-24 rounded-[3rem] px-4 sm:px-6 lg:px-8 xl:px-10 mb-12 shadow-xl shadow-black/50 dark:shadow-[0_0_80px_-20px_rgba(0,0,0,0.05)] relative overflow-hidden">
         
         <div className="relative z-10">
           {/* Header */}
@@ -328,7 +328,7 @@ export default function LoopHRCaseStudy({ project }: { project: Project }) {
             </div>
           </div>
 
-           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="py-24 text-center border-t border-white/5 bg-gradient-to-t from-white/5 from-white/5 to-transparent rounded-b-[3rem] px-4 -mx-4 md:-mx-12 lg:-mx-24 -mb-12">
+           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="py-24 text-center border-t border-white/5 bg-gradient-to-t from-white/5 from-white/5 to-transparent rounded-b-[3rem] px-4 -mx-4 sm:-mx-6 lg:-mx-8 xl:-mx-10 -mb-12">
               <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl text-white font-sans tracking-tight mb-6">EXPLORATION COMPLETE</motion.h2>
               <motion.p variants={itemVariants} className="text-white/50 font-light text-lg">Thank you for reviewing the Loop HR integration study.</motion.p>
            </motion.div>

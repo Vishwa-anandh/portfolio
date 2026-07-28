@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Project } from "./data/projects";
-import { motion, AnimatePresence, useMotionValue, useTransform } from "motion/react";
+import { motion, useMotionValue, useTransform } from "motion/react";
+import { ImageViewer } from "./components/ImageViewer";
 
 function HeroDashboardMockup({ children, className = "" }: { children: React.ReactNode, className?: string }) {
   const mouseX = useMotionValue(0.5);
@@ -108,7 +109,7 @@ export default function PulseCXCaseStudy({ project }: { project: Project }) {
     <>
       <ModernBackground />
 
-      <div className="w-full bg-neutral-950/80 backdrop-blur-xl border border-white/5 text-white/80 font-sans mt-8 pt-12 lg:pt-24 rounded-[3rem] px-4 md:px-12 lg:px-24 mb-12 shadow-[0_0_80px_-20px_rgba(0,0,0,0.05)] relative overflow-hidden">
+      <div className="case-study-shell w-full bg-neutral-950/80 backdrop-blur-xl border border-white/5 text-white/80 font-sans mt-8 pt-12 lg:pt-24 rounded-[3rem] px-4 sm:px-6 lg:px-8 xl:px-10 mb-12 shadow-[0_0_80px_-20px_rgba(0,0,0,0.05)] relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/100/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[150px] -z-10 pointer-events-none" />
 
@@ -422,34 +423,11 @@ export default function PulseCXCaseStudy({ project }: { project: Project }) {
         </div>
       </div>
 
-      <AnimatePresence>
-        {activeImage && (
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 cursor-zoom-out"
-            onClick={closeImage}
-          >
-            <motion.img 
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              src={activeImage.src} 
-              alt={activeImage.alt} 
-              loading="eager"
-              decoding="async"
-              fetchPriority="high"
-              className="max-w-[95vw] max-h-[95vh] object-contain rounded-xl shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            />
-            <button className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors p-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <ImageViewer
+        src={activeImage?.src || ""}
+        alt={activeImage?.alt || ""}
+        onClose={closeImage}
+      />
     </>
   );
 }

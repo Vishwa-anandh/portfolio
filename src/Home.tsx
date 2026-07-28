@@ -8,6 +8,7 @@ import { projects } from "./data/projects";
 import { Background3D } from "./components/Background3D";
 import ImpactSection from "./components/ui/impact-section";
 import { LetsTalk } from "./components/LetsTalk";
+import { Button } from "./components/ui/button";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -125,12 +126,17 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const lenis = new Lenis({
-      autoRaf: true,
-      lerp: 0.1,
-      wheelMultiplier: 1,
-      smoothWheel: true,
-    });
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    const lenis = prefersReducedMotion
+      ? null
+      : new Lenis({
+          autoRaf: true,
+          lerp: 0.1,
+          wheelMultiplier: 1,
+          smoothWheel: true,
+        });
 
     const canvas = canvasRef.current;
     const ctx = canvas ? canvas.getContext('2d', { alpha: false }) : null;
@@ -193,13 +199,21 @@ export default function Home() {
       requestDraw();
     };
 
-    lenis.on('scroll', handleScroll);
+    if (lenis) {
+      lenis.on('scroll', handleScroll);
+    } else {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+    }
     window.addEventListener('resize', requestDraw);
     // Trigger once
     handleScroll();
 
     return () => {
-      lenis.destroy();
+      if (lenis) {
+        lenis.destroy();
+      } else {
+        window.removeEventListener('scroll', handleScroll);
+      }
       window.removeEventListener('resize', requestDraw);
       if (rafId !== null) cancelAnimationFrame(rafId);
       requestDrawRef.current = () => {};
@@ -210,7 +224,10 @@ export default function Home() {
     e.preventDefault();
     const target = document.getElementById(targetId);
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+      target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' });
     }
   };
 
@@ -259,18 +276,18 @@ export default function Home() {
           <header className="absolute top-4 md:top-6 left-0 right-0 z-50 px-2 md:px-4 pointer-events-auto">
             <nav className="flex items-center justify-between gap-4">
               {/* Navigation pill (visible on both mobile and desktop) */}
-              <div className="flex items-center gap-0.5 md:gap-1 liquid-glass rounded-full p-1 md:px-3 md:py-2">
+              <div className="flex items-center gap-0.5 md:gap-1 liquid-glass rounded-full p-1">
                 <Link
                   to="/resume"
-                  className="text-white/80 hover:text-white transition-colors text-xs md:text-sm px-3 md:px-5 py-1.5 md:py-2 rounded-full hover:bg-white/10"
+                  className="apple-control inline-flex items-center text-white/75 hover:text-white text-sm px-4 md:px-5 hover:bg-white/10"
                 >
-                  resume
+                  Resume
                 </Link>
                 <Link
                   to="/about"
-                  className="text-white/80 hover:text-white transition-colors text-xs md:text-sm px-3 md:px-5 py-1.5 md:py-2 rounded-full hover:bg-white/10"
+                  className="apple-control inline-flex items-center text-white/75 hover:text-white text-sm px-4 md:px-5 hover:bg-white/10"
                 >
-                  about
+                  About
                 </Link>
 
               </div>
@@ -278,9 +295,9 @@ export default function Home() {
               {/* Right button */}
               <button 
                 onClick={(e) => handleScrollTo(e, 'contact')}
-                className="liquid-glass text-white text-xs md:text-sm font-normal rounded-full px-4 md:px-6 py-2.5 md:py-3 hover:bg-white/20 transition-all hover:scale-105"
+                className="apple-control liquid-glass text-white text-sm font-medium px-5 md:px-6 hover:bg-white/20 active:scale-[0.98]"
               >
-                let's talk
+                Let&apos;s talk
               </button>
             </nav>
           </header>
@@ -319,12 +336,9 @@ export default function Home() {
               <p className="max-w-[240px] md:max-w-[400px] text-[15px] md:text-2xl leading-snug text-white/95 font-sans mix-blend-plus-lighter drop-shadow-sm font-light">
                 specializing in complex enterprise workflows and AI-native systems.
               </p>
-              <Link
-                to="/projects"
-                className="px-5 md:px-6 py-2.5 md:py-3 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 transition-all text-[13px] md:text-sm font-medium flex items-center gap-2 shadow-xl"
-              >
-                Explore Case Studies &rarr;
-              </Link>
+              <Button asChild variant="outline">
+                <Link to="/projects">Explore Case Studies &rarr;</Link>
+              </Button>
             </motion.div>
 
             {/* Stat block — top-right */}
@@ -361,7 +375,7 @@ export default function Home() {
 
       {/* Scrollable Content Below Hero */}
       <div className="relative z-30 bg-transparent w-full pb-16 md:pb-32" id="work">
-        <div className="max-w-7xl mx-auto px-2 md:px-4 xl:px-0 py-16 md:py-24">
+        <div className="w-full px-4 py-16 sm:px-6 md:py-24 lg:px-10 xl:px-12">
 
           {/* Case Studies Accordion (Impact Section) */}
           <div className="relative mb-12 md:mb-16 w-full">
@@ -388,10 +402,8 @@ export default function Home() {
                 <p className="text-white/60 leading-relaxed text-lg mb-10 max-w-xl">
                   I specialize in translating ambiguous product requirements into structured, scalable design systems. From 0-to-1 concepts to enterprise-grade platforms, I design interfaces that empower users to leverage complex AI without the cognitive overload.
                 </p>
-                <Link
-                  to="/resume"
-                  className="px-8 py-4 rounded-full bg-white text-black hover:bg-neutral-200 hover:scale-105 transition-all font-medium flex items-center justify-center gap-3 group w-max shadow-lg"
-                >
+                <Button asChild size="lg">
+                  <Link to="/resume" className="group w-max">
                   <span>View Resume</span>
                   <svg
                     className="w-4 h-4 transition-transform group-hover:translate-x-1"
@@ -406,7 +418,8 @@ export default function Home() {
                       d="M14 5l7 7m0 0l-7 7m7-7H3"
                     />
                   </svg>
-                </Link>
+                  </Link>
+                </Button>
               </div>
 
               <div className="w-full lg:w-2/3 relative flex flex-col gap-12 lg:gap-16 pt-2 lg:pt-0">

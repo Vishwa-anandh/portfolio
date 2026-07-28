@@ -1,6 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Seo } from "./components/Seo";
 import { Background3D } from "./components/Background3D";
+import { PageBar } from "./components/ui/site-controls";
 import { breadcrumbNode, graph, personNode, webPageNode } from "./lib/seo";
 
 const maitsysAchievements = [
@@ -104,10 +105,8 @@ function BulletList({ children }: { children: React.ReactNode[] }) {
 }
 
 export default function Resume() {
-  const navigate = useNavigate();
-
   return (
-    <div className="relative min-h-screen bg-transparent pb-24 font-sans text-white selection:bg-indigo-500/30">
+    <div className="relative min-h-screen bg-transparent pb-24 font-sans text-white">
       <Seo
         title="Resume - Vishwa Anandh, Product Designer"
         description="Resume of Vishwa Anandh, a Product Designer with 5+ years of experience across enterprise SaaS, AI-native systems, design systems, and user research."
@@ -132,29 +131,21 @@ export default function Resume() {
       <Background3D />
 
       <div className="relative z-10">
-        <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md print:hidden">
-          <div className="flex w-full items-center justify-between px-4 py-4 sm:px-6 lg:px-10 xl:px-12">
-            <button
-              onClick={() => (window.history.length > 2 ? navigate(-1) : navigate("/"))}
-              className="font-mono text-sm text-white/50 underline-offset-4 transition-colors hover:text-white hover:underline"
-            >
-              ← Back
-            </button>
+        <PageBar fallback="/" navClassName="print:hidden">
             <a
               href="/resume.pdf"
               download="Vishwa_Anandh_Resume.pdf"
-              className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-black transition-colors hover:bg-indigo-50"
+              className="apple-control flex items-center gap-2 bg-[#0A84FF] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#409CFF]"
             >
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
               Download PDF
             </a>
-          </div>
-        </nav>
+        </PageBar>
 
         <main className="mt-8 w-full px-4 sm:px-6 md:mt-12 lg:px-10 xl:px-12">
-          <header className="relative mb-8 grid overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.07] via-white/[0.025] to-indigo-950/20 p-6 shadow-2xl shadow-black/30 md:p-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-16">
+          <header className="apple-card relative mb-8 grid overflow-hidden rounded-[2rem] p-6 md:p-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-16">
             <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
             <div className="pointer-events-none absolute -bottom-32 left-1/3 h-64 w-64 rounded-full bg-indigo-500/10 blur-3xl" />
             <div>

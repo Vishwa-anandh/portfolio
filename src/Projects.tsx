@@ -5,6 +5,7 @@ import { Seo } from "./components/Seo";
 import { graph, webPageNode, breadcrumbNode, canonical } from "./lib/seo";
 import { projects, Project } from "./data/projects";
 import { Background3D } from "./components/Background3D";
+import { PageBar } from "./components/ui/site-controls";
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -35,9 +36,9 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   };
   
   const springConfig = { damping: 20, stiffness: 150, mass: 0.5 };
-  const rx = useSpring(useTransform(mouseY, [-200, 200], [8, -8]), springConfig);
-  const ry = useSpring(useTransform(mouseX, [-200, 200], [-8, 8]), springConfig);
-  const scale = useSpring(hovered ? 1.03 : 1, springConfig);
+  const rx = useSpring(useTransform(mouseY, [-200, 200], [3, -3]), springConfig);
+  const ry = useSpring(useTransform(mouseX, [-200, 200], [-3, 3]), springConfig);
+  const scale = useSpring(hovered ? 1.01 : 1, springConfig);
 
   return (
     <motion.div
@@ -51,11 +52,11 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={handleMouseOut}
-      className="relative block w-full aspect-[4/3] rounded-[2rem] z-0 hover:z-10 perspective-1000"
+      className="relative block w-full aspect-[4/3] rounded-[1.75rem] z-0 hover:z-10 perspective-1000"
     >
       <Link
         to={`/projects/${project.id}`}
-        className="group absolute inset-0 block w-full h-full bg-neutral-900 rounded-[2rem] overflow-hidden cursor-pointer transition-colors duration-500 hover:shadow-[0_0_40px_rgba(99,102,241,0.4)] border border-transparent hover:border-indigo-500/50"
+        className="group apple-card absolute inset-0 block w-full h-full rounded-[1.75rem] overflow-hidden cursor-pointer transition-[border-color,box-shadow] duration-300 hover:border-[#0A84FF]/50 hover:shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
       >
         <motion.div
           className="absolute inset-x-0 inset-y-[-15%] w-full h-[130%]"
@@ -64,7 +65,10 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           <motion.img
             src={project.img}
             alt={project.name}
-            className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-85 group-hover:scale-[1.025] transition-[transform,opacity] duration-500 ease-out"
             style={{
               x: useSpring(useTransform(mouseX, [-200, 200], [-10, 10]), springConfig),
               y: useSpring(useTransform(mouseY, [-200, 200], [-10, 10]), springConfig)
@@ -73,13 +77,13 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         </motion.div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6 md:p-8 pointer-events-none transform-gpu" style={{ transform: 'translateZ(30px)' }}>
           <div className="transform transition-transform duration-500 ease-out group-hover:-translate-y-2">
-            <span className="text-white/60 font-mono text-xs mb-3 block uppercase tracking-wider">
+            <span className="text-[#64D2FF] font-mono text-xs mb-3 block uppercase tracking-wider">
               {project.type}
             </span>
             <h3 className="text-2xl md:text-3xl text-white font-medium mb-3">
               {project.name}
             </h3>
-            <p className="text-white/70 line-clamp-3 text-sm opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+            <p className="text-white/70 line-clamp-3 text-sm opacity-100 translate-y-0 transition-opacity duration-300">
               {project.description}
             </p>
           </div>
@@ -95,7 +99,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-transparent text-white font-sans w-full selection:bg-indigo-500/30 relative">
+    <div className="min-h-screen bg-transparent text-white font-sans w-full relative">
       <Seo
         title="Projects & Case Studies | Vishwa Anandh"
         description="Explore selected UI/UX and product design case studies by Vishwa Anandh — AI-native monitoring platforms, multi-agent orchestration dashboards, and enterprise design systems."
@@ -127,17 +131,12 @@ export default function Projects() {
       />
       <div className="fixed inset-0 z-[-2] bg-black"></div>
       <Background3D />
-      <div className="max-w-7xl mx-auto px-2 md:px-4 xl:px-0 py-12 md:py-24 relative z-10">
+      <PageBar to="/" label="Back to Home" />
+      <div className="relative z-10 w-full px-4 py-12 sm:px-6 md:py-24 lg:px-10 xl:px-12">
         {/* Header */}
         <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16 pb-8 border-b border-white/10">
           <div>
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 text-white/50 hover:text-white mb-8 transition-colors font-mono text-sm underline-offset-4 hover:underline"
-            >
-              <span>← Back to Home</span>
-            </Link>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-2 mix-blend-plus-lighter">
+            <h1 className="text-5xl md:text-7xl font-semibold tracking-[-0.045em] mb-2">
               All Projects
             </h1>
             <h2 className="text-xl md:text-2xl text-white/60 font-medium tracking-tight">

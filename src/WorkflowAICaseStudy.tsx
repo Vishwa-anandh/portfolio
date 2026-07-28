@@ -8,8 +8,8 @@ function HeroLaptopMockup({ children, className = "" }: { children: React.ReactN
   const mouseX = useMotionValue(0.5);
   const mouseY = useMotionValue(0.5);
 
-  const rotateX = useTransform(mouseY, [0, 1], [65, 45]);
-  const rotateY = useTransform(mouseX, [0, 1], [-15, 15]);
+  const rotateX = useTransform(mouseY, [0, 1], [58, 48]);
+  const rotateY = useTransform(mouseX, [0, 1], [-6, 6]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -22,7 +22,7 @@ function HeroLaptopMockup({ children, className = "" }: { children: React.ReactN
   }, []);
 
   return (
-    <div className={`relative w-full max-w-[800px] mx-auto mt-20 md:mt-32 lg:mt-48 ${className}`} style={{ perspective: "1500px" }}>
+    <div className={`relative mx-auto mt-28 w-[88%] max-w-[700px] px-2 sm:mt-36 sm:px-4 lg:mt-56 ${className}`} style={{ perspective: "1800px" }}>
       <motion.div 
         style={{
           rotateX,
@@ -136,7 +136,7 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
       {/* Animated Background Elements */}
       <ModernBackground />
 
-      <div className="w-full bg-neutral-950/80 backdrop-blur-xl border border-white/5 text-white/80 font-sans mt-8 pt-12 lg:pt-24 rounded-[3rem] px-4 md:px-12 lg:px-24 mb-12 shadow-[0_0_80px_-20px_rgba(59,130,246,0.15)] relative overflow-hidden">
+      <div className="case-study-shell w-full bg-neutral-950/80 backdrop-blur-xl border border-white/5 text-white/80 font-sans mt-8 pt-12 lg:pt-24 rounded-[3rem] px-4 sm:px-6 lg:px-8 xl:px-10 mb-12 shadow-[0_0_80px_-20px_rgba(59,130,246,0.15)] relative overflow-hidden">
         {/* Futuristic glowing orbs */}
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-500/100/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-indigo-500/100/10 rounded-full blur-[150px] -z-10 pointer-events-none" />
@@ -148,7 +148,7 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
             whileInView="visible" 
             viewport={{ once: true, margin: "-50px" }}
             variants={containerVariants}
-            className="flex flex-col-reverse lg:grid lg:grid-cols-2 lg:items-center mb-24 gap-12 lg:gap-8 xl:gap-16"
+            className="mb-24 flex flex-col-reverse gap-12 lg:grid lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center lg:gap-8 xl:gap-12"
           >
             <motion.div variants={itemVariants} className="w-full">
               <div className="inline-block px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/100/10 text-blue-400 text-xs font-mono uppercase tracking-widest mb-6">Case Study</div>
@@ -185,7 +185,7 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
               </div>
             </motion.div>
             
-            <div className="w-full relative group z-10 hidden md:block pt-16 lg:pt-0">
+            <div className="relative z-10 hidden w-full px-6 pt-16 md:block lg:px-8 lg:pt-0 xl:px-12">
               <motion.div 
                 variants={itemVariants}
                 className="relative flex justify-center"
@@ -543,7 +543,7 @@ export default function WorkflowAICaseStudy({ project }: { project: Project }) {
           </div>
 
            {/* Thank you */}
-           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="py-24 text-center border-t border-white/5 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-b-[3rem] px-4 -mx-4 md:-mx-12 lg:-mx-24 -mb-12">
+           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="py-24 text-center border-t border-white/5 bg-gradient-to-t from-indigo-500/5 to-transparent rounded-b-[3rem] px-4 -mx-4 sm:-mx-6 lg:-mx-8 xl:-mx-10 -mb-12">
               <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl text-white font-sans tracking-tight mb-6">TRANSMISSION COMPLETE</motion.h2>
               <motion.p variants={itemVariants} className="text-white/60 font-light text-lg">Thank you for exploring this spatial design record.</motion.p>
            </motion.div>
